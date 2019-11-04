@@ -2,6 +2,21 @@ import { IProject } from "../IProject";
 import {TagType} from "../IProject"
 import thumbnail from '../../../assets/thumbnail/60.jpg';
 
+import img1 from '../../../assets/images/the-witcher-3/witcher2.jpg';
+import img2 from '../../../assets/images/the-witcher-3/witcher3.jpg';
+import img3 from '../../../assets/images/the-witcher-3/witcher5.jpg';
+import img4 from '../../../assets/images/the-witcher-3/witcher6.jpg';
+import img5 from '../../../assets/images/the-witcher-3/witcher7.jpg';
+import img6 from '../../../assets/images/the-witcher-3/witcher9.jpg';
+import img7 from '../../../assets/images/the-witcher-3/witcher10.jpg';
+import img8 from '../../../assets/images/the-witcher-3/witcher11.jpg';
+import img9 from '../../../assets/images/the-witcher-3/witcher12.jpg';
+import img10 from '../../../assets/images/the-witcher-3/witchera.jpg';
+import img11 from '../../../assets/images/the-witcher-3/witcher13.jpg';
+import img12 from '../../../assets/images/the-witcher-3/witcher14.jpg';
+import img13 from '../../../assets/images/the-witcher-3/witcher8.jpg';
+import img14 from '../../../assets/images/the-witcher-3/witcher1.jpg';
+
 export const theWitcher3: IProject = {
     title: 'The Witcher 3 Xbox Promotion',
     subtitle: 'subtitle',
@@ -9,62 +24,61 @@ export const theWitcher3: IProject = {
     tags: [TagType.XboxOne],
     content:[
         {
-            header:"The Witcher 3 Xbox Promotion",
             slideshow:[
                 {
-                    img:"img/witcher2.jpg",
+                    img:img1,
                     caption:"Main menu with animated background (Pre-launch)"
                 },
                 {
-                    img:"img/witcher3.jpg",
+                    img:img2,
                     caption:"Watch section shows subnav with trailers and gameplay"
                 },
                 {
-                    img:"img/witcher5.jpg",
+                    img:img3,
                     caption:"Character gallery with center carousel navigation."
                 },
                 {
-                    img:"img/witcher6.jpg",
+                    img:img4,
                     caption:"Character details page"
                 },
                 {
-                    img:"img/witcher7.jpg",
+                    img:img5,
                     caption:"Image slideshow"
                 },
                 {
-                    img:"img/witcher9.jpg",
+                    img:img6,
                     caption:"Quiz with animated background"
                 },
                 {
-                    img:"img/witcher10.jpg",
+                    img:img7,
                     caption:"Quiz question"
                 },
                 {
-                    img:"img/witcher11.jpg",
+                    img:img8,
                     caption:"Quiz incorrect answer message"
                 },
                 {
-                    img:"img/witcher12.jpg",
+                    img:img9,
                     caption:"Quiz results page with animated background"
                 },
                 {
-                    img:"img/witchera.jpg",
+                    img:img10,
                     caption:"Post-launch experience with new content"
                 },
                 {
-                    img:"img/witcher13.jpg",
+                    img:img11,
                     caption:"Post-launch poll"
                 },
                 {
-                    img:"img/witcher14.jpg",
+                    img:img12,
                     caption:"Post-launch monster bestiary"
                 },
                 {
-                    img:"img/witcher8.jpg",
+                    img:img13,
                     caption:"Quiz featured as a stand-alone experience on the Xbox One"
                 },
                 {
-                    img:"img/witcher1.jpg",
+                    img:img14,
                     caption:"Xbox One games section feature"
                 }
             ]
@@ -83,11 +97,14 @@ export const theWitcher3: IProject = {
         },
         {
             header:"Xbox One Video Capture",
-            label:"Witcher 3 Poll",
-            desc:"",
-            img:"img/thumbnails/36.jpg",
-            action:"video",
-            source:"media/video/witcherPollOpt.mp4"
+        
+            img:{
+                img: "img/thumbnails/36.jpg",
+                caption: "Witcher 3 Poll",
+                action:"video",
+                source:"media/video/witcherPollOpt.mp4"
+            },
+        
         }
     ]
 }
