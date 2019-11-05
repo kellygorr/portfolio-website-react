@@ -1,5 +1,5 @@
-import {IProject} from './IProject'
-import {theWitcher3} from './projects/the-witcher-3'
+import { IProject } from './IProject'
+import { theWitcher3 } from './projects/the-witcher-3'
 // import {xboxBillboards} from './projects/xbox-billboards'
 // import {xboxLiveEvents} from './projects/xbox-live-events'
 // import { xboxQuizzes } from './projects/xbox-quizzes'
@@ -38,6 +38,4 @@ import {theWitcher3} from './projects/the-witcher-3'
 
 // ]
 
-export const projects: IProject[] = [
-    theWitcher3,
-]
+export const projects: IProject[] = [theWitcher3]
