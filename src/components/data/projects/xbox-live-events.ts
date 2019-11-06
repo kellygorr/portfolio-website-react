@@ -1,6 +1,42 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/55.jpg'
+import thumbnail from '../../../assets/thumbnails/55.jpg'
+import thumbnail2 from '../../../assets/thumbnails/51.jpg'
+import thumbnail3 from '../../../assets/thumbnails/58.jpg'
+import thumbnail4 from '../../../assets/thumbnails/61.jpg'
+import thumbnail5 from '../../../assets/thumbnails/63.jpg'
+
+import img1 from '../../../assets/images/xbox-live-events/xlei1.png'
+import img2 from '../../../assets/images/xbox-live-events/E32.jpg'
+import img3 from '../../../assets/images/xbox-live-events/TGA1.jpg'
+import img4 from '../../../assets/images/xbox-live-events/TGA2.jpg'
+import img5 from '../../../assets/images/xbox-live-events/TGA4.jpg'
+import img6 from '../../../assets/images/xbox-live-events/TGA9.jpg'
+import img7 from '../../../assets/images/xbox-live-events/TGA7.jpg'
+import img8 from '../../../assets/images/xbox-live-events/TGA5.jpg'
+import img9 from '../../../assets/images/xbox-live-events/TGA6.jpg'
+import img10 from '../../../assets/images/xbox-live-events/TGA8.jpg'
+
+import img11 from '../../../assets/images/xbox-live-events/Gamescom11.jpg'
+import img12 from '../../../assets/images/xbox-live-events/Gamescom1.jpg'
+import img13 from '../../../assets/images/xbox-live-events/Gamescom5.jpg'
+import img14 from '../../../assets/images/xbox-live-events/Gamescom6.jpg'
+import img15 from '../../../assets/images/xbox-live-events/Gamescom10.jpg'
+import img16 from '../../../assets/images/xbox-live-events/Gamescom12.jpg'
+import img17 from '../../../assets/images/xbox-live-events/Gamescom3.png'
+
+import img18 from '../../../assets/images/xbox-live-events/E31.jpg'
+import img19 from '../../../assets/images/xbox-live-events/E32.jpg'
+
+import img20 from '../../../assets/images/xbox-live-events/CODLive4.png'
+import img21 from '../../../assets/images/xbox-live-events/CODLive.jpg'
+import img22 from '../../../assets/images/xbox-live-events/CODLive2.jpg'
+import img23 from '../../../assets/images/xbox-live-events/CODLive5.png'
+
+import video1 from '../../../assets/videos/TGAPromo.mp4'
+import video2 from '../../../assets/videos/TGAscreencapture.mp4'
+import video3 from '../../../assets/videos/GCPromo.mp4'
+import video4 from '../../../assets/videos/GCTombraiderQuiz.mp4'
 
 export const xboxLiveEvents: IProject = {
 	title: 'Xbox Live Events',
@@ -12,14 +48,10 @@ export const xboxLiveEvents: IProject = {
 			header: 'Xbox Live Events on XLEi',
 			slideshow: [
 				{
-					img: 'img/xlei/xlei1.png',
-					caption: '',
-					source: '',
+					img: img1,
 				},
 				{
-					img: 'img/xlei/E32.jpg',
-					caption: '',
-					source: '',
+					img: img2,
 				},
 			],
 		},
@@ -39,38 +71,36 @@ export const xboxLiveEvents: IProject = {
 				'Platform: Xbox One<br/>Placement: Live events are featured and promoted on the Xbox One<br/>Countries: Varies by event<br/>Dates: 2014-present<br/>XLEi App and database: Xbox Broadcast Service Team<br/>Designer: Jacqueline Montplaisir',
 		},
 		{
-			title: 'The Game Awards 2015',
+			header: 'The Game Awards 2015',
 			slideshow: [
 				{
-					img: 'img/xlei/TGA1.jpg',
-					caption: '',
+					img: img3,
 				},
 				{
-					img: 'img/xlei/TGA2.jpg',
-					caption: '',
+					img: img4,
 				},
 				{
-					img: 'img/xlei/TGA4.jpg',
+					img: img5,
 					caption: 'Lower thirds leaderboard',
 				},
 				{
-					img: 'img/xlei/TGA9.jpg',
+					img: img6,
 					caption: 'Full screen leaderboard',
 				},
 				{
-					img: 'img/xlei/TGA7.JPG',
+					img: img7,
 					caption: 'Fullscreen user stats',
 				},
 				{
-					img: 'img/xlei/TGA5.jpg',
+					img: img8,
 					caption: 'Taco bell promo',
 				},
 				{
-					img: 'img/xlei/TGA6.jpg',
+					img: img9,
 					caption: 'Larry Hryb Game plug',
 				},
 				{
-					img: 'img/xlei/TGA8.jpg',
+					img: img10,
 					caption: 'Windows Central Game plug',
 				},
 			],
@@ -91,49 +121,52 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'The Game Awards 2015',
-			label: 'Exclusive Xbox game promo',
-			desc: '',
-			img: 'img/thumbnails/v2/51.jpg',
-			action: 'video',
-			source: 'media/video/TGAPromo.mp4',
+			attachments: [
+				{
+					img: thumbnail2,
+					caption: 'Exclusive Xbox game promo',
+					type: FileType.Video,
+					source: video1,
+				},
+			],
 		},
 		{
-			header: '',
-			label: 'The Game Awards Video Capture',
-			desc: '',
-			img: 'img/thumbnails/v2/58.jpg',
-			action: 'video',
-			source: 'media/video/TGAscreencapture.mp4',
+			attachments: [
+				{
+					img: thumbnail3,
+					caption: 'The Game Awards Video Capture',
+					type: FileType.Video,
+					source: video2,
+				},
+			],
 		},
 		{
-			title: 'Gamescom 2015: Xbox Daily Show',
+			header: 'Gamescom 2015: Xbox Daily Show',
 			slideshow: [
 				{
-					img: 'img/xlei/Gamescom11.jpg',
-					caption: '',
+					img: img11,
 				},
 				{
-					img: 'img/xlei/Gamescom1.JPG',
+					img: img12,
 					caption: 'Preshow poll',
 				},
 				{
-					img: 'img/xlei/Gamescom5.JPG',
+					img: img13,
 					caption: 'Preshow quiz pt.1',
 				},
 				{
-					img: 'img/xlei/Gamescom6.JPG',
+					img: img14,
 					caption: 'Preshow quiz pt.2',
 				},
 				{
-					img: 'img/xlei/Gamescom10.jpg',
+					img: img15,
 					caption: 'Poll',
 				},
 				{
-					img: 'img/xlei/Gamescom12.jpg',
-					caption: '',
+					img: img16,
 				},
 				{
-					img: 'img/xlei/Gamescom3.png',
+					img: img17,
 					caption: 'Xbox Gamescom promotion',
 				},
 			],
@@ -149,31 +182,33 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Gamescom 2015',
-			label: 'Daily Show and Interactive Promo',
-			desc: '',
-			img: 'img/thumbnails/v2/61.jpg',
-			action: 'video',
-			source: 'media/video/GCPromo.mp4',
+			attachments: [
+				{
+					img: thumbnail4,
+					caption: 'Daily Show and Interactive Promo',
+					type: FileType.Video,
+					source: video3,
+				},
+			],
 		},
 		{
-			header: '',
-			label: 'Tomb Raider Quiz',
-			desc: '',
-			img: 'img/thumbnails/v2/63.jpg',
-			action: 'video',
-			source: 'media/video/GCTombraiderQuiz.mp4',
+			attachments: [
+				{
+					img: thumbnail5,
+					caption: 'Tomb Raider Quiz',
+					type: FileType.Video,
+					source: video4,
+				},
+			],
 		},
 		{
-			title: 'E3 2015: Xbox Daily Show',
+			header: 'E3 2015: Xbox Daily Show',
 			slideshow: [
 				{
-					img: 'img/xlei/E31.jpg',
-					caption: '',
+					img: img18,
 				},
 				{
-					img: 'img/xlei/E32.jpg',
-					caption: '',
-					source: '',
+					img: img19,
 				},
 			],
 		},
@@ -187,22 +222,19 @@ export const xboxLiveEvents: IProject = {
 			body: 'Platform: Xbox One<br/>Dates: June 17, 2015 - June 18, 2015<br/>Designer: Jacqueline Montplaisir',
 		},
 		{
-			title: 'Call of Duty Championship 2015',
+			header: 'Call of Duty Championship 2015',
 			slideshow: [
 				{
-					img: 'img/xlei/CODLive4.png',
-					caption: '',
+					img: img20,
 				},
 				{
-					img: 'img/xlei/CODLive.JPG',
-					caption: '',
+					img: img21,
 				},
 				{
-					img: 'img/xlei/CODLive2.JPG',
-					caption: '',
+					img: img22,
 				},
 				{
-					img: 'img/xlei/CODLive5.png',
+					img: img23,
 					caption: 'Xbox Promotion',
 				},
 			],

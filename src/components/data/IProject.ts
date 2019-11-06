@@ -26,13 +26,15 @@ export enum SectionType {
 export enum FileType {
 	Video,
 	Image,
+	Pdf,
+	Link,
 }
 
 export interface IProject {
 	title: string
 	subtitle: string
 	thumbnail: string
-	content: ISection[] | any
+	content: ISection[]
 	tags?: TagType[]
 }
 
@@ -46,11 +48,13 @@ export interface ISection {
 export interface ISlideshow {
 	img: string
 	caption?: string
+	source?: string
 }
 
 export interface IAttachment {
 	img: string
 	caption?: string
+	desc?: string
 	type: FileType
 	source: string
 }

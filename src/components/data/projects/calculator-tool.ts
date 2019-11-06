@@ -1,6 +1,13 @@
 import { IProject } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/53.jpg'
+import thumbnail from '../../../assets/thumbnails/53.jpg'
+
+import img1 from '../../../assets/images/calculator-tool/itemcalc1.jpg'
+import img2 from '../../../assets/images/calculator-tool/itemcalc2.jpg'
+import img3 from '../../../assets/images/calculator-tool/itemcalc3.jpg'
+import img4 from '../../../assets/images/calculator-tool/itemcalc4.jpg'
+import img5 from '../../../assets/images/calculator-tool/itemcalc5.jpg'
+import img6 from '../../../assets/images/calculator-tool/itemcalc7.jpg'
 
 export const calculatorTool: IProject = {
 	title: 'Calculator Tool',
@@ -12,27 +19,24 @@ export const calculatorTool: IProject = {
 			header: 'Calculator',
 			slideshow: [
 				{
-					img: 'img/calctool/itemcalc1.jpg',
-					caption: '',
+					img: img1,
 				},
 				{
-					img: 'img/calctool/itemcalc2.jpg',
-					caption: '',
+					img: img2,
 				},
 				{
-					img: 'img/calctool/itemcalc3.jpg',
-					caption: '',
+					img: img3,
 				},
 				{
-					img: 'img/calctool/itemcalc4.jpg',
+					img: img4,
 					caption: 'Items successfully calculated',
 				},
 				{
-					img: 'img/calctool/itemcalc5.jpg',
+					img: img5,
 					caption: 'One of the error messages',
 				},
 				{
-					img: 'img/calctool/itemcalc7.jpg',
+					img: img6,
 					caption: 'Some messages from the fish',
 				},
 			],

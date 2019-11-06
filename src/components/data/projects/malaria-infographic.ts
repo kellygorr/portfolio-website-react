@@ -1,6 +1,10 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/4.jpg'
+import thumbnail from '../../../assets/thumbnails/4.jpg'
+import thumbnail2 from '../../../assets/thumbnails/19.jpg'
+
+import img1 from '../../../assets/images/malaria-infographic/large4a.jpg'
+import pdf from '../../../assets/images/malaria-infographic/research_based_design.pdf'
 
 export const malariaInfographic: IProject = {
 	title: 'Malaria Infographic',
@@ -12,8 +16,7 @@ export const malariaInfographic: IProject = {
 			header: 'Malaria Infographic',
 			slideshow: [
 				{
-					img: 'img/large4a.jpg',
-					caption: '',
+					img: img1,
 				},
 			],
 		},
@@ -27,11 +30,13 @@ export const malariaInfographic: IProject = {
 		},
 		{
 			header: 'Project Statement',
-			label: '.pdf',
-			desc: '',
-			img: 'img/thumbnails/19.jpg',
-			action: 'pdf',
-			source: 'img/research_based_design.pdf',
+			attachments: [
+				{
+					type: FileType.Pdf,
+					img: thumbnail2,
+					source: pdf,
+				},
+			],
 		},
 	],
 }

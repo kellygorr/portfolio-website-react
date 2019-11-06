@@ -1,6 +1,8 @@
 import { IProject } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/3.jpg'
+import thumbnail from '../../../assets/thumbnails/3.jpg'
+
+import img1 from '../../../assets/images/k-monogram/large6.jpg'
 
 export const kMonogram: IProject = {
 	title: 'K Monogram',
@@ -12,9 +14,7 @@ export const kMonogram: IProject = {
 			header: 'K Monogram',
 			slideshow: [
 				{
-					img: 'img/large6.jpg',
-					caption: '',
-					height: '580px',
+					img: img1,
 				},
 			],
 		},

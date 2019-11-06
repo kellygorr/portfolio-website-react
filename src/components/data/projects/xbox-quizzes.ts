@@ -1,6 +1,24 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/43.jpg'
+import thumbnail from '../../../assets/thumbnails/43.jpg'
+import thumbnail2 from '../../../assets/thumbnails/46.jpg'
+import thumbnail3 from '../../../assets/thumbnails/29.jpg'
+
+import img1 from '../../../assets/images/xbox-quizzes/quiz7.png'
+import img2 from '../../../assets/images/xbox-quizzes/quiz8.jpg'
+import img3 from '../../../assets/images/xbox-quizzes/quiz4.jpg'
+import img4 from '../../../assets/images/xbox-quizzes/quiz22.jpg'
+import img5 from '../../../assets/images/xbox-quizzes/quiz11.jpg'
+import img6 from '../../../assets/images/xbox-quizzes/quiz14.png'
+import img7 from '../../../assets/images/xbox-quizzes/quiz13.png'
+import img8 from '../../../assets/images/xbox-quizzes/quiz9.png'
+
+import img9 from '../../../assets/images/xbox-quizzes/gotquiz1.jpg'
+import img10 from '../../../assets/images/xbox-quizzes/gotquiz2.jpg'
+import img11 from '../../../assets/images/xbox-quizzes/gotquiz3.jpg'
+
+import video1 from '../../../assets/videos/fifaQuiz.mp4'
+import video2 from '../../../assets/videos/gameofthronesquiz.mp4'
 
 export const xboxQuizzes: IProject = {
 	title: 'Xbox Quizzes',
@@ -12,35 +30,35 @@ export const xboxQuizzes: IProject = {
 			header: 'Xbox One Quizzes',
 			slideshow: [
 				{
-					img: 'img/quiz7.png',
+					img: img1,
 					caption: 'All quizzes have an intro and results page',
 				},
 				{
-					img: 'img/quiz8.jpg',
+					img: img2,
 					caption: 'Witcher 3: Four choice quiz',
 				},
 				{
-					img: 'img/quiz4.jpg',
+					img: img3,
 					caption: 'World Cup Quiz: Five choice quiz',
 				},
 				{
-					img: 'img/quiz22.jpg',
+					img: img4,
 					caption: 'South Park Quiz: Five choice quiz with multiple sounds for right/wrong answers',
 				},
 				{
-					img: 'img/quiz11.jpg',
+					img: img5,
 					caption: 'Witcher 3 Quiz: User got the question incorrect',
 				},
 				{
-					img: 'img/quiz14.png',
+					img: img6,
 					caption: 'Daredevil Quiz: User got the question correct',
 				},
 				{
-					img: 'img/quiz13.png',
+					img: img7,
 					caption: 'World Cup Quiz: Results page',
 				},
 				{
-					img: 'img/quiz9.png',
+					img: img8,
 					caption: 'Tomb Raider Quiz: Results page with community performance',
 				},
 			],
@@ -61,25 +79,28 @@ export const xboxQuizzes: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Fifa 16 quiz',
-			desc: '',
-			img: 'img/thumbnails/v2/46.jpg',
-			action: 'video',
-			source: 'media/video/fifaQuiz.mp4',
+			attachments: [
+				{
+					img: thumbnail2,
+					caption: 'Fifa 16 quiz',
+					type: FileType.Video,
+					source: video1,
+				},
+			],
 		},
 		{
-			title: 'Game of Thrones Quiz',
+			header: 'Game of Thrones Quiz',
 			slideshow: [
 				{
-					img: 'img/gotquiz1.jpg',
+					img: img9,
 					caption: 'Intro page',
 				},
 				{
-					img: 'img/gotquiz2.jpg',
+					img: img10,
 					caption: 'Question section (The answer is Stallion)',
 				},
 				{
-					img: 'img/gotquiz3.jpg',
+					img: img11,
 					caption:
 						"The results screen had 6 possible messages and sound clips from previous Game of Thrones seasons, based on the user's score.",
 				},
@@ -97,11 +118,14 @@ export const xboxQuizzes: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Game of Thrones Quiz',
-			desc: '',
-			img: 'img/thumbnails/29.jpg',
-			action: 'video',
-			source: 'media/video/gameofthronesquiz.mp4',
+			attachments: [
+				{
+					img: thumbnail3,
+					caption: 'Game of Thrones Quiz',
+					type: FileType.Video,
+					source: video2,
+				},
+			],
 		},
 	],
 }

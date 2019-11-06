@@ -1,6 +1,28 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/66.jpg'
+import thumbnail from '../../../assets/thumbnails/66.jpg'
+import thumbnail2 from '../../../assets/thumbnails/65.jpg'
+import thumbnail3 from '../../../assets/thumbnails/30.jpg'
+
+// import video1 from '../../../assets/videos/summerME.mp4'
+import video2 from '../../../assets/videos/slipknotXboxI.mp4'
+
+import img1 from '../../../assets/images/interactive-video-playlist/summer5.png'
+import img2 from '../../../assets/images/interactive-video-playlist/summer8.png'
+import img3 from '../../../assets/images/interactive-video-playlist/summer1.png'
+import img4 from '../../../assets/images/interactive-video-playlist/summer6.png'
+import img5 from '../../../assets/images/interactive-video-playlist/summer3.png'
+import img6 from '../../../assets/images/interactive-video-playlist/summer4.png'
+import img7 from '../../../assets/images/interactive-video-playlist/summer7.png'
+import img8 from '../../../assets/images/interactive-video-playlist/summer14.png'
+import img9 from '../../../assets/images/interactive-video-playlist/summer11.png'
+import img10 from '../../../assets/images/interactive-video-playlist/summer15.png'
+import img11 from '../../../assets/images/interactive-video-playlist/summer12.png'
+
+import img12 from '../../../assets/images/interactive-video-playlist/itv1.jpg'
+import img13 from '../../../assets/images/interactive-video-playlist/itv3.jpg'
+import img14 from '../../../assets/images/interactive-video-playlist/itv4.jpg'
+import img15 from '../../../assets/images/interactive-video-playlist/itv5.jpg'
 
 export const interactiveVideoPlaylist: IProject = {
 	title: 'Interactive Video Playlist',
@@ -12,48 +34,43 @@ export const interactiveVideoPlaylist: IProject = {
 			header: 'Interactive Video Playlist',
 			slideshow: [
 				{
-					img: 'img/summer5.png',
+					img: img1,
 					caption: 'Video clips, like this intro clip, are organized/ordered with the playlist',
 				},
 				{
-					img: 'img/summer8.png',
+					img: img2,
 					caption: 'Polls and quizzes are added dynamically over the video',
 				},
 				{
-					img: 'img/summer1.png',
-					caption: '',
+					img: img3,
 				},
 				{
-					img: 'img/summer6.png',
+					img: img4,
 					caption: 'Buttons can link to full length videos or purchasable content',
 				},
 				{
-					img: 'img/summer3.png',
+					img: img5,
 					caption: 'The dynamic content is customizable',
 				},
 				{
-					img: 'img/summer4.png',
-					caption: '',
+					img: img6,
 				},
 				{
-					img: 'img/summer7.png',
+					img: img7,
 					caption: 'Joke xbox achievement image',
 				},
 				{
-					img: 'img/summer14.png',
+					img: img8,
 					caption: 'A fallback quiz can be inserted if the polling database is unavailable',
 				},
 				{
-					img: 'img/summer11.png',
-					caption: '',
+					img: img9,
 				},
 				{
-					img: 'img/summer15.png',
-					caption: '',
+					img: img10,
 				},
 				{
-					img: 'img/summer12.png',
-					caption: '',
+					img: img11,
 				},
 			],
 		},
@@ -74,29 +91,33 @@ export const interactiveVideoPlaylist: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Summer Playlist',
-			desc: 'Interactive video playlist',
-			img: 'img/thumbnails/v2/65.jpg',
-			action: 'video',
-			source: 'media/video/summerME.mp4',
+			attachments: [
+				{
+					img: thumbnail2,
+					caption: 'Summer Playlist',
+					desc: 'Interactive video playlist',
+					type: FileType.Video,
+					source: 'video1',
+				},
+			],
 		},
 		{
-			title: 'Interactive Slipknot Music Video',
+			header: 'Interactive Slipknot Music Video',
 			slideshow: [
 				{
-					img: 'img/itv1.jpg',
+					img: img12,
 					caption: 'Quiz',
 				},
 				{
-					img: 'img/itv3.jpg',
+					img: img13,
 					caption: 'Fact/trivia',
 				},
 				{
-					img: 'img/itv4.jpg',
+					img: img14,
 					caption: 'Poll',
 				},
 				{
-					img: 'img/itv5.jpg',
+					img: img15,
 					caption: 'Two button billboard with T&C button',
 				},
 			],
@@ -113,11 +134,15 @@ export const interactiveVideoPlaylist: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Slipknot',
-			desc: 'Interactive music video',
-			img: 'img/thumbnails/v2/30.jpg',
-			action: 'video',
-			source: 'media/video/slipknotXboxI.mp4',
+			attachments: [
+				{
+					img: thumbnail3,
+					caption: 'Slipknot',
+					desc: 'Interactive music video',
+					type: FileType.Video,
+					source: video2,
+				},
+			],
 		},
 	],
 }

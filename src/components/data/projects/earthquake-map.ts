@@ -1,6 +1,9 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/17.jpg'
+import thumbnail from '../../../assets/thumbnails/17.jpg'
+import thumbnail2 from '../../../assets/thumbnails/21.jpg'
+
+import img1 from '../../../assets/images/earthquake-map/large17.jpg'
 
 export const earthquakeMap: IProject = {
 	title: 'Earthquake Map',
@@ -12,8 +15,7 @@ export const earthquakeMap: IProject = {
 			header: 'Earthquake Map',
 			slideshow: [
 				{
-					img: 'img/large17.jpg',
-					caption: '',
+					img: img1,
 				},
 			],
 		},
@@ -33,11 +35,13 @@ export const earthquakeMap: IProject = {
 		},
 		{
 			header: 'Code Sample',
-			label: '.pdf',
-			desc: '',
-			img: 'img/thumbnails/21.jpg',
-			action: 'pdf',
-			source: 'http://www.kellygorr.com/img/Kelly_Gorr_Code_Sample.pdf',
+			attachments: [
+				{
+					type: FileType.Pdf,
+					img: thumbnail2,
+					source: 'http://www.kellygorr.com/img/Kelly_Gorr_Code_Sample.pdf',
+				},
+			],
 		},
 	],
 }

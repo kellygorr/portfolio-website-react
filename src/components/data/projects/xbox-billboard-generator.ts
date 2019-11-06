@@ -1,6 +1,12 @@
 import { IProject } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/42.jpg'
+import thumbnail from '../../../assets/thumbnails/42.jpg'
+
+import img1 from '../../../assets/images/xbox-billboard-generator/billGen0.jpg'
+import img2 from '../../../assets/images/xbox-billboard-generator/billGen2.jpg'
+import img3 from '../../../assets/images/xbox-billboard-generator/billGen3.jpg'
+import img4 from '../../../assets/images/xbox-billboard-generator/billGen4.jpg'
+import img5 from '../../../assets/images/xbox-billboard-generator/billGen5.jpg'
 
 export const xboxBillboardGenerator: IProject = {
 	title: 'Xbox Billboard Generator',
@@ -12,24 +18,20 @@ export const xboxBillboardGenerator: IProject = {
 			header: 'Xbox One Billboards',
 			slideshow: [
 				{
-					img: 'img/billGen0.jpg',
+					img: img1,
 					caption: 'Billboard generator tool (options condensed)',
 				},
 				{
-					img: 'img/billGen2.jpg',
-					caption: '',
+					img: img2,
 				},
 				{
-					img: 'img/billGen3.jpg',
-					caption: '',
+					img: img3,
 				},
 				{
-					img: 'img/billGen4.jpg',
-					caption: '',
+					img: img4,
 				},
 				{
-					img: 'img/billGen5.jpg',
-					caption: '',
+					img: img5,
 				},
 			],
 		},

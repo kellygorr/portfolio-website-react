@@ -1,6 +1,13 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/47.jpg'
+import thumbnail from '../../../assets/thumbnails/47.jpg'
+import thumbnail2 from '../../../assets/thumbnails/34.jpg'
+
+import img1 from '../../../assets/images/preview-app-link-generator/previewApp1.jpg'
+import img2 from '../../../assets/images/preview-app-link-generator/previewApp4.jpg'
+import img3 from '../../../assets/images/preview-app-link-generator/previewApp6.jpg'
+import img4 from '../../../assets/images/preview-app-link-generator/previewApp3.jpg'
+import img5 from '../../../assets/images/preview-app-link-generator/previewApp2.jpg'
 
 export const previewAppLinkGenerator: IProject = {
 	title: 'Preview App Link Generator',
@@ -12,29 +19,24 @@ export const previewAppLinkGenerator: IProject = {
 			header: 'Video App Link Creator',
 			slideshow: [
 				{
-					img: 'img/previewApp1.jpg',
+					img: img1,
 					caption: 'Starting screen',
-					source: '',
 				},
 				{
-					img: 'img/previewApp4.jpg',
+					img: img2,
 					caption: 'Error messages are included to help users include all the required information',
-					source: '',
 				},
 				{
-					img: 'img/previewApp6.jpg',
+					img: img3,
 					caption: 'Link generated successfully',
-					source: '',
 				},
 				{
-					img: 'img/previewApp3.jpg',
+					img: img4,
 					caption: 'Information section',
-					source: '',
 				},
 				{
-					img: 'img/previewApp2.jpg',
+					img: img5,
 					caption: 'Just for fun',
-					source: '',
 				},
 			],
 		},
@@ -54,11 +56,14 @@ export const previewAppLinkGenerator: IProject = {
 		},
 		{
 			header: 'View Website',
-			label: 'v1.0',
-			desc: '',
-			img: 'img/thumbnails/v2/34.jpg',
-			action: 'link',
-			source: 'sites/previewApp/',
+			attachments: [
+				{
+					img: thumbnail2,
+					caption: 'v1.0',
+					type: FileType.Link,
+					source: 'sites/previewApp/',
+				},
+			],
 		},
 	],
 }

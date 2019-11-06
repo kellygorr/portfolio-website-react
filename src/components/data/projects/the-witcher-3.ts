@@ -1,6 +1,7 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/60.jpg'
+import thumbnail from '../../../assets/thumbnails/60.jpg'
+import thumbnail2 from '../../../assets/thumbnails/36.jpg'
 
 import img1 from '../../../assets/images/the-witcher-3/witcher2.jpg'
 import img2 from '../../../assets/images/the-witcher-3/witcher3.jpg'
@@ -102,12 +103,11 @@ export const theWitcher3: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-
 			attachments: [
 				{
-					img: 'img/thumbnails/36.jpg',
+					img: thumbnail2,
 					caption: 'Witcher 3 Poll',
-					type: 'video',
+					type: FileType.Video,
 					source: video1,
 				},
 			],

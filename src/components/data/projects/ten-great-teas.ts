@@ -1,6 +1,10 @@
 import { IProject } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/2.jpg'
+import thumbnail from '../../../assets/thumbnails/2.jpg'
+
+import img1 from '../../../assets/images/ten-great-teas/large2a.jpg'
+import img2 from '../../../assets/images/ten-great-teas/large2b.jpg'
+import img3 from '../../../assets/images/ten-great-teas/large2c.jpg'
 
 export const tenGreatTeas: IProject = {
 	title: 'Ten Great Teas',
@@ -12,15 +16,15 @@ export const tenGreatTeas: IProject = {
 			header: 'Ten Great Teas',
 			slideshow: [
 				{
-					img: 'img/large2a.jpg',
+					img: img1,
 					caption: 'Main screen',
 				},
 				{
-					img: 'img/large2b.jpg',
+					img: img2,
 					caption: 'Main screen with selected state',
 				},
 				{
-					img: 'img/large2c.jpg',
+					img: img3,
 					caption: 'Tea details screen',
 				},
 			],

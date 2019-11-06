@@ -1,6 +1,11 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/22.jpg'
+import thumbnail from '../../../assets/thumbnails/22.jpg'
+import thumbnail2 from '../../../assets/thumbnails/19.png'
+
+import img1 from '../../../assets/images/crime-spot/crimespot_1.png'
+import img2 from '../../../assets/images/crime-spot/crimespot_2.png'
+import img3 from '../../../assets/images/crime-spot/crimespot_3.png'
 
 export const crimeSpot: IProject = {
 	title: 'Crime Spot',
@@ -12,15 +17,15 @@ export const crimeSpot: IProject = {
 			header: 'Crime Spot',
 			slideshow: [
 				{
-					img: 'img/crimespot_1.png',
+					img: img1,
 					caption: 'Mobile and web',
 				},
 				{
-					img: 'img/crimespot_2.png',
+					img: img2,
 					caption: 'Start, settings, and map screens',
 				},
 				{
-					img: 'img/crimespot_3.png',
+					img: img3,
 					caption: "Map filtered by 'assualt' and 'homicide', map with selection, and news details",
 				},
 			],
@@ -36,11 +41,13 @@ export const crimeSpot: IProject = {
 		},
 		{
 			header: 'Project Statement',
-			label: '.pdf',
-			desc: '',
-			img: 'img/thumbnails/19.png',
-			action: 'pdf',
-			source: 'http://www.kellygorr.com/img/kelly_gorr_web_integration.pdf',
+			attachments: [
+				{
+					type: FileType.Pdf,
+					img: thumbnail2,
+					source: 'http://www.kellygorr.com/img/kelly_gorr_web_integration.pdf',
+				},
+			],
 		},
 	],
 }

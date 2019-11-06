@@ -1,6 +1,15 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/28.jpg'
+import thumbnail from '../../../assets/thumbnails/28.jpg'
+
+import img1 from '../../../assets/images/xbox-billboards/billboard3.jpg'
+import img2 from '../../../assets/images/xbox-billboards/billboard1.jpg'
+import img3 from '../../../assets/images/xbox-billboards/billboard2.jpg'
+import img4 from '../../../assets/images/xbox-billboards/ffSweepstakes.jpg'
+import img5 from '../../../assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
+import img6 from '../../../assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
+
+import video1 from '../../../assets/videos/iggyazalea.mp4'
 
 export const xboxBillboards: IProject = {
 	title: 'Xbox Promotional Billboards',
@@ -12,27 +21,27 @@ export const xboxBillboards: IProject = {
 			header: 'Xbox One Billboards',
 			slideshow: [
 				{
-					img: 'img/billboard3.jpg',
+					img: img1,
 					caption: 'Two buttons with left aligned T&C button',
 				},
 				{
-					img: 'img/billboard1.jpg',
+					img: img2,
 					caption: 'Stacked buttons',
 				},
 				{
-					img: 'img/billboard2.jpg',
+					img: img3,
 					caption: 'One button template launches video',
 				},
 				{
-					img: 'img/ffSweepstakes.jpg',
+					img: img4,
 					caption: 'Sweepstakes billboard',
 				},
 				{
-					img: 'img/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg',
+					img: img5,
 					caption: 'Billboard with countdown clock',
 				},
 				{
-					img: 'img/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg',
+					img: img6,
 					caption: 'Fifa Points billboard',
 				},
 			],
@@ -54,11 +63,15 @@ export const xboxBillboards: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Iggy Azalea Billboard',
-			desc: 'Preroll video, billboard, terms and conditions popup',
-			img: 'img/thumbnails/27.jpg',
-			action: 'video',
-			source: 'media/video/iggyazalea.mp4',
+			attachments: [
+				{
+					img: 'img/thumbnails/v2/27.jpg',
+					caption: 'Iggy Azalea Billboard',
+					desc: 'Preroll video, billboard, terms and conditions popup',
+					type: FileType.Video,
+					source: video1,
+				},
+			],
 		},
 	],
 }

@@ -1,6 +1,8 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/5.jpg'
+import thumbnail from '../../../assets/thumbnails/5.jpg'
+
+import img1 from '../../../assets/images/jewel-box-cafe-redesign/large5.jpg'
 
 export const jewelBoxCafe: IProject = {
 	title: 'Jewel Box Cafe Redesign',
@@ -12,10 +14,8 @@ export const jewelBoxCafe: IProject = {
 			header: 'Jewelbox Cafe Redesign',
 			slideshow: [
 				{
-					img: 'img/large5.jpg',
-					caption: '',
+					img: img1,
 					source: 'sites/type_website/',
-					height: '580px',
 				},
 			],
 		},
@@ -29,11 +29,15 @@ export const jewelBoxCafe: IProject = {
 		},
 		{
 			header: 'View Website',
-			label: 'Demo',
-			desc: '(Navigation only)',
-			img: 'img/thumbnails/v2/5.jpg',
-			action: 'link',
-			source: 'sites/type_website/',
+			attachments: [
+				{
+					img: thumbnail,
+					caption: 'Demo',
+					desc: '(Navigation only)',
+					type: FileType.Link,
+					source: 'sites/type_website/',
+				},
+			],
 		},
 	],
 }

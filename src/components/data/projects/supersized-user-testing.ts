@@ -1,6 +1,14 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/23.jpg'
+import thumbnail from '../../../assets/thumbnails/23.jpg'
+
+import img1 from '../../../assets/images/supersized-user-testing/large22e.jpg'
+import img2 from '../../../assets/images/supersized-user-testing/large22a.jpg'
+import img3 from '../../../assets/images/supersized-user-testing/large22b.jpg'
+import img4 from '../../../assets/images/supersized-user-testing/large22c.jpg'
+import img5 from '../../../assets/images/supersized-user-testing/large22d.jpg'
+
+import pdf from '../../../assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
 
 export const supersizedUserTesting: IProject = {
 	title: 'Supersized! User Testing',
@@ -12,24 +20,21 @@ export const supersizedUserTesting: IProject = {
 			header: 'Supersized! User Testing',
 			slideshow: [
 				{
-					img: 'img/large22e.jpg',
-					caption: '',
+					img: img1,
 				},
 				{
-					img: 'img/large22a.jpg',
+					img: img2,
 					caption: 'Part 1 tested a paper prototype of the interface',
 				},
 				{
-					img: 'img/large22b.jpg',
+					img: img3,
 					caption: 'I experimented with graph visualizations',
 				},
 				{
-					img: 'img/large22c.jpg',
-					caption: '',
+					img: img4,
 				},
 				{
-					img: 'img/large22d.jpg',
-					caption: '',
+					img: img5,
 				},
 			],
 		},
@@ -44,11 +49,13 @@ export const supersizedUserTesting: IProject = {
 		},
 		{
 			header: 'Methods and Results',
-			label: '.pdf',
-			desc: '',
-			img: 'img/thumbnails/v2/23.jpg',
-			action: 'link',
-			source: 'img/kelly_gorr_user_testing_plan.pdf',
+			attachments: [
+				{
+					type: FileType.Pdf,
+					img: thumbnail,
+					source: pdf,
+				},
+			],
 		},
 	],
 }

@@ -1,6 +1,15 @@
-import { IProject } from '../IProject'
+import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnail/49.jpg'
+import thumbnail from '../../../assets/thumbnails/49.jpg'
+import thumbnail2 from '../../../assets/thumbnails/65.jpg'
+
+import video1 from '../../../assets/videos/starWars.mp4'
+
+import img1 from '../../../assets/images/star-wars/starwars1.png'
+import img2 from '../../../assets/images/star-wars/starwars2.png'
+import img3 from '../../../assets/images/star-wars/starwars3.png'
+import img4 from '../../../assets/images/star-wars/starwars4.jpg'
+import img5 from '../../../assets/images/star-wars/starwars5.png'
 
 export const starWars: IProject = {
 	title: 'Star Wars Xbox Promotion',
@@ -12,23 +21,23 @@ export const starWars: IProject = {
 			header: 'Star Wars Xbox Promotion',
 			slideshow: [
 				{
-					img: 'img/starwars1.png',
+					img: img1,
 					caption: '',
 				},
 				{
-					img: 'img/starwars2.png',
+					img: img2,
 					caption: 'Slideshow',
 				},
 				{
-					img: 'img/starwars3.png',
+					img: img3,
 					caption: 'Billboard promotion',
 				},
 				{
-					img: 'img/starwars4.jpg',
+					img: img4,
 					caption: "Kotaku article (<a href='http://kotaku.com/the-force-awakens-on-game-consoles-1768991827#'>full</a>)",
 				},
 				{
-					img: 'img/starwars5.png',
+					img: img5,
 					caption: 'Placement on the Xbox Dashboard',
 				},
 			],
@@ -45,11 +54,14 @@ export const starWars: IProject = {
 		},
 		{
 			header: 'Xbox One Video Capture',
-			label: 'Star Wars Promotion',
-			desc: '',
-			img: 'img/thumbnails/v2/49.jpg',
-			action: 'video',
-			source: 'media/video/starWars.mp4',
+			attachments: [
+				{
+					img: thumbnail2,
+					caption: 'Star Wars Promotion',
+					type: FileType.Video,
+					source: video1,
+				},
+			],
 		},
 	],
 }
