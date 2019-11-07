@@ -2,7 +2,7 @@ import { IProject } from '../IProject'
 import { TagType } from '../IProject'
 import thumbnail from '../../../assets/thumbnails/test.jpg'
 
-import img1 from '../../../assets/images/1.jpg'
+// import img1 from '../../../assets/images/1.jpg'
 import img2 from '../../../assets/images/2.jpg'
 import img3 from '../../../assets/images/3.jpg'
 import img4 from '../../../assets/images/4.jpg'
@@ -18,7 +18,7 @@ export const test: IProject = {
 		{
 			slideshow: [
 				{
-					img: img1,
+					img: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
 					caption: 'Text',
 				},
 				{
