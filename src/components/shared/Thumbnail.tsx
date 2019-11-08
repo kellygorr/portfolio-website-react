@@ -1,7 +1,7 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import { IProject } from './data/IProject'
+import { IProject } from '../data/IProject'
 
 interface IThumbnailProps {
 	project: IProject
@@ -13,6 +13,7 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 		<ThumbnailContainer to={`page/${project.title.replace(' ', '').toLowerCase()}`}>
 			<ThumbnailStyled style={{ backgroundImage: `url('${project.thumbnail}')` }}>{<Button> </Button>}</ThumbnailStyled>
 			<Details>{project.title}</Details>
+			{project.tags && <Tags>{project.tags[0]}</Tags>}
 		</ThumbnailContainer>
 	)
 }
@@ -32,5 +33,14 @@ const Button = styled.div``
 const Details = styled.div`
 	width: 100%;
 	text-align: center;
-	padding: 10px 0;
+	padding-top: 10px;
+	font-size: 16px;
+	/* font-family: 'Museo_Slab_500_2'; */
+	/* font-family: 'aleoregular';
+	font-family: 'aleobold'; */
+`
+const Tags = styled.div`
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
 `

@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Home, Contact, Navigation, Page } from './components'
 import { projects } from './components/data'
 import { GlobalStyles } from './GlobalStyles'
+import './index.css'
 
 const App: React.FC = () => {
 	return (
@@ -37,11 +38,11 @@ export default App
 
 const AppContainer = styled.div`
 	position: relative;
-	height: 100%;
-	width: 100%;
-	padding: 10px;
+	height: 100vh;
+	width: 100vw;
 	display: grid;
 	grid-template-rows: [navigation] 50px [canvas] auto;
+	font-family: 'open_sansregular';
 `
 const TopRow = styled.div`
 	grid-row: navigation;

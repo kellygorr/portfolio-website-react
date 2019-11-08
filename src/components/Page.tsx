@@ -1,7 +1,7 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { IProject, ISection } from './data/IProject'
-import { Section } from './Section'
+import { Section } from './shared/Section'
 
 interface IPageProps {
 	data: IProject | null

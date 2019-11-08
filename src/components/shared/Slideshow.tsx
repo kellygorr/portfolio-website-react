@@ -1,20 +1,20 @@
 import * as React from 'react'
 import { createRef } from 'react'
 import styled, { keyframes } from 'styled-components'
-import { ISlideshow } from './data/IProject'
+import { ISlideshow } from '../data/IProject'
 
 interface IPageProps {
 	data: ISlideshow[]
 }
 
-const slideRef = createRef<HTMLDivElement>()
-let Timer: number
+const slidesRef = createRef<HTMLDivElement>()
+let ScrollTimer: number
 
 export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	const [active, setActive] = React.useState(0)
 	const [isScrolling, setIsScrolling] = React.useState(false)
-	const isNextVisible = active !== props.data.length - 1
-	const isPrevVisible = active !== 0
+	const isNextVisible = !isScrolling && active !== props.data.length - 1
+	const isPrevVisible = !isScrolling && active !== 0
 
 	React.useEffect(() => {
 		if (!isScrolling) {
@@ -25,51 +25,59 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	return (
 		<Container>
 			<Slides
-				ref={slideRef}
+				ref={slidesRef}
 				onScroll={() => {
 					setIsScrolling(true)
-					clearTimeout(Timer)
+					clearTimeout(ScrollTimer)
 
-					Timer = setTimeout(function() {
+					ScrollTimer = setTimeout(function() {
 						setIsScrolling(false)
 					}, 150)
 				}}
 			>
-				<Spacer />
 				{props.data.map((slide: ISlideshow, index) => (
 					<Slide
 						key={slide.img}
 						style={{
-							backgroundImage: `url('${slide.img}')`,
 							borderColor: index === active ? (isScrolling ? 'transparent' : 'blue') : 'transparent',
-							transitionDuration: isScrolling ? '0s' : '300ms',
+							transitionDuration: isScrolling ? '0s' : '500ms',
 						}}
-					/>
+					>
+						<img src={slide.img} alt={slide.img} />
+					</Slide>
 				))}
-				<Spacer />
 			</Slides>
-			<Caption isScrolling={isScrolling}>{props.data[active].caption}</Caption>
-			{isPrevVisible && <Prev onClick={() => scrollToPrev(active, setActive)}>Prev</Prev>}
-			{isNextVisible && <Next onClick={() => scrollToNext(active, props.data.length, setActive)}>Next</Next>}
+			<Caption
+				style={{
+					opacity: isScrolling ? 0 : 1,
+					transitionDuration: isScrolling ? '0s' : '500ms',
+				}}
+			>
+				{props.data[active].caption}
+			</Caption>
+			{isPrevVisible && <Prev onClick={() => scrollToPrev(active, setActive, setIsScrolling)} />}
+			{isNextVisible && <Next onClick={() => scrollToNext(active, props.data.length, setActive, setIsScrolling)} />}
 		</Container>
 	)
 }
 
-const scrollToNext = (active: number, total: number, setActive: any): void => {
-	if (slideRef && slideRef.current && active < total - 1) {
-		slideRef.current.scrollBy({
+const scrollToNext = (active: number, total: number, setActive: any, setIsScrolling: any): void => {
+	if (slidesRef && slidesRef.current && active < total - 1) {
+		setIsScrolling(true)
+		slidesRef.current.scrollBy({
 			top: 0,
-			left: slideRef.current.clientWidth / 2,
+			left: slidesRef.current.clientWidth / 2,
 			behavior: 'smooth',
 		})
 		setActive(active + 1)
 	}
 }
-const scrollToPrev = (active: number, setActive: any): void => {
-	if (slideRef && slideRef.current && active > 0) {
-		slideRef.current.scrollBy({
+const scrollToPrev = (active: number, setActive: any, setIsScrolling: any): void => {
+	if (slidesRef && slidesRef.current && active > 0) {
+		setIsScrolling(true)
+		slidesRef.current.scrollBy({
 			top: 0,
-			left: -slideRef.current.clientWidth / 2,
+			left: -slidesRef.current.clientWidth / 2,
 			behavior: 'smooth',
 		})
 		setActive(active - 1)
@@ -77,12 +85,12 @@ const scrollToPrev = (active: number, setActive: any): void => {
 }
 
 const findActiveSlide = (setActive: any): void => {
-	if (slideRef && slideRef.current) {
-		slideRef.current.querySelectorAll('div').forEach((el, index) => {
-			if (isElementInViewport(el)) {
-				setActive(index)
-			}
-		})
+	if (slidesRef && slidesRef.current) {
+		var slideArray = [].slice.call(slidesRef.current.querySelectorAll('div'))
+		const activeSlideIndex = slideArray.findIndex((el) => isElementInViewport(el))
+		if (activeSlideIndex >= 0) {
+			setActive(activeSlideIndex)
+		}
 	}
 }
 
@@ -105,18 +113,15 @@ const fadeIn = keyframes`
   from { opacity: 0; }
   to { opacity: 1;}
 `
-const fadeOut = keyframes`
-  from { opacity: 1; }
-  to { opacity: 0;}
-`
 
 const Container = styled.div`
 	position: relative;
+	height: 60%;
 `
 const Slides = styled.div`
+	height: 100%;
 	display: flex;
 	align-items: center;
-	height: 500px;
 
 	/* Hide scrollbars  */
 	overflow: -moz-scrollbars-none;
@@ -130,29 +135,49 @@ const Slides = styled.div`
 	/* snap mandatory on horizontal axis  */
 	scroll-snap-type: x mandatory;
 	-webkit-overflow-scrolling: touch;
+
+	/* Space before first slide and after last slide  */
+	&:before,
+	&:after {
+		content: '';
+		height: 100%;
+		min-width: 10%;
+		width: 10%;
+	}
 `
 
 const Slide = styled.div<IStyle>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 75%;
 	min-width: 75%;
-	min-height: 95%;
+
 	/* snap align center  */
 	scroll-snap-align: center;
-	margin: 0 10px;
+	margin: 0 5px;
 	border: 3px solid;
 	transition: border-color linear;
 
-	background-color: bisque;
-	background-repeat: no-repeat;
+	img {
+		width: 100%;
+	}
 `
+
+const Caption = styled.div<IStyle>`
+	width: 100%;
+	opacity: 1;
+	transition: opacity linear;
+	text-align: center;
+`
+
 const NavButtons = styled.div`
 	position: absolute;
-	top: 50%;
-	height: 30px;
-	width: 30px;
-	background-color: rgba(0, 0, 0, 0.5);
+	top: 45%;
+	height: 50px;
+	width: 15px;
+	background-color: black;
+	color: white;
 
 	opacity: 0;
 	animation-name: ${fadeIn};
@@ -161,24 +186,9 @@ const NavButtons = styled.div`
 `
 
 const Next = styled(NavButtons)`
-	right: 10px;
+	right: 0px;
 `
 
 const Prev = styled(NavButtons)`
-	left: 10px;
-`
-const Spacer = styled.span`
-	display: block;
-	height: 100%;
-	min-width: 10%;
-	width: 10%;
-`
-
-const Caption = styled.div<IStyle>`
-	width: 100%;
-	text-align: center;
-	opacity: 0;
-	animation-name: ${(props) => (props.isScrolling ? fadeOut : fadeIn)};
-	animation-duration: ${(props) => (props.isScrolling ? '0' : ' 0.8s')};
-	animation-fill-mode: forwards;
+	left: 0px;
 `
