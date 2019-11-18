@@ -1,26 +1,59 @@
 export enum TagType {
-	XboxOne = 'Xbox One',
+	Xbox = 'Xbox',
 	Poll = 'poll',
 	Quiz = 'quiz',
-	InteractiveVideo = 'interactive video',
 	Plugin = 'plugin',
-	UIUX = 'UI/UX',
-	Tool = 'tool',
-	Design = 'design',
-	InterfaceDesign = 'interface design',
-	Illustration = 'illustration',
+	Tooling = 'tooling',
 	Infographic = 'infographic',
 	Website = 'website',
-	WebDesign = 'web design',
-	MobileDesign = 'mobile design',
-	EmailDesign = 'email design',
+	Mobile = 'mobile',
+	Web = 'web',
+	XboxKinect = 'Xbox One with Kinect (voice and gesture)',
+	Print = 'print',
 }
+export enum SkillType {
+	UIUX = 'UI/UX',
+	Design = 'design',
+	Illustration = 'illustration',
+	JQuery = 'jQuery',
+	JavaScript = 'JavaScript',
+	React = 'React',
+	TypeScript = 'TypeScript',
+	AngularJS = 'AngularJS',
+	PHP = 'PHP',
+	MySQL = 'MySQL',
+	Ajax = 'Ajax',
+	JSON = 'JSON',
+	HTML = 'HTML',
+	CSS = 'CSS',
+}
+
+export enum ToolType {
+	Illustrator = 'Illustrator',
+	Photoshop = 'Photoshop',
+	InDesign = 'InDesign',
+}
+
+export const relatedTags: (TagType | SkillType | ToolType)[][] = [
+	[SkillType.HTML, SkillType.CSS],
+	[SkillType.Illustration, TagType.Infographic],
+	[TagType.Poll, TagType.Quiz],
+	[SkillType.Design, SkillType.UIUX],
+	[TagType.Website, TagType.Mobile],
+	[SkillType.JavaScript, SkillType.TypeScript, SkillType.React],
+	[SkillType.JavaScript, SkillType.JQuery, SkillType.Ajax],
+	[TagType.Website, SkillType.HTML, SkillType.CSS],
+	[ToolType.Photoshop, SkillType.Illustration, ToolType.Illustrator],
+	[SkillType.PHP, SkillType.MySQL],
+	[TagType.Xbox, TagType.XboxKinect],
+]
 
 export enum SectionType {
 	Header = 'header',
 	Slideshow = 'slideshow',
 	Body = 'body',
-	attachments = 'attachments',
+	Highlight = 'highlight',
+	Attachments = 'attachments',
 }
 
 export enum FileType {
@@ -42,6 +75,7 @@ export interface ISection {
 	header?: string
 	slideshow?: ISlideshow[]
 	body?: string
+	highlight?: IHighlight[]
 	attachments?: IAttachment[]
 }
 
@@ -57,4 +91,11 @@ export interface IAttachment {
 	desc?: string
 	type: FileType
 	source: string
+}
+
+export interface IHighlight {
+	header: string
+	tags?: (TagType | SkillType | ToolType)[]
+	list?: string[]
+	body?: string
 }

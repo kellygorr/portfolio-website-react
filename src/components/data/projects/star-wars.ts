@@ -1,24 +1,24 @@
-import { IProject, FileType } from '../IProject'
+import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/49.jpg'
-import thumbnail2 from '../../../assets/thumbnails/65.jpg'
 
-import video1 from '../../../assets/videos/starWars.mp4'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/49.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/65.jpg'
 
-import img1 from '../../../assets/images/star-wars/starwars1.png'
-import img2 from '../../../assets/images/star-wars/starwars2.png'
-import img3 from '../../../assets/images/star-wars/starwars3.png'
-import img4 from '../../../assets/images/star-wars/starwars4.jpg'
-import img5 from '../../../assets/images/star-wars/starwars5.png'
+const video1 = 'https://www.kellygorr.com/assets/videos/starWars.mp4'
+
+const img1 = 'https://www.kellygorr.com/assets/images/star-wars/starwars1.png'
+const img2 = 'https://www.kellygorr.com/assets/images/star-wars/starwars2.png'
+const img3 = 'https://www.kellygorr.com/assets/images/star-wars/starwars3.png'
+const img4 = 'https://www.kellygorr.com/assets/images/star-wars/starwars4.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/star-wars/starwars5.png'
 
 export const starWars: IProject = {
 	title: 'Star Wars Xbox Promotion',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox],
 	content: [
 		{
-			header: 'Star Wars Xbox Promotion',
 			slideshow: [
 				{
 					img: img1,
@@ -49,8 +49,36 @@ export const starWars: IProject = {
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One with Kinect (voice and gesture)<br/>Placement: Featured on the Xbox One dashboard home page, Movie & TV, and Gold Lounge<br/>Countries: United States, Canada (EN-CA & FR-CA), United Kingdom, Mexico, Brazil, France, Spain, Germany<br/>Dates: April 2016<br/>jQuery/Javascript, JSON, HTML, CSS<br/> Designer: Eric Embry',
+			highlight: [
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page, Movie & TV, and Gold Lounge',
+				},
+				{
+					header: 'Countries',
+					list: ['United States', 'Canada (EN-CA & FR-CA)', 'United Kingdom', 'Mexico', 'Brazil', 'France', 'Spain', 'Germany'],
+				},
+				{
+					header: 'Dates',
+					body: 'April 2016',
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Eric Embry',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr & Jana Sheehan',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',

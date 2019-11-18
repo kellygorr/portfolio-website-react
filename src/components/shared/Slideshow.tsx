@@ -2,6 +2,7 @@ import * as React from 'react'
 import { createRef } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ISlideshow } from '../data/IProject'
+import { AccentColor } from '../../GlobalStyles'
 
 interface IPageProps {
 	data: ISlideshow[]
@@ -39,7 +40,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 					<Slide
 						key={slide.img}
 						style={{
-							borderColor: index === active ? (isScrolling ? 'transparent' : 'blue') : 'transparent',
+							borderColor: index === active ? (isScrolling ? 'transparent' : AccentColor) : 'transparent',
 							transitionDuration: isScrolling ? '0s' : '500ms',
 						}}
 					>

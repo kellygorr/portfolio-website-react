@@ -1,17 +1,16 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/5.jpg'
+import { IProject, FileType, TagType, SkillType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/jewel-box-cafe-redesign/large5.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/5.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/jewel-box-cafe-redesign/large5.jpg'
 
 export const jewelBoxCafe: IProject = {
 	title: 'Jewel Box Cafe Redesign',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Website],
 	content: [
 		{
-			header: 'Jewelbox Cafe Redesign',
 			slideshow: [
 				{
 					img: img1,
@@ -25,7 +24,16 @@ export const jewelBoxCafe: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'HTML, CSS, jQuery<br />Illustrator',
+			highlight: [
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator],
+				},
+			],
 		},
 		{
 			header: 'View Website',

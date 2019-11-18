@@ -1,37 +1,36 @@
 import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/66.jpg'
-import thumbnail2 from '../../../assets/thumbnails/65.jpg'
-import thumbnail3 from '../../../assets/thumbnails/30.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/66.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/65.jpg'
+const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/30.jpg'
 
-// import video1 from '../../../assets/videos/summerME.mp4'
-import video2 from '../../../assets/videos/slipknotXboxI.mp4'
+// const video1 = 'https://www.kellygorr.com/assets/videos/summerME.mp4'
+const video2 = 'https://www.kellygorr.com/assets/videos/slipknotXboxI.mp4'
 
-import img1 from '../../../assets/images/interactive-video-playlist/summer5.png'
-import img2 from '../../../assets/images/interactive-video-playlist/summer8.png'
-import img3 from '../../../assets/images/interactive-video-playlist/summer1.png'
-import img4 from '../../../assets/images/interactive-video-playlist/summer6.png'
-import img5 from '../../../assets/images/interactive-video-playlist/summer3.png'
-import img6 from '../../../assets/images/interactive-video-playlist/summer4.png'
-import img7 from '../../../assets/images/interactive-video-playlist/summer7.png'
-import img8 from '../../../assets/images/interactive-video-playlist/summer14.png'
-import img9 from '../../../assets/images/interactive-video-playlist/summer11.png'
-import img10 from '../../../assets/images/interactive-video-playlist/summer15.png'
-import img11 from '../../../assets/images/interactive-video-playlist/summer12.png'
+const img1 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer5.png'
+const img2 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer8.png'
+const img3 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer1.png'
+const img4 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer6.png'
+const img5 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer3.png'
+const img6 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer4.png'
+const img7 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer7.png'
+const img8 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer14.png'
+const img9 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer11.png'
+const img10 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer15.png'
+const img11 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer12.png'
 
-import img12 from '../../../assets/images/interactive-video-playlist/itv1.jpg'
-import img13 from '../../../assets/images/interactive-video-playlist/itv3.jpg'
-import img14 from '../../../assets/images/interactive-video-playlist/itv4.jpg'
-import img15 from '../../../assets/images/interactive-video-playlist/itv5.jpg'
+const img12 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv1.jpg'
+const img13 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv3.jpg'
+const img14 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv4.jpg'
+const img15 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv5.jpg'
 
 export const interactiveVideoPlaylist: IProject = {
 	title: 'Interactive Video Playlist',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
 	content: [
 		{
-			header: 'Interactive Video Playlist',
 			slideshow: [
 				{
 					img: img1,
@@ -86,8 +85,20 @@ export const interactiveVideoPlaylist: IProject = {
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One with Kinect (voice and gesture)<br/>Countries: United States, Canada<br/>Dates: Aug. 2014<br/>Designers: Bruce Warren, Jacqueline Montplaisir',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Bruce Warren & Jacqueline Montplaisir',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',
@@ -125,12 +136,36 @@ export const interactiveVideoPlaylist: IProject = {
 		{
 			header: 'Overview',
 			body:
-				"For the premiere of Slipknot's music video, for ‘The Devil In I’, Xbox wanted to give fans a unique experience.  Our team decided to use the interactive video playlist app that I built to add facts, quizzes, and polls, over the music video.  The team had five days to come up with questions, design the project, and decide how the content should be spaced over the video.  I used the app to organize the videos, and create and style the content (polls/quizzes/facts). (The project is below… watch if you dare).",
+				"For the premiere of Slipknot's music video, for ‘The Devil In I’, Xbox wanted to give fans a unique experience.  Our team decided to use the interactive video playlist app that I built to add facts, quizzes, and polls, over the music video.  The team had five days to come up with questions, design the project, and decide how the content should be spaced over the video.  I used the app to organize the videos, and create and style the content (polls/quizzes/facts).",
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One with Kinect (voice and gesture)<br/>Placement: Featured on the Xbox One dashboard home page and games section<br/>Countries: United States, Canada<br/>Dates: Sept. 2014<br/>Designer: James Aparis',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page and music section',
+				},
+				{
+					header: 'Countries',
+					list: ['United States', 'Canada (EN-CA)'],
+				},
+				{
+					header: 'Dates',
+					body: 'Sept. 2014',
+				},
+				{
+					header: 'Designer(s)',
+					body: 'James Aparis',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',

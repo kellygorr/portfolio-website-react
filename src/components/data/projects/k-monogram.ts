@@ -1,17 +1,15 @@
-import { IProject } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/3.jpg'
+import { IProject, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/k-monogram/large6.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/3.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/k-monogram/large6.jpg'
 
 export const kMonogram: IProject = {
 	title: 'K Monogram',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
 	content: [
 		{
-			header: 'K Monogram',
 			slideshow: [
 				{
 					img: img1,
@@ -24,7 +22,12 @@ export const kMonogram: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Tools: Illustrator',
+			highlight: [
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator],
+				},
+			],
 		},
 	],
 }

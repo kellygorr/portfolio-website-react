@@ -1,22 +1,21 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/47.jpg'
-import thumbnail2 from '../../../assets/thumbnails/34.jpg'
+import { IProject, FileType, TagType, SkillType } from '../IProject'
 
-import img1 from '../../../assets/images/preview-app-link-generator/previewApp1.jpg'
-import img2 from '../../../assets/images/preview-app-link-generator/previewApp4.jpg'
-import img3 from '../../../assets/images/preview-app-link-generator/previewApp6.jpg'
-import img4 from '../../../assets/images/preview-app-link-generator/previewApp3.jpg'
-import img5 from '../../../assets/images/preview-app-link-generator/previewApp2.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/47.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/34.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp1.jpg'
+const img2 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp4.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp6.jpg'
+const img4 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp3.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp2.jpg'
 
 export const previewAppLinkGenerator: IProject = {
-	title: 'Preview App Link Generator',
+	title: 'Video App Link Generator',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Tooling],
 	content: [
 		{
-			header: 'Video App Link Creator',
 			slideshow: [
 				{
 					img: img1,
@@ -52,7 +51,12 @@ export const previewAppLinkGenerator: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'AngularJS (v1.0 only), jQuery, JSON, HTML, CSS',
+			highlight: [
+				{
+					header: 'Skills',
+					tags: [SkillType.AngularJS, SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+				},
+			],
 		},
 		{
 			header: 'View Website',

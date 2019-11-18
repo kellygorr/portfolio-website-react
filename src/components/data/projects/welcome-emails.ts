@@ -1,19 +1,17 @@
-import { IProject } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/26.jpg'
+import { IProject, ToolType, SkillType } from '../IProject'
 
-import img1 from '../../../assets/images/welcome-emails/email1.jpg'
-import img2 from '../../../assets/images/welcome-emails/email2.jpg'
-import img3 from '../../../assets/images/welcome-emails/email3.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/26.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/welcome-emails/email1.jpg'
+const img2 = 'https://www.kellygorr.com/assets/images/welcome-emails/email2.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/welcome-emails/email3.jpg'
 
 export const welcomeEmails: IProject = {
 	title: 'Welcome Emails',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
 	content: [
 		{
-			header: 'Welcome Emails',
 			slideshow: [
 				{
 					img: img1,
@@ -33,7 +31,20 @@ export const welcomeEmails: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Tools: Photoshop<br> Images: istockphoto.com',
+			highlight: [
+				{
+					header: 'Skills',
+					tags: [SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Tools',
+					tags: [ToolType.Photoshop],
+				},
+				{
+					header: 'Images',
+					body: 'istockphoto.com',
+				},
+			],
 		},
 	],
 }

@@ -1,18 +1,17 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/17.jpg'
-import thumbnail2 from '../../../assets/thumbnails/21.jpg'
+import { IProject, FileType, TagType, SkillType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/earthquake-map/large17.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/17.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/21.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/earthquake-map/large17.jpg'
 
 export const earthquakeMap: IProject = {
 	title: 'Earthquake Map',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Website],
 	content: [
 		{
-			header: 'Earthquake Map',
 			slideshow: [
 				{
 					img: img1,
@@ -31,7 +30,25 @@ export const earthquakeMap: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Website:PHP, JSON, JavaScript/jQuery, MySQL, Ajax, HTML, CSS/CSS3<br/>Design: Illustrator, Photoshop',
+			highlight: [
+				{
+					header: 'Skills',
+					tags: [
+						SkillType.PHP,
+						SkillType.JSON,
+						SkillType.JavaScript,
+						SkillType.JQuery,
+						SkillType.MySQL,
+						SkillType.Ajax,
+						SkillType.HTML,
+						SkillType.CSS,
+					],
+				},
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator, ToolType.Photoshop],
+				},
+			],
 		},
 		{
 			header: 'Code Sample',

@@ -1,19 +1,18 @@
-import { IProject } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/2.jpg'
+import { IProject, TagType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/ten-great-teas/large2a.jpg'
-import img2 from '../../../assets/images/ten-great-teas/large2b.jpg'
-import img3 from '../../../assets/images/ten-great-teas/large2c.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/2.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2a.jpg'
+const img2 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2b.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2c.jpg'
 
 export const tenGreatTeas: IProject = {
 	title: 'Ten Great Teas',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Infographic],
 	content: [
 		{
-			header: 'Ten Great Teas',
 			slideshow: [
 				{
 					img: img1,
@@ -35,7 +34,12 @@ export const tenGreatTeas: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Illustrator',
+			highlight: [
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator],
+				},
+			],
 		},
 	],
 }

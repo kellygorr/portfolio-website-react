@@ -1,51 +1,51 @@
-import { IProject, FileType } from '../IProject'
+import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/55.jpg'
-import thumbnail2 from '../../../assets/thumbnails/51.jpg'
-import thumbnail3 from '../../../assets/thumbnails/58.jpg'
-import thumbnail4 from '../../../assets/thumbnails/61.jpg'
-import thumbnail5 from '../../../assets/thumbnails/63.jpg'
 
-import img1 from '../../../assets/images/xbox-live-events/xlei1.png'
-import img2 from '../../../assets/images/xbox-live-events/E32.jpg'
-import img3 from '../../../assets/images/xbox-live-events/TGA1.jpg'
-import img4 from '../../../assets/images/xbox-live-events/TGA2.jpg'
-import img5 from '../../../assets/images/xbox-live-events/TGA4.jpg'
-import img6 from '../../../assets/images/xbox-live-events/TGA9.jpg'
-import img7 from '../../../assets/images/xbox-live-events/TGA7.jpg'
-import img8 from '../../../assets/images/xbox-live-events/TGA5.jpg'
-import img9 from '../../../assets/images/xbox-live-events/TGA6.jpg'
-import img10 from '../../../assets/images/xbox-live-events/TGA8.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/55.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/51.jpg'
+const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/58.jpg'
+const thumbnail4 = 'https://www.kellygorr.com/assets/thumbnails/61.jpg'
+const thumbnail5 = 'https://www.kellygorr.com/assets/thumbnails/63.jpg'
 
-import img11 from '../../../assets/images/xbox-live-events/Gamescom11.jpg'
-import img12 from '../../../assets/images/xbox-live-events/Gamescom1.jpg'
-import img13 from '../../../assets/images/xbox-live-events/Gamescom5.jpg'
-import img14 from '../../../assets/images/xbox-live-events/Gamescom6.jpg'
-import img15 from '../../../assets/images/xbox-live-events/Gamescom10.jpg'
-import img16 from '../../../assets/images/xbox-live-events/Gamescom12.jpg'
-import img17 from '../../../assets/images/xbox-live-events/Gamescom3.png'
+const img1 = 'https://www.kellygorr.com/assets/images/xbox-live-events/xlei1.png'
+const img2 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E32.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA1.jpg'
+const img4 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA2.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA4.jpg'
+const img6 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA9.jpg'
+const img7 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA7.jpg'
+const img8 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA5.jpg'
+const img9 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA6.jpg'
+const img10 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA8.jpg'
 
-import img18 from '../../../assets/images/xbox-live-events/E31.jpg'
-import img19 from '../../../assets/images/xbox-live-events/E32.jpg'
+const img11 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom11.jpg'
+const img12 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom1.jpg'
+const img13 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom5.jpg'
+const img14 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom6.jpg'
+const img15 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom10.jpg'
+const img16 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom12.jpg'
+const img17 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom3.png'
 
-import img20 from '../../../assets/images/xbox-live-events/CODLive4.png'
-import img21 from '../../../assets/images/xbox-live-events/CODLive.jpg'
-import img22 from '../../../assets/images/xbox-live-events/CODLive2.jpg'
-import img23 from '../../../assets/images/xbox-live-events/CODLive5.png'
+const img18 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E31.jpg'
+const img19 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E32.jpg'
 
-import video1 from '../../../assets/videos/TGAPromo.mp4'
-import video2 from '../../../assets/videos/TGAscreencapture.mp4'
-import video3 from '../../../assets/videos/GCPromo.mp4'
-import video4 from '../../../assets/videos/GCTombraiderQuiz.mp4'
+const img20 = 'https://www.kellygorr.com/assets/images/xbox-live-events/CODLive4.png'
+const img21 = 'https://www.kellygorr.com/assets/images/xbox-live-events/CODLive.jpg'
+const img22 = 'https://www.kellygorr.com/assets/images/xbox-live-events/CODLive2.jpg'
+const img23 = 'https://www.kellygorr.com/assets/images/xbox-live-events/CODLive5.png'
+
+const video1 = 'https://www.kellygorr.com/assets/videos/TGAPromo.mp4'
+const video2 = 'https://www.kellygorr.com/assets/videos/TGAscreencapture.mp4'
+const video3 = 'https://www.kellygorr.com/assets/videos/GCPromo.mp4'
+const video4 = 'https://www.kellygorr.com/assets/videos/GCTombraiderQuiz.mp4'
 
 export const xboxLiveEvents: IProject = {
 	title: 'Xbox Live Events',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
 	content: [
 		{
-			header: 'Xbox Live Events on XLEi',
 			slideshow: [
 				{
 					img: img1,
@@ -67,8 +67,40 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One<br/>Placement: Live events are featured and promoted on the Xbox One<br/>Countries: Varies by event<br/>Dates: 2014-present<br/>XLEi App and database: Xbox Broadcast Service Team<br/>Designer: Jacqueline Montplaisir',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page and games section',
+				},
+				{
+					header: 'Countries',
+					body: 'Varies by event',
+				},
+				{
+					header: 'Dates',
+					body: '2014 - 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Jacqueline Montplaisir',
+				},
+				{
+					header: 'XLEi App and database',
+					body: 'Xbox Broadcast Service Team',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'The Game Awards 2015',
@@ -117,7 +149,36 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Platform: Xbox One<br/>Dates: Dec. 3, 2015<br/>Designer: Jacqueline Montplaisir',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page and games section',
+				},
+				{
+					header: 'Dates',
+					body: 'Dec. 3, 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Jacqueline Montplaisir',
+				},
+				{
+					header: 'XLEi App and database',
+					body: 'Xbox Broadcast Service Team',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'The Game Awards 2015',
@@ -178,7 +239,36 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Platform: Xbox One<br/>Dates: June 17, 2015 - June 18, 2015<br/>Designer: Jacqueline Montplaisir',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page',
+				},
+				{
+					header: 'Dates',
+					body: 'June 17, 2015 - June 18, 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Jacqueline Montplaisir',
+				},
+				{
+					header: 'XLEi App and database',
+					body: 'Xbox Broadcast Service Team',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Gamescom 2015',
@@ -219,7 +309,36 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Platform: Xbox One<br/>Dates: June 17, 2015 - June 18, 2015<br/>Designer: Jacqueline Montplaisir',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page',
+				},
+				{
+					header: 'Dates',
+					body: 'June 17, 2015 - June 18, 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Jacqueline Montplaisir',
+				},
+				{
+					header: 'XLEi App and database',
+					body: 'Xbox Broadcast Service Team',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Call of Duty Championship 2015',
@@ -245,7 +364,36 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Platform: Xbox One<br/>Dates: March 29, 2015<br/>Designer: Efus Richman',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page',
+				},
+				{
+					header: 'Dates',
+					body: 'March 29, 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Efus Richman',
+				},
+				{
+					header: 'XLEi App and database',
+					body: 'Xbox Broadcast Service Team',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 	],
 }

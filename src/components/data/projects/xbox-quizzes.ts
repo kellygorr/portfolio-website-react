@@ -1,33 +1,33 @@
-import { IProject, FileType } from '../IProject'
+import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/43.jpg'
-import thumbnail2 from '../../../assets/thumbnails/46.jpg'
-import thumbnail3 from '../../../assets/thumbnails/29.jpg'
 
-import img1 from '../../../assets/images/xbox-quizzes/quiz7.png'
-import img2 from '../../../assets/images/xbox-quizzes/quiz8.jpg'
-import img3 from '../../../assets/images/xbox-quizzes/quiz4.jpg'
-import img4 from '../../../assets/images/xbox-quizzes/quiz22.jpg'
-import img5 from '../../../assets/images/xbox-quizzes/quiz11.jpg'
-import img6 from '../../../assets/images/xbox-quizzes/quiz14.png'
-import img7 from '../../../assets/images/xbox-quizzes/quiz13.png'
-import img8 from '../../../assets/images/xbox-quizzes/quiz9.png'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/43.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/46.jpg'
+const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/29.jpg'
 
-import img9 from '../../../assets/images/xbox-quizzes/gotquiz1.jpg'
-import img10 from '../../../assets/images/xbox-quizzes/gotquiz2.jpg'
-import img11 from '../../../assets/images/xbox-quizzes/gotquiz3.jpg'
+const img1 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz7.png'
+const img2 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz8.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz4.jpg'
+const img4 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz22.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz11.jpg'
+const img6 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz14.png'
+const img7 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz13.png'
+const img8 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz9.png'
 
-import video1 from '../../../assets/videos/fifaQuiz.mp4'
-import video2 from '../../../assets/videos/gameofthronesquiz.mp4'
+const img9 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz1.jpg'
+const img10 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz2.jpg'
+const img11 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz3.jpg'
+
+const video1 = 'https://www.kellygorr.com/assets/videos/fifaQuiz.mp4'
+const video2 = 'https://www.kellygorr.com/assets/videos/gameofthronesquiz.mp4'
 
 export const xboxQuizzes: IProject = {
 	title: 'Xbox Quizzes',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox, TagType.Plugin, TagType.Quiz],
 	content: [
 		{
-			header: 'Xbox One Quizzes',
 			slideshow: [
 				{
 					img: img1,
@@ -75,7 +75,28 @@ export const xboxQuizzes: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Platform: Xbox One with Kinect (voice and gesture)<br/>Designers: Xbox Programing Team designers',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Dates',
+					body: 'March 29, 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Xbox Programing Team designers',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',
@@ -113,8 +134,40 @@ export const xboxQuizzes: IProject = {
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One with Kinect (voice and gesture)<br/>Placement: Featured on the Xbox One dashboard home page and games section<br/>Countries: United States, Canada<br/>Dates: May 2015 - June 2015<br/>jQuery/Javascript, JSON, HTML, CSS<br/> Design Lead: Todd Bohanna<br/> Designer: James Aparis',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Featured On',
+					body: 'Xbox One dashboard home page and games section',
+				},
+				{
+					header: 'Countries',
+					list: ['United States', 'Canada (EN-CA)'],
+				},
+				{
+					header: 'Dates',
+					body: 'May 2015 - June 2015',
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Design Lead',
+					body: 'Todd Bohanna',
+				},
+				{
+					header: 'Designer(s)',
+					body: 'James Aparis',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',

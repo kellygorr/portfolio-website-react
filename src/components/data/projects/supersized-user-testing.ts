@@ -1,23 +1,21 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/23.jpg'
+import { IProject, FileType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/supersized-user-testing/large22e.jpg'
-import img2 from '../../../assets/images/supersized-user-testing/large22a.jpg'
-import img3 from '../../../assets/images/supersized-user-testing/large22b.jpg'
-import img4 from '../../../assets/images/supersized-user-testing/large22c.jpg'
-import img5 from '../../../assets/images/supersized-user-testing/large22d.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/23.jpg'
 
-import pdf from '../../../assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
+const img1 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22e.jpg'
+const img2 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22a.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22b.jpg'
+const img4 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22c.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22d.jpg'
+
+const pdf = 'https://www.kellygorr.com/assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
 
 export const supersizedUserTesting: IProject = {
-	title: 'Supersized! User Testing',
+	title: 'Supersized User Testing',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
 	content: [
 		{
-			header: 'Supersized! User Testing',
 			slideshow: [
 				{
 					img: img1,
@@ -45,7 +43,12 @@ export const supersizedUserTesting: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'PDF created in InDesign',
+			highlight: [
+				{
+					header: 'Tools',
+					tags: [ToolType.InDesign],
+				},
+			],
 		},
 		{
 			header: 'Methods and Results',

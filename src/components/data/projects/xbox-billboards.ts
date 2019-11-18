@@ -1,24 +1,24 @@
-import { IProject, FileType } from '../IProject'
+import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/28.jpg'
 
-import img1 from '../../../assets/images/xbox-billboards/billboard3.jpg'
-import img2 from '../../../assets/images/xbox-billboards/billboard1.jpg'
-import img3 from '../../../assets/images/xbox-billboards/billboard2.jpg'
-import img4 from '../../../assets/images/xbox-billboards/ffSweepstakes.jpg'
-import img5 from '../../../assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
-import img6 from '../../../assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/28.jpg'
 
-import video1 from '../../../assets/videos/iggyazalea.mp4'
+const img1 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard3.jpg'
+const img2 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard1.jpg'
+const img3 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard2.jpg'
+const img4 = 'https://www.kellygorr.com/assets/images/xbox-billboards/ffSweepstakes.jpg'
+const img5 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
+const img6 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
+
+const video1 = 'https://www.kellygorr.com/assets/videos/iggyazalea.mp4'
 
 export const xboxBillboards: IProject = {
 	title: 'Xbox Promotional Billboards',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Xbox],
 	content: [
 		{
-			header: 'Xbox One Billboards',
 			slideshow: [
 				{
 					img: img1,
@@ -58,8 +58,24 @@ export const xboxBillboards: IProject = {
 		},
 		{
 			header: 'Details',
-			body:
-				'Platform: Xbox One with Kinect (voice and gesture)<br/>Template: jQuery/Javascript, JSON, HTML, CSS<br/>Billboard generator tool: PHP, Ajax, jQuery/Javascript, JSON, HTML, CSS<br/>Designed by: Xbox Programing Team designers<br/>Interaction Design: Kelly Gorr & Jana Sheehan',
+			highlight: [
+				{
+					header: 'Platform',
+					tags: [TagType.XboxKinect],
+				},
+				{
+					header: 'Skills',
+					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+				},
+				{
+					header: 'Designer(s)',
+					body: 'Xbox Programing Team designers',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr & Jana Sheehan',
+				},
+			],
 		},
 		{
 			header: 'Xbox One Video Capture',

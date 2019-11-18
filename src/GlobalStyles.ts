@@ -1,4 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
+import './fonts.css'
+
+export const AccentColor = '#eb2f1b'
+export const PrimaryAccentColor = '#FFFFFF'
+export const PrimaryHoverAccentColor = '#fbe2e0'
+export const PrimaryColor = '#303030'
+export const PrimaryHoverColor = '#757575'
 
 export const GlobalStyles = createGlobalStyle`
 	* {
@@ -15,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	html,
-	body {
+	body, #root {
 		height: 100%;
 		margin: 0;
 		padding: 0;
@@ -34,4 +41,5 @@ export const GlobalStyles = createGlobalStyle`
 		color: inherit;
 		text-decoration: inherit;
 	}
+
 `

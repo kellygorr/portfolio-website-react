@@ -1,20 +1,19 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/22.jpg'
-import thumbnail2 from '../../../assets/thumbnails/19.png'
+import { IProject, FileType, TagType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/crime-spot/crimespot_1.png'
-import img2 from '../../../assets/images/crime-spot/crimespot_2.png'
-import img3 from '../../../assets/images/crime-spot/crimespot_3.png'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/22.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/19.png'
+
+const img1 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_1.png'
+const img2 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_2.png'
+const img3 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_3.png'
 
 export const crimeSpot: IProject = {
 	title: 'Crime Spot',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Website, TagType.Mobile],
 	content: [
 		{
-			header: 'Crime Spot',
 			slideshow: [
 				{
 					img: img1,
@@ -37,7 +36,12 @@ export const crimeSpot: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Tools: Illustrator, Photoshop, InDesign',
+			highlight: [
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator, ToolType.Photoshop, ToolType.InDesign],
+				},
+			],
 		},
 		{
 			header: 'Project Statement',

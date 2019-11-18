@@ -1,19 +1,18 @@
-import { IProject, FileType } from '../IProject'
-import { TagType } from '../IProject'
-import thumbnail from '../../../assets/thumbnails/4.jpg'
-import thumbnail2 from '../../../assets/thumbnails/19.jpg'
+import { IProject, FileType, TagType, ToolType } from '../IProject'
 
-import img1 from '../../../assets/images/malaria-infographic/large4a.jpg'
-import pdf from '../../../assets/images/malaria-infographic/research_based_design.pdf'
+const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/4.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/19.jpg'
+
+const img1 = 'https://www.kellygorr.com/assets/images/malaria-infographic/large4a.jpg'
+const pdf = 'https://www.kellygorr.com/assets/images/malaria-infographic/research_based_design.pdf'
 
 export const malariaInfographic: IProject = {
 	title: 'Malaria Infographic',
 	subtitle: 'subtitle',
 	thumbnail: thumbnail,
-	tags: [TagType.XboxOne],
+	tags: [TagType.Infographic],
 	content: [
 		{
-			header: 'Malaria Infographic',
 			slideshow: [
 				{
 					img: img1,
@@ -26,7 +25,12 @@ export const malariaInfographic: IProject = {
 		},
 		{
 			header: 'Details',
-			body: 'Tools: Illustrator',
+			highlight: [
+				{
+					header: 'Tools',
+					tags: [ToolType.Illustrator],
+				},
+			],
 		},
 		{
 			header: 'Project Statement',
