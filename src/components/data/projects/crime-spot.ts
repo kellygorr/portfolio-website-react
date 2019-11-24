@@ -47,9 +47,13 @@ export const crimeSpot: IProject = {
 			header: 'Project Statement',
 			attachments: [
 				{
-					type: FileType.Pdf,
-					img: thumbnail2,
-					source: 'http://www.kellygorr.com/img/kelly_gorr_web_integration.pdf',
+					title: 'Web/Mobile Integration PDF',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Pdf,
+						source: 'http://www.kellygorr.com/img/kelly_gorr_web_integration.pdf',
+					},
 				},
 			],
 		},

@@ -55,8 +55,8 @@ export const starWars: IProject = {
 					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
 				},
 				{
-					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					header: 'Platform and Accessories',
+					tags: [TagType.Xbox, TagType.Kinect],
 				},
 				{
 					header: 'Featured On',
@@ -84,10 +84,13 @@ export const starWars: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'Star Wars Promotion',
-					type: FileType.Video,
-					source: video1,
+					title: 'Star Wars Promotion',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 			],
 		},

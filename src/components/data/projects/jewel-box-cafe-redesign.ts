@@ -39,11 +39,13 @@ export const jewelBoxCafe: IProject = {
 			header: 'View Website',
 			attachments: [
 				{
-					img: thumbnail,
-					caption: 'Demo',
-					desc: '(Navigation only)',
-					type: FileType.Link,
-					source: 'sites/type_website/',
+					title: 'Demo',
+					subtitle: '(Navigation only)',
+					thumbnail: thumbnail,
+					file: {
+						type: FileType.Link,
+						source: 'sites/type_website/',
+					},
 				},
 			],
 		},

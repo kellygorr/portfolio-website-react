@@ -8,7 +8,7 @@ export enum TagType {
 	Website = 'website',
 	Mobile = 'mobile',
 	Web = 'web',
-	XboxKinect = 'Xbox One with Kinect (voice and gesture)',
+	Kinect = 'Xbox Kinect',
 	Print = 'print',
 }
 export enum SkillType {
@@ -45,7 +45,7 @@ export const relatedTags: (TagType | SkillType | ToolType)[][] = [
 	[TagType.Website, SkillType.HTML, SkillType.CSS],
 	[ToolType.Photoshop, SkillType.Illustration, ToolType.Illustrator],
 	[SkillType.PHP, SkillType.MySQL],
-	[TagType.Xbox, TagType.XboxKinect],
+	[TagType.Xbox, TagType.Kinect],
 ]
 
 export enum SectionType {
@@ -67,7 +67,8 @@ export interface IProject {
 	title: string
 	subtitle: string
 	thumbnail: string
-	content: ISection[]
+	content?: ISection[]
+	file?: IFile
 	tags?: TagType[]
 }
 
@@ -76,7 +77,7 @@ export interface ISection {
 	slideshow?: ISlideshow[]
 	body?: string
 	highlight?: IHighlight[]
-	attachments?: IAttachment[]
+	attachments?: IProject[]
 }
 
 export interface ISlideshow {
@@ -85,17 +86,14 @@ export interface ISlideshow {
 	source?: string
 }
 
-export interface IAttachment {
-	img: string
-	caption?: string
-	desc?: string
-	type: FileType
-	source: string
-}
-
 export interface IHighlight {
 	header: string
 	tags?: (TagType | SkillType | ToolType)[]
 	list?: string[]
 	body?: string
+}
+
+export interface IFile {
+	type: FileType
+	source: string
 }

@@ -36,9 +36,13 @@ export const malariaInfographic: IProject = {
 			header: 'Project Statement',
 			attachments: [
 				{
-					type: FileType.Pdf,
-					img: thumbnail2,
-					source: pdf,
+					title: 'Research Based Design PDF',
+					subtitle: '(Navigation only)',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Pdf,
+						source: pdf,
+					},
 				},
 			],
 		},

@@ -9,43 +9,54 @@ interface IHighlightProps {
 
 export const Highlight: React.FC<IHighlightProps> = (props: IHighlightProps) => {
 	return (
-		<>
+		<HighlightSection>
 			<Header>{props.data.header}</Header>
 			{props.data.tags && props.data.tags.length > 0 && (
 				<List>
+					[
 					{props.data.tags &&
 						(props.data.tags as (TagType | SkillType | ToolType)[]).map((item: TagType | SkillType | ToolType, index) => (
-							<Link to={'/search/' + item} key={index}>
+							<Tag to={'/search/' + item} key={index}>
 								{item}
 								{index !== (props.data.tags && props.data.tags.length - 1) && ', '}
-							</Link>
+							</Tag>
 						))}
+					]
 				</List>
 			)}
 			{props.data.list && props.data.list.length > 0 && (
 				<List>
 					{(props.data.list as string[]).map((item: string, index) => (
-						<>
+						<span key={index}>
 							{item}
 							{index !== (props.data.list && props.data.list.length - 1) && ', '}
-						</>
+						</span>
 					))}
 				</List>
 			)}
 			{props.data.body && <Body>{props.data.body}</Body>}
-		</>
+		</HighlightSection>
 	)
 }
 
-const Header = styled.h4`
+const HighlightSection = styled.div`
+	display: flex;
 	padding: 0 5%;
+`
+
+const Header = styled.h4`
+	padding-right: 10px;
+	white-space: nowrap;
 	&::after {
 		content: ': ';
 	}
 `
-const List = styled.p`
-	padding: 0 5%;
+
+const Tag = styled(Link)`
+	&:hover {
+		text-decoration: underline;
+	}
 `
-const Body = styled.p`
-	padding: 0 5%;
-`
+
+const List = styled.p``
+const Body = styled.p``

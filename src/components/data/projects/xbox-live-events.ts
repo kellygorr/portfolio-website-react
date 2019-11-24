@@ -184,20 +184,22 @@ export const xboxLiveEvents: IProject = {
 			header: 'The Game Awards 2015',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'Exclusive Xbox game promo',
-					type: FileType.Video,
-					source: video1,
+					title: 'Exclusive Xbox game promo',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
-			],
-		},
-		{
-			attachments: [
 				{
-					img: thumbnail3,
-					caption: 'The Game Awards Video Capture',
-					type: FileType.Video,
-					source: video2,
+					title: 'The Game Awards Video Capture',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail3,
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
 				},
 			],
 		},
@@ -274,20 +276,22 @@ export const xboxLiveEvents: IProject = {
 			header: 'Gamescom 2015',
 			attachments: [
 				{
-					img: thumbnail4,
-					caption: 'Daily Show and Interactive Promo',
-					type: FileType.Video,
-					source: video3,
+					title: 'Daily Show and Interactive Promo',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail4,
+					file: {
+						type: FileType.Video,
+						source: video3,
+					},
 				},
-			],
-		},
-		{
-			attachments: [
 				{
-					img: thumbnail5,
-					caption: 'Tomb Raider Quiz',
-					type: FileType.Video,
-					source: video4,
+					title: 'Tomb Raider Quiz',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail5,
+					file: {
+						type: FileType.Video,
+						source: video4,
+					},
 				},
 			],
 		},

@@ -78,7 +78,7 @@ export const xboxQuizzes: IProject = {
 			highlight: [
 				{
 					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					tags: [TagType.Xbox],
 				},
 				{
 					header: 'Dates',
@@ -102,10 +102,13 @@ export const xboxQuizzes: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'Fifa 16 quiz',
-					type: FileType.Video,
-					source: video1,
+					title: 'Fifa 16 quiz',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 			],
 		},
@@ -136,8 +139,8 @@ export const xboxQuizzes: IProject = {
 			header: 'Details',
 			highlight: [
 				{
-					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					header: 'Platform and Accessories',
+					tags: [TagType.Xbox, TagType.Kinect],
 				},
 				{
 					header: 'Featured On',
@@ -173,10 +176,13 @@ export const xboxQuizzes: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail3,
-					caption: 'Game of Thrones Quiz',
-					type: FileType.Video,
-					source: video2,
+					title: 'Game of Thrones Quiz',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail3,
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
 				},
 			],
 		},

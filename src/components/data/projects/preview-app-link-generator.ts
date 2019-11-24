@@ -62,10 +62,13 @@ export const previewAppLinkGenerator: IProject = {
 			header: 'View Website',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'v1.0',
-					type: FileType.Link,
-					source: 'sites/previewApp/',
+					title: 'v1.0',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Link,
+						source: 'sites/previewApp/',
+					},
 				},
 			],
 		},

@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { IProject } from '../data/IProject'
-import { AccentColor } from '../../GlobalStyles'
+import { AccentColor, LoadingColor } from '../../GlobalStyles'
 
 interface IThumbnailProps {
 	project: IProject
@@ -13,15 +13,15 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 
 	return (
 		<ThumbnailContainer>
-			<ThumbnailStyled style={{ backgroundImage: `url('${project.thumbnail}')` }}>{<Button> </Button>}</ThumbnailStyled>
+			<ThumbnailImage style={{ backgroundImage: `url('${project.thumbnail}')` }} />
 			<H3>{project.title}</H3>
 			{/* We don't want to nest <a>'s*/}
 			<ThumbnailLink to={`/page/${project.title.replace(' ', '').toLowerCase()}`} />
 
 			{project.tags && (
 				<Tags>
-					{/* We want the thumbnail link behind the tag links */}
-					<ThumbnailLink to={`/page/${project.title.replace(' ', '').toLowerCase()}`} />[
+					[{/* We want the thumbnail link behind the tag links */}
+					<ThumbnailLink to={`/page/${project.title.replace(' ', '').toLowerCase()}`} />
 					{project.tags.map((tag, index) => (
 						<Tag key={index} to={'/search/' + tag}>
 							{project.tags && index === project.tags.length - 1 ? tag : tag + ', '}
@@ -43,16 +43,16 @@ const ThumbnailLink = styled(Link)`
 	grid-column: gallery;
 `
 
-const ThumbnailStyled = styled.div`
+const ThumbnailImage = styled.div`
 	width: 100%;
 	height: 175px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	border: 3px solid transparent;
+	border: 3px solid #ffffff;
+	background-color: ${LoadingColor};
 `
 
-const Button = styled.div``
 const H3 = styled.h3`
 	width: 100%;
 	text-align: center;
@@ -73,7 +73,7 @@ const Tag = styled(Link)`
 	font-size: 0.9em;
 
 	&:hover {
-		font-weight: 700;
+		text-decoration: underline;
 	}
 `
 
@@ -82,7 +82,7 @@ const ThumbnailContainer = styled.div`
 	flex-direction: column;
 
 	&:hover {
-		${ThumbnailStyled} {
+		${ThumbnailImage} {
 			border-color: ${AccentColor};
 		}
 		${H3} {

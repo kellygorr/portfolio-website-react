@@ -54,9 +54,13 @@ export const supersizedUserTesting: IProject = {
 			header: 'Methods and Results',
 			attachments: [
 				{
-					type: FileType.Pdf,
-					img: thumbnail,
-					source: pdf,
+					title: 'Testing PDF',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail,
+					file: {
+						type: FileType.Pdf,
+						source: pdf,
+					},
 				},
 			],
 		},

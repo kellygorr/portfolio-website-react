@@ -1,21 +1,22 @@
 import * as React from 'react'
-import { createRef } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { ISlideshow } from '../data/IProject'
 import { AccentColor } from '../../GlobalStyles'
 
 interface IPageProps {
 	data: ISlideshow[]
+	slideRef: React.RefObject<HTMLDivElement>
 }
 
-const slidesRef = createRef<HTMLDivElement>()
+let slidesRef: React.RefObject<HTMLDivElement>
 let ScrollTimer: number
 
 export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
+	slidesRef = props.slideRef
 	const [active, setActive] = React.useState(0)
 	const [isScrolling, setIsScrolling] = React.useState(false)
-	const isNextVisible = !isScrolling && active !== props.data.length - 1
-	const isPrevVisible = !isScrolling && active !== 0
+	// const isNextVisible = !isScrolling && active !== props.data.length - 1
+	// const isPrevVisible = !isScrolling && active !== 0
 
 	React.useEffect(() => {
 		if (!isScrolling) {
@@ -23,8 +24,10 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 		}
 	}, [isScrolling])
 
+	console.log('active', props.data[0].img, active)
+
 	return (
-		<Container>
+		<SlideshowContainer>
 			<Slides
 				ref={slidesRef}
 				onScroll={() => {
@@ -56,53 +59,49 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			>
 				{props.data[active].caption}
 			</Caption>
-			{isPrevVisible && <Prev onClick={() => scrollToPrev(active, setActive, setIsScrolling)} />}
-			{isNextVisible && <Next onClick={() => scrollToNext(active, props.data.length, setActive, setIsScrolling)} />}
-		</Container>
+			{/* {isPrevVisible && <Prev onClick={() => scrollToPrev(active, setActive, setIsScrolling)}>&#8249;</Prev>}
+			{isNextVisible && <Next onClick={() => scrollToNext(active, props.data.length, setActive, setIsScrolling)}>&#8250;</Next>} */}
+		</SlideshowContainer>
 	)
 }
 
-const scrollToNext = (active: number, total: number, setActive: any, setIsScrolling: any): void => {
-	if (slidesRef && slidesRef.current && active < total - 1) {
-		setIsScrolling(true)
-		slidesRef.current.scrollBy({
-			top: 0,
-			left: slidesRef.current.clientWidth / 2,
-			behavior: 'smooth',
-		})
-		setActive(active + 1)
-	}
-}
-const scrollToPrev = (active: number, setActive: any, setIsScrolling: any): void => {
-	if (slidesRef && slidesRef.current && active > 0) {
-		setIsScrolling(true)
-		slidesRef.current.scrollBy({
-			top: 0,
-			left: -slidesRef.current.clientWidth / 2,
-			behavior: 'smooth',
-		})
-		setActive(active - 1)
-	}
-}
+// const scrollToNext = (active: number, total: number, setActive: any, setIsScrolling: any): void => {
+// 	if (slidesRef && slidesRef.current && active < total - 1) {
+// 		setIsScrolling(true)
+// 		slidesRef.current.scrollBy({
+// 			top: 0,
+// 			left: slidesRef.current.clientWidth / 2,
+// 			behavior: 'smooth',
+// 		})
+// 		setActive(active + 1)
+// 	}
+// }
+// const scrollToPrev = (active: number, setActive: any, setIsScrolling: any): void => {
+// 	if (slidesRef && slidesRef.current && active > 0) {
+// 		setIsScrolling(true)
+// 		slidesRef.current.scrollBy({
+// 			top: 0,
+// 			left: -slidesRef.current.clientWidth / 2,
+// 			behavior: 'smooth',
+// 		})
+// 		setActive(active - 1)
+// 	}
+// }
 
 const findActiveSlide = (setActive: any): void => {
 	if (slidesRef && slidesRef.current) {
 		var slideArray = [].slice.call(slidesRef.current.querySelectorAll('div'))
-		const activeSlideIndex = slideArray.findIndex((el) => isElementInViewport(el))
+		const activeSlideIndex = slideArray.findIndex((el) => isElementCentered(el))
 		if (activeSlideIndex >= 0) {
 			setActive(activeSlideIndex)
 		}
 	}
 }
 
-const isElementInViewport = (el: any) => {
+const isElementCentered = (el: any) => {
 	var rect = el.getBoundingClientRect()
-	return (
-		rect.top >= 0 &&
-		rect.left >= 0 &&
-		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-	)
+	const center = document.documentElement.clientWidth / 2
+	return rect.left < center && center < rect.right
 }
 
 interface IStyle {
@@ -110,15 +109,11 @@ interface IStyle {
 	isScrolling?: boolean
 }
 
-const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1;}
-`
+// const fadeIn = keyframes`
+//   from { opacity: 0; }
+//   to { opacity: 1;}
+// `
 
-const Container = styled.div`
-	position: relative;
-	height: 60%;
-`
 const Slides = styled.div`
 	height: 100%;
 	display: flex;
@@ -138,14 +133,18 @@ const Slides = styled.div`
 	-webkit-overflow-scrolling: touch;
 
 	/* Space before first slide and after last slide  */
-	&:before,
+	/* &:before,
 	&:after {
-		content: '';
+		content: ' ';
 		height: 100%;
+		max-height: 100%;
 		min-width: 10%;
 		width: 10%;
-	}
+		width: 100px;
+		background-color: green;
+	} */
 `
+const SlideshowContainer = styled.div``
 
 const Slide = styled.div<IStyle>`
 	display: flex;
@@ -172,24 +171,28 @@ const Caption = styled.div<IStyle>`
 	text-align: center;
 `
 
-const NavButtons = styled.div`
-	position: absolute;
-	top: 45%;
-	height: 50px;
-	width: 15px;
-	background-color: black;
-	color: white;
+// const NavButtons = styled.div`
+// 	cursor: pointer;
+// 	position: absolute;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	top: 45%;
+// 	width: 60px;
+// 	background-color: black;
+// 	color: white;
+// 	border: 1px solid white;
 
-	opacity: 0;
-	animation-name: ${fadeIn};
-	animation-duration: 0.8s;
-	animation-fill-mode: forwards;
-`
+// 	opacity: 0;
+// 	animation-name: ${fadeIn};
+// 	animation-duration: 0.8s;
+// 	animation-fill-mode: forwards;
+// `
 
-const Next = styled(NavButtons)`
-	right: 0px;
-`
+// const Next = styled(NavButtons)`
+// 	right: 0px;
+// `
 
-const Prev = styled(NavButtons)`
-	left: 0px;
-`
+// const Prev = styled(NavButtons)`
+// 	left: 0px;
+// `

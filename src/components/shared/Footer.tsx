@@ -10,9 +10,9 @@ export const Footer: React.FC = () => (
 	<Container>
 		<Title>Contact/Resume</Title>
 		<Contact>
-			<a href='https://www.linkedin.com/in/kellygorr/'>LinkedIn</a>
+			<a href="https://www.linkedin.com/in/kellygorr/">LinkedIn</a>
 		</Contact>
-		<Title>Website</Title>
+		<Title>Website Info</Title>
 		<Tags>
 			[
 			{websiteTags.map((tag, index) => (
@@ -22,6 +22,11 @@ export const Footer: React.FC = () => (
 			))}
 			]
 		</Tags>
+
+		<Contact>
+			<a href="https://github.com/kellygorr/portfolio-website-react">https://github.com/kellygorr/portfolio-website-react</a>
+		</Contact>
+
 		{/* <Title>Other Projects</Title>
 					<Contact>Photography</Contact>
 					<Contact>Digital Art</Contact> */}
@@ -45,12 +50,15 @@ const Title = styled.div`
 	&:first-child {
 		margin: 0;
 	}
+	&::after {
+		content: ': ';
+	}
 `
 const Contact = styled.div`
 	font-size: 0.9em;
 
 	&:hover {
-		font-weight: 700;
+		text-decoration: underline;
 	}
 `
 
@@ -61,6 +69,6 @@ const Tag = styled(Link)`
 	width: 100%;
 	font-size: 0.9em;
 	&:hover {
-		font-weight: 700;
+		text-decoration: underline;
 	}
 `

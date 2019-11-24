@@ -54,9 +54,13 @@ export const earthquakeMap: IProject = {
 			header: 'Code Sample',
 			attachments: [
 				{
-					type: FileType.Pdf,
-					img: thumbnail2,
-					source: 'http://www.kellygorr.com/img/Kelly_Gorr_Code_Sample.pdf',
+					title: 'Code Sample PDF',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Pdf,
+						source: 'http://www.kellygorr.com/img/Kelly_Gorr_Code_Sample.pdf',
+					},
 				},
 			],
 		},

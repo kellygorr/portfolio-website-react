@@ -6,6 +6,7 @@ export const PrimaryAccentColor = '#FFFFFF'
 export const PrimaryHoverAccentColor = '#fbe2e0'
 export const PrimaryColor = '#303030'
 export const PrimaryHoverColor = '#757575'
+export const LoadingColor = '#e2e2e2'
 
 export const GlobalStyles = createGlobalStyle`
 	* {

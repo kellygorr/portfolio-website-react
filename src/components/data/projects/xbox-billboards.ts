@@ -2,6 +2,7 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/28.jpg'
+const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/24.jpg'
 
 const img1 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard3.jpg'
 const img2 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard1.jpg'
@@ -60,8 +61,8 @@ export const xboxBillboards: IProject = {
 			header: 'Details',
 			highlight: [
 				{
-					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					header: 'Platform and Accessories',
+					tags: [TagType.Xbox, TagType.Kinect],
 				},
 				{
 					header: 'Skills',
@@ -81,11 +82,13 @@ export const xboxBillboards: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: 'img/thumbnails/v2/27.jpg',
-					caption: 'Iggy Azalea Billboard',
-					desc: 'Preroll video, billboard, terms and conditions popup',
-					type: FileType.Video,
-					source: video1,
+					title: 'Iggy Azalea Billboard',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 			],
 		},

@@ -87,8 +87,8 @@ export const interactiveVideoPlaylist: IProject = {
 			header: 'Details',
 			highlight: [
 				{
-					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					header: 'Platform and Accessories',
+					tags: [TagType.Xbox, TagType.Kinect],
 				},
 				{
 					header: 'Designer(s)',
@@ -104,11 +104,13 @@ export const interactiveVideoPlaylist: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'Summer Playlist',
-					desc: 'Interactive video playlist',
-					type: FileType.Video,
-					source: 'video1',
+					title: 'Summer Playlist',
+					subtitle: 'Interactive video playlist',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: 'video1',
+					},
 				},
 			],
 		},
@@ -143,7 +145,11 @@ export const interactiveVideoPlaylist: IProject = {
 			highlight: [
 				{
 					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					tags: [TagType.Xbox],
+				},
+				{
+					header: 'Accessories',
+					tags: [TagType.Kinect],
 				},
 				{
 					header: 'Featured On',
@@ -171,11 +177,13 @@ export const interactiveVideoPlaylist: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail3,
-					caption: 'Slipknot',
-					desc: 'Interactive music video',
-					type: FileType.Video,
-					source: video2,
+					title: 'Slipknot',
+					subtitle: 'Interactive music video',
+					thumbnail: thumbnail3,
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
 				},
 			],
 		},

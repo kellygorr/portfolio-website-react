@@ -115,8 +115,8 @@ export const theWitcher3: IProject = {
 			header: 'Details',
 			highlight: [
 				{
-					header: 'Platform',
-					tags: [TagType.XboxKinect],
+					header: 'Platform and Accessories',
+					tags: [TagType.Xbox, TagType.Kinect],
 				},
 				{
 					header: 'Featured On',
@@ -148,10 +148,13 @@ export const theWitcher3: IProject = {
 			header: 'Xbox One Video Capture',
 			attachments: [
 				{
-					img: thumbnail2,
-					caption: 'Witcher 3 Poll',
-					type: FileType.Video,
-					source: video1,
+					title: 'Witcher 3 Poll',
+					subtitle: 'subtitle',
+					thumbnail: thumbnail2,
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 			],
 		},
