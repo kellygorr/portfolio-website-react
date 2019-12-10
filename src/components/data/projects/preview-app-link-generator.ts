@@ -10,10 +10,11 @@ const img4 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator
 const img5 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp2.jpg'
 
 export const previewAppLinkGenerator: IProject = {
-	title: 'Video App Link Generator',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Tooling],
+	details: {
+		header: 'Video App Link Generator',
+		thumbnail: thumbnail,
+		tags: [TagType.Tooling],
+	},
 	content: [
 		{
 			slideshow: [
@@ -62,8 +63,7 @@ export const previewAppLinkGenerator: IProject = {
 			header: 'View Website',
 			attachments: [
 				{
-					title: 'v1.0',
-					subtitle: 'subtitle',
+					header: 'v1.0',
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Link,

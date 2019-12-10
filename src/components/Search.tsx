@@ -15,7 +15,7 @@ interface IProjectSearch extends IProject {
 
 const queryMatches = (query: string): IProjectSearch[] => {
 	const tagMatches: IProject[] = projects.filter(
-		(project: IProject) => project.tags && project.tags.find((tag) => tag.toLowerCase() === query.toLowerCase())
+		(project: IProject) => project.details.tags && project.details.tags.find((tag) => tag.toLowerCase() === query.toLowerCase())
 	)
 	const skillMatches: IProject[] = projects.filter(
 		(project: IProject) =>
@@ -26,7 +26,9 @@ const queryMatches = (query: string): IProjectSearch[] => {
 					section.highlight.find((item) => item.tags && item.tags.find((tag) => tag.toLowerCase() === query.toLowerCase()))
 			)
 	)
-	const titleMatches: IProject[] = projects.filter((project: IProject) => project.title.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+	const titleMatches: IProject[] = projects.filter(
+		(project: IProject) => project.details.header.toLowerCase().indexOf(query.toLowerCase()) !== -1
+	)
 
 	const matches: IProject[] = removeDuplicates([...tagMatches, ...skillMatches, ...titleMatches])
 	matches.forEach((match) => ((match as IProjectSearch).query = query))
@@ -37,7 +39,7 @@ const queryMatches = (query: string): IProjectSearch[] => {
 const removeDuplicates = (matches: IProject[]): IProject[] => matches.filter((match, index) => matches.indexOf(match) >= index)
 
 const removeDuplicateTitles = (matches: IProjectSearch[]) =>
-	matches.filter((item, pos, array) => array.map((mapItem) => mapItem['title']).indexOf(item['title']) === pos)
+	matches.filter((item, pos, array) => array.map((mapItem) => mapItem.details['header']).indexOf(item.details['header']) === pos)
 
 const relatedQueryTags = (query: string) => {
 	let tags: any = relatedTags.filter((tags) => tags.find((tag) => tag.toLowerCase() === query.toLowerCase()))
@@ -69,7 +71,7 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 			<Header>Results for [{props.query}]...</Header>
 			<Gallery>
 				{searchResults.length > 0
-					? searchResults.map((project: IProjectSearch) => <Thumbnail key={project.title} project={project} />)
+					? searchResults.map((project: IProjectSearch) => <Thumbnail key={project.details.header} data={project.details} />)
 					: 'Sorry, no results'}
 			</Gallery>
 
@@ -78,7 +80,7 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 					<Header>Related results {relatedResultTags.map((x) => '[' + x + ']')}...</Header>
 					<Gallery>
 						{relatedResults.map((project: IProjectSearch) => (
-							<Thumbnail key={project.title} project={project} />
+							<Thumbnail key={project.details.header} data={project.details} />
 						))}
 					</Gallery>
 				</>

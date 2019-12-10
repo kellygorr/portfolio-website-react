@@ -8,10 +8,11 @@ const img2 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_2.png
 const img3 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_3.png'
 
 export const crimeSpot: IProject = {
-	title: 'Crime Spot',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Website, TagType.Mobile],
+	details: {
+		header: 'Crime Spot',
+		thumbnail: thumbnail,
+		tags: [TagType.Website, TagType.Mobile],
+	},
 	content: [
 		{
 			slideshow: [
@@ -47,8 +48,7 @@ export const crimeSpot: IProject = {
 			header: 'Project Statement',
 			attachments: [
 				{
-					title: 'Web/Mobile Integration PDF',
-					subtitle: 'subtitle',
+					header: 'Web/Mobile Integration PDF',
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Pdf,

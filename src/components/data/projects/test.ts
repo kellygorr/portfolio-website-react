@@ -1,6 +1,4 @@
 import { IProject } from '../IProject'
-import { TagType } from '../IProject'
-
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/test.jpg'
 
 // const img1 = 'https://www.kellygorr.com/assets/images/1.jpg'
@@ -11,10 +9,10 @@ const img5 = 'https://www.kellygorr.com/assets/images/5.jpg'
 const img6 = 'https://www.kellygorr.com/assets/images/6.jpg'
 
 export const test: IProject = {
-	title: 'Test',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox],
+	details: {
+		header: ' ',
+		thumbnail: thumbnail,
+	},
 	content: [
 		{
 			slideshow: [

@@ -1,40 +1,38 @@
 import * as React from 'react'
 import styled from 'styled-components/macro'
 import { IHighlight, SkillType, ToolType, TagType } from '../data/IProject'
-import { Link } from 'react-router-dom'
+import { Tag } from '.'
 
 interface IHighlightProps {
 	data: IHighlight
 }
 
 export const Highlight: React.FC<IHighlightProps> = (props: IHighlightProps) => {
+	const { data } = props
 	return (
 		<HighlightSection>
-			<Header>{props.data.header}</Header>
-			{props.data.tags && props.data.tags.length > 0 && (
+			<Header>{data.header}</Header>
+			{data.tags && data.tags.length > 0 && (
 				<List>
 					[
-					{props.data.tags &&
-						(props.data.tags as (TagType | SkillType | ToolType)[]).map((item: TagType | SkillType | ToolType, index) => (
-							<Tag to={'/search/' + item} key={index}>
-								{item}
-								{index !== (props.data.tags && props.data.tags.length - 1) && ', '}
-							</Tag>
+					{data.tags &&
+						(data.tags as (TagType | SkillType | ToolType)[]).map((tag: TagType | SkillType | ToolType, index) => (
+							<Tag key={index} isLastTag={data.tags ? index === data.tags.length - 1 : false} tag={tag} />
 						))}
 					]
 				</List>
 			)}
-			{props.data.list && props.data.list.length > 0 && (
+			{data.list && data.list.length > 0 && (
 				<List>
-					{(props.data.list as string[]).map((item: string, index) => (
+					{(data.list as string[]).map((item: string, index) => (
 						<span key={index}>
 							{item}
-							{index !== (props.data.list && props.data.list.length - 1) && ', '}
+							{index !== (data.list && data.list.length - 1) && ', '}
 						</span>
 					))}
 				</List>
 			)}
-			{props.data.body && <Body>{props.data.body}</Body>}
+			{data.body && <Body>{data.body}</Body>}
 		</HighlightSection>
 	)
 }
@@ -49,12 +47,6 @@ const Header = styled.h4`
 	white-space: nowrap;
 	&::after {
 		content: ': ';
-	}
-`
-
-const Tag = styled(Link)`
-	&:hover {
-		text-decoration: underline;
 	}
 `
 

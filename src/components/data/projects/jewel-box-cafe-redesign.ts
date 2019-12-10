@@ -5,16 +5,20 @@ const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/5.jpg'
 const img1 = 'https://www.kellygorr.com/assets/images/jewel-box-cafe-redesign/large5.jpg'
 
 export const jewelBoxCafe: IProject = {
-	title: 'Jewel Box Cafe Redesign',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Website],
+	details: {
+		header: 'Jewel Box Cafe Redesign',
+		thumbnail: thumbnail,
+		tags: [TagType.Website],
+	},
 	content: [
 		{
 			slideshow: [
 				{
 					img: img1,
-					source: 'sites/type_website/',
+					file: {
+						type: FileType.Link,
+						source: 'sites/type_website/',
+					},
 				},
 			],
 		},
@@ -32,20 +36,6 @@ export const jewelBoxCafe: IProject = {
 				{
 					header: 'Tools',
 					tags: [ToolType.Illustrator],
-				},
-			],
-		},
-		{
-			header: 'View Website',
-			attachments: [
-				{
-					title: 'Demo',
-					subtitle: '(Navigation only)',
-					thumbnail: thumbnail,
-					file: {
-						type: FileType.Link,
-						source: 'sites/type_website/',
-					},
 				},
 			],
 		},

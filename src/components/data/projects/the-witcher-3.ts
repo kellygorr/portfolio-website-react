@@ -2,7 +2,6 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/60.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/36.jpg'
 
 const img1 = 'https://www.kellygorr.com/assets/images/the-witcher-3/witcher2.jpg'
 const img2 = 'https://www.kellygorr.com/assets/images/the-witcher-3/witcher3.jpg'
@@ -22,10 +21,11 @@ const img14 = 'https://www.kellygorr.com/assets/images/the-witcher-3/witcher1.jp
 const video1 = 'https://www.kellygorr.com/assets/videos/witcherPollOpt.mp4'
 
 export const theWitcher3: IProject = {
-	title: 'The Witcher 3 Xbox Launch',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox, TagType.Poll, TagType.Quiz],
+	details: {
+		header: 'The Witcher 3 Xbox Launch',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox, TagType.Poll, TagType.Quiz],
+	},
 	content: [
 		{
 			slideshow: [
@@ -72,6 +72,10 @@ export const theWitcher3: IProject = {
 				{
 					img: img11,
 					caption: 'Post-launch poll',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 				{
 					img: img12,
@@ -141,20 +145,6 @@ export const theWitcher3: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr & Jana Sheehan',
-				},
-			],
-		},
-		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Witcher 3 Poll',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Video,
-						source: video1,
-					},
 				},
 			],
 		},

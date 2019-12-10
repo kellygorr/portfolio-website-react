@@ -1,40 +1,39 @@
 import * as React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { Home, Page, Search } from './components'
 import { projects } from './components/data'
-import { GlobalStyles, AccentColor, PrimaryColor } from './GlobalStyles'
-import { Footer as FooterContent } from './components/shared/Footer'
+import { GlobalStyles, PrimaryColor } from './GlobalStyles'
+import { Footer as FooterContent, Header as HeaderContent } from './components/shared'
 
 const App: React.FC = () => {
 	return (
 		<Router>
 			<AppContainer>
 				<GlobalStyles />
+
 				<Header>
-					<Logo>
-						<Link to='/'>Kelly Gorr</Link>
-					</Logo>
-					<H2>
-						<Link to='/'>UI/UX</Link> | <Link to='/'>Developer</Link> | <Link to='/'>Designer</Link>
-					</H2>
+					<HeaderContent />
 				</Header>
 				<Canvas>
 					<Switch>
-						<Route exact path='/' render={() => <Home />} />
+						<Route exact path="/" render={() => <Home />} />
 						<Route
-							path='/page/:title?'
+							path="/page/:title?"
 							render={({ match }) => {
 								const project = projects.find(
 									(project) =>
-										match.params.title.replace(/[^\w\s]/gi, '') === project.title.replace(' ', '').toLowerCase()
+										match.params.title.replace(/[^\w\s]/gi, '') ===
+										project.details.header.replace(' ', '').toLowerCase()
 								)
 								return project && <Page data={project} />
 							}}
 						/>
 						<Route
-							path='/search/:query?'
-							render={({ match }) => <Search query={match.params.query.replace(/[^\w\s]/gi, '')} />}
+							path="/search/:query?"
+							render={({ match }) => (
+								<Search query={match.params.query === 'UI-UX' ? 'UI-UX' : match.params.query.replace(/[^\w\s]/gi, '')} />
+							)}
 						/>
 					</Switch>
 				</Canvas>
@@ -51,7 +50,7 @@ export default App
 const AppContainer = styled.div`
 	position: relative;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 	display: grid;
 	grid-template-rows: [header] 150px [canvas] auto [footer] 200px;
 
@@ -60,23 +59,6 @@ const AppContainer = styled.div`
 `
 const Header = styled.header`
 	grid-row: header;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-`
-
-const Logo = styled.h1`
-	font-size: 2em;
-	font-family: 'montserrat';
-
-	&:hover {
-		color: ${AccentColor};
-	}
-`
-const H2 = styled.h2`
-	padding-top: 5px;
-	font-size: 0.9em;
 `
 
 const Canvas = styled.div`

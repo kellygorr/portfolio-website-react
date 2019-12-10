@@ -12,7 +12,7 @@ export enum TagType {
 	Print = 'print',
 }
 export enum SkillType {
-	UIUX = 'UI/UX',
+	UIUX = 'UI-UX',
 	Design = 'design',
 	Illustration = 'illustration',
 	JQuery = 'jQuery',
@@ -64,12 +64,8 @@ export enum FileType {
 }
 
 export interface IProject {
-	title: string
-	subtitle: string
-	thumbnail: string
+	details: IThumbnail
 	content?: ISection[]
-	file?: IFile
-	tags?: TagType[]
 }
 
 export interface ISection {
@@ -77,13 +73,13 @@ export interface ISection {
 	slideshow?: ISlideshow[]
 	body?: string
 	highlight?: IHighlight[]
-	attachments?: IProject[]
+	attachments?: IThumbnail[]
 }
 
 export interface ISlideshow {
 	img: string
 	caption?: string
-	source?: string
+	file?: IFile
 }
 
 export interface IHighlight {
@@ -96,4 +92,11 @@ export interface IHighlight {
 export interface IFile {
 	type: FileType
 	source: string
+}
+
+export interface IThumbnail {
+	header: string
+	thumbnail: string
+	file?: IFile
+	tags?: TagType[]
 }

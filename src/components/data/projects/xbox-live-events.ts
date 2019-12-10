@@ -2,10 +2,8 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/55.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/51.jpg'
-const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/58.jpg'
-const thumbnail4 = 'https://www.kellygorr.com/assets/thumbnails/61.jpg'
-const thumbnail5 = 'https://www.kellygorr.com/assets/thumbnails/63.jpg'
+const thumbnail6 = 'https://www.kellygorr.com/assets/thumbnails/67.jpg'
+const thumbnail7 = 'https://www.kellygorr.com/assets/thumbnails/68.jpg'
 
 const img1 = 'https://www.kellygorr.com/assets/images/xbox-live-events/xlei1.png'
 const img2 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E32.jpg'
@@ -15,8 +13,8 @@ const img5 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA4.jpg'
 const img6 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA9.jpg'
 const img7 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA7.jpg'
 const img8 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA5.jpg'
-const img9 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA6.jpg'
-const img10 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA8.jpg'
+const img9 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA10.jpg'
+const img10 = 'https://www.kellygorr.com/assets/images/xbox-live-events/TGA11.jpg'
 
 const img11 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom11.jpg'
 const img12 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom1.jpg'
@@ -25,6 +23,8 @@ const img14 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom
 const img15 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom10.jpg'
 const img16 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom12.jpg'
 const img17 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom3.png'
+const img24 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom16.jpg'
+const img25 = 'https://www.kellygorr.com/assets/images/xbox-live-events/Gamescom17.jpg'
 
 const img18 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E31.jpg'
 const img19 = 'https://www.kellygorr.com/assets/images/xbox-live-events/E32.jpg'
@@ -40,10 +40,11 @@ const video3 = 'https://www.kellygorr.com/assets/videos/GCPromo.mp4'
 const video4 = 'https://www.kellygorr.com/assets/videos/GCTombraiderQuiz.mp4'
 
 export const xboxLiveEvents: IProject = {
-	title: 'Xbox Live Events',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
+	details: {
+		header: 'Xbox Live Events',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
+	},
 	content: [
 		{
 			slideshow: [
@@ -106,6 +107,22 @@ export const xboxLiveEvents: IProject = {
 			header: 'The Game Awards 2015',
 			slideshow: [
 				{
+					img: img9,
+					caption: 'Exclusive Xbox game promo',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
+				},
+				{
+					img: img10,
+					caption: 'The Game Awards Video Capture',
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
+				},
+				{
 					img: img3,
 				},
 				{
@@ -126,14 +143,6 @@ export const xboxLiveEvents: IProject = {
 				{
 					img: img8,
 					caption: 'Taco bell promo',
-				},
-				{
-					img: img9,
-					caption: 'Larry Hryb Game plug',
-				},
-				{
-					img: img10,
-					caption: 'Windows Central Game plug',
 				},
 			],
 		},
@@ -181,24 +190,22 @@ export const xboxLiveEvents: IProject = {
 			],
 		},
 		{
-			header: 'The Game Awards 2015',
+			header: 'Hype',
 			attachments: [
 				{
-					title: 'Exclusive Xbox game promo',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail2,
+					header: 'Larry Hryb',
+					thumbnail: thumbnail6,
 					file: {
-						type: FileType.Video,
-						source: video1,
+						type: FileType.Link,
+						source: 'https://twitter.com/majornelson/status/672128749467340800',
 					},
 				},
 				{
-					title: 'The Game Awards Video Capture',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail3,
+					header: 'Windows Central',
+					thumbnail: thumbnail7,
 					file: {
-						type: FileType.Video,
-						source: video2,
+						type: FileType.Link,
+						source: 'https://twitter.com/windowscentral/status/672123341185024000',
 					},
 				},
 			],
@@ -206,6 +213,22 @@ export const xboxLiveEvents: IProject = {
 		{
 			header: 'Gamescom 2015: Xbox Daily Show',
 			slideshow: [
+				{
+					img: img24,
+					caption: 'Daily Show and Interactive Promo',
+					file: {
+						type: FileType.Video,
+						source: video3,
+					},
+				},
+				{
+					img: img25,
+					caption: 'Tomb Raider Quiz',
+					file: {
+						type: FileType.Video,
+						source: video4,
+					},
+				},
 				{
 					img: img11,
 				},
@@ -269,29 +292,6 @@ export const xboxLiveEvents: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr',
-				},
-			],
-		},
-		{
-			header: 'Gamescom 2015',
-			attachments: [
-				{
-					title: 'Daily Show and Interactive Promo',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail4,
-					file: {
-						type: FileType.Video,
-						source: video3,
-					},
-				},
-				{
-					title: 'Tomb Raider Quiz',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail5,
-					file: {
-						type: FileType.Video,
-						source: video4,
-					},
 				},
 			],
 		},

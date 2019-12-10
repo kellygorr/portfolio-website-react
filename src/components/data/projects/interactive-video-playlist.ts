@@ -1,10 +1,8 @@
 import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/66.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/65.jpg'
-const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/30.jpg'
 
-// const video1 = 'https://www.kellygorr.com/assets/videos/summerME.mp4'
+const video1 = 'https://www.kellygorr.com/assets/videos/summerME.mp4'
 const video2 = 'https://www.kellygorr.com/assets/videos/slipknotXboxI.mp4'
 
 const img1 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer5.png'
@@ -19,22 +17,26 @@ const img9 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist
 const img10 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer15.png'
 const img11 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer12.png'
 
-const img12 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv1.jpg'
+const img12 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv6.jpg'
 const img13 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv3.jpg'
 const img14 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv4.jpg'
 const img15 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/itv5.jpg'
 
 export const interactiveVideoPlaylist: IProject = {
-	title: 'Interactive Video Playlist',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
+	details: {
+		header: 'Interactive Video Playlist',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox, TagType.Quiz, TagType.Poll],
+	},
 	content: [
 		{
 			slideshow: [
 				{
 					img: img1,
-					caption: 'Video clips, like this intro clip, are organized/ordered with the playlist',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 				{
 					img: img2,
@@ -101,25 +103,14 @@ export const interactiveVideoPlaylist: IProject = {
 			],
 		},
 		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Summer Playlist',
-					subtitle: 'Interactive video playlist',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Video,
-						source: 'video1',
-					},
-				},
-			],
-		},
-		{
 			header: 'Interactive Slipknot Music Video',
 			slideshow: [
 				{
 					img: img12,
-					caption: 'Quiz',
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
 				},
 				{
 					img: img13,
@@ -170,20 +161,6 @@ export const interactiveVideoPlaylist: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr',
-				},
-			],
-		},
-		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Slipknot',
-					subtitle: 'Interactive music video',
-					thumbnail: thumbnail3,
-					file: {
-						type: FileType.Video,
-						source: video2,
-					},
 				},
 			],
 		},

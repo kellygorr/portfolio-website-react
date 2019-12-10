@@ -7,7 +7,7 @@ export const Home: React.FC = () => {
 	return (
 		<Gallery>
 			{projects.map((project) => (
-				<Thumbnail key={project.title} project={project} />
+				<Thumbnail key={project.details.header} data={project.details} />
 			))}
 		</Gallery>
 	)

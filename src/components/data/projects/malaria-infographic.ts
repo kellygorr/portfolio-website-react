@@ -7,10 +7,11 @@ const img1 = 'https://www.kellygorr.com/assets/images/malaria-infographic/large4
 const pdf = 'https://www.kellygorr.com/assets/images/malaria-infographic/research_based_design.pdf'
 
 export const malariaInfographic: IProject = {
-	title: 'Malaria Infographic',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Infographic],
+	details: {
+		header: 'Malaria Infographic',
+		thumbnail: thumbnail,
+		tags: [TagType.Infographic],
+	},
 	content: [
 		{
 			slideshow: [
@@ -36,8 +37,7 @@ export const malariaInfographic: IProject = {
 			header: 'Project Statement',
 			attachments: [
 				{
-					title: 'Research Based Design PDF',
-					subtitle: '(Navigation only)',
+					header: 'Research Based Design PDF',
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Pdf,

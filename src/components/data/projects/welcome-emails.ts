@@ -7,9 +7,10 @@ const img2 = 'https://www.kellygorr.com/assets/images/welcome-emails/email2.jpg'
 const img3 = 'https://www.kellygorr.com/assets/images/welcome-emails/email3.jpg'
 
 export const welcomeEmails: IProject = {
-	title: 'Welcome Emails',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
+	details: {
+		header: 'Welcome Emails',
+		thumbnail: thumbnail,
+	},
 	content: [
 		{
 			slideshow: [

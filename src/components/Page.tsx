@@ -14,7 +14,7 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 
 	return (
 		<Container>
-			<Header>{props.data.title}</Header>
+			<Header>{props.data.details.header}</Header>
 			{props.data.content &&
 				props.data.content.map((data: ISection) => {
 					const items = Object.entries(data)

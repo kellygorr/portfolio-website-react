@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { AccentColor, PrimaryAccentColor } from '../../GlobalStyles'
 import { SkillType } from '../data/IProject'
-import { Link } from 'react-router-dom'
+import { Tag } from '.'
 
 const websiteTags = [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS]
 
@@ -16,9 +16,7 @@ export const Footer: React.FC = () => (
 		<Tags>
 			[
 			{websiteTags.map((tag, index) => (
-				<Tag key={index} to={'/search/' + tag}>
-					{index === websiteTags.length - 1 ? tag : tag + ', '}
-				</Tag>
+				<Tag key={index} isLastTag={index === websiteTags.length - 1} tag={tag} />
 			))}
 			]
 		</Tags>
@@ -64,11 +62,4 @@ const Contact = styled.div`
 
 const Tags = styled.div`
 	width: 100%;
-`
-const Tag = styled(Link)`
-	width: 100%;
-	font-size: 0.9em;
-	&:hover {
-		text-decoration: underline;
-	}
 `

@@ -9,10 +9,11 @@ const img4 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/b
 const img5 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen5.jpg'
 
 export const xboxBillboardGenerator: IProject = {
-	title: 'Xbox Billboard Generator',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox, TagType.Tooling],
+	details: {
+		header: 'Xbox Billboard Generator',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox, TagType.Tooling],
+	},
 	content: [
 		{
 			slideshow: [

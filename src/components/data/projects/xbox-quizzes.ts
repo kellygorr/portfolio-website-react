@@ -2,8 +2,6 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/43.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/46.jpg'
-const thumbnail3 = 'https://www.kellygorr.com/assets/thumbnails/29.jpg'
 
 const img1 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz7.png'
 const img2 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz8.jpg'
@@ -14,7 +12,7 @@ const img6 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz14.png'
 const img7 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz13.png'
 const img8 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz9.png'
 
-const img9 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz1.jpg'
+const img9 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz4.jpg'
 const img10 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz2.jpg'
 const img11 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz3.jpg'
 
@@ -22,16 +20,21 @@ const video1 = 'https://www.kellygorr.com/assets/videos/fifaQuiz.mp4'
 const video2 = 'https://www.kellygorr.com/assets/videos/gameofthronesquiz.mp4'
 
 export const xboxQuizzes: IProject = {
-	title: 'Xbox Quizzes',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox, TagType.Plugin, TagType.Quiz],
+	details: {
+		header: 'Xbox Quizzes',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox, TagType.Plugin, TagType.Quiz],
+	},
 	content: [
 		{
 			slideshow: [
 				{
 					img: img1,
-					caption: 'All quizzes have an intro and results page',
+					caption: 'Fifa 16 quiz',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 				{
 					img: img2,
@@ -99,25 +102,14 @@ export const xboxQuizzes: IProject = {
 			],
 		},
 		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Fifa 16 quiz',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Video,
-						source: video1,
-					},
-				},
-			],
-		},
-		{
 			header: 'Game of Thrones Quiz',
 			slideshow: [
 				{
 					img: img9,
-					caption: 'Intro page',
+					file: {
+						type: FileType.Video,
+						source: video2,
+					},
 				},
 				{
 					img: img10,
@@ -169,20 +161,6 @@ export const xboxQuizzes: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr',
-				},
-			],
-		},
-		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Game of Thrones Quiz',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail3,
-					file: {
-						type: FileType.Video,
-						source: video2,
-					},
 				},
 			],
 		},

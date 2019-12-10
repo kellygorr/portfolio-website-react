@@ -6,10 +6,11 @@ const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/21.jpg'
 const img1 = 'https://www.kellygorr.com/assets/images/earthquake-map/large17.jpg'
 
 export const earthquakeMap: IProject = {
-	title: 'Earthquake Map',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Website],
+	details: {
+		header: 'Earthquake Map',
+		thumbnail: thumbnail,
+		tags: [TagType.Website],
+	},
 	content: [
 		{
 			slideshow: [
@@ -54,8 +55,7 @@ export const earthquakeMap: IProject = {
 			header: 'Code Sample',
 			attachments: [
 				{
-					title: 'Code Sample PDF',
-					subtitle: 'subtitle',
+					header: 'Code Sample PDF',
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Pdf,

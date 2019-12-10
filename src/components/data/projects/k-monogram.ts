@@ -5,9 +5,10 @@ const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/3.jpg'
 const img1 = 'https://www.kellygorr.com/assets/images/k-monogram/large6.jpg'
 
 export const kMonogram: IProject = {
-	title: 'K Monogram',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
+	details: {
+		header: 'K Monogram',
+		thumbnail: thumbnail,
+	},
 	content: [
 		{
 			slideshow: [

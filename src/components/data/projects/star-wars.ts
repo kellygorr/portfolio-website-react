@@ -2,7 +2,6 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/49.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/65.jpg'
 
 const video1 = 'https://www.kellygorr.com/assets/videos/starWars.mp4'
 
@@ -13,16 +12,20 @@ const img4 = 'https://www.kellygorr.com/assets/images/star-wars/starwars4.jpg'
 const img5 = 'https://www.kellygorr.com/assets/images/star-wars/starwars5.png'
 
 export const starWars: IProject = {
-	title: 'Star Wars Xbox Promotion',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox],
+	details: {
+		header: 'Star Wars Xbox Promotion',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox],
+	},
 	content: [
 		{
 			slideshow: [
 				{
 					img: img1,
-					caption: '',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 				{
 					img: img2,
@@ -77,20 +80,6 @@ export const starWars: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr & Jana Sheehan',
-				},
-			],
-		},
-		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Star Wars Promotion',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Video,
-						source: video1,
-					},
 				},
 			],
 		},

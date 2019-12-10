@@ -11,9 +11,10 @@ const img5 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/la
 const pdf = 'https://www.kellygorr.com/assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
 
 export const supersizedUserTesting: IProject = {
-	title: 'Supersized User Testing',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
+	details: {
+		header: 'Supersized User Testing',
+		thumbnail: thumbnail,
+	},
 	content: [
 		{
 			slideshow: [
@@ -54,8 +55,7 @@ export const supersizedUserTesting: IProject = {
 			header: 'Methods and Results',
 			attachments: [
 				{
-					title: 'Testing PDF',
-					subtitle: 'subtitle',
+					header: 'Testing PDF',
 					thumbnail: thumbnail,
 					file: {
 						type: FileType.Pdf,

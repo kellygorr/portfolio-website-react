@@ -10,10 +10,11 @@ const img5 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc5.
 const img6 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc7.jpg'
 
 export const calculatorTool: IProject = {
-	title: 'Calculator Tool',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Tooling, TagType.Website],
+	details: {
+		header: 'Calculator Tool',
+		thumbnail: thumbnail,
+		tags: [TagType.Tooling, TagType.Website],
+	},
 	content: [
 		{
 			slideshow: [

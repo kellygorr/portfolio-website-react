@@ -2,7 +2,6 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/28.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/24.jpg'
 
 const img1 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard3.jpg'
 const img2 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard1.jpg'
@@ -10,24 +9,34 @@ const img3 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard2
 const img4 = 'https://www.kellygorr.com/assets/images/xbox-billboards/ffSweepstakes.jpg'
 const img5 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
 const img6 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
+const img7 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard5.jpg'
 
 const video1 = 'https://www.kellygorr.com/assets/videos/iggyazalea.mp4'
 
 export const xboxBillboards: IProject = {
-	title: 'Xbox Promotional Billboards',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Xbox],
+	details: {
+		header: 'Xbox Promotional Billboards',
+		thumbnail: thumbnail,
+		tags: [TagType.Xbox],
+	},
 	content: [
 		{
 			slideshow: [
 				{
-					img: img1,
-					caption: 'Two buttons with left aligned T&C button',
+					img: img7,
+					caption: 'Iggy Azalea Billboard',
+					file: {
+						type: FileType.Video,
+						source: video1,
+					},
 				},
 				{
 					img: img2,
 					caption: 'Stacked buttons',
+				},
+				{
+					img: img1,
+					caption: 'Two buttons with left aligned T&C button',
 				},
 				{
 					img: img3,
@@ -75,20 +84,6 @@ export const xboxBillboards: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr & Jana Sheehan',
-				},
-			],
-		},
-		{
-			header: 'Xbox One Video Capture',
-			attachments: [
-				{
-					title: 'Iggy Azalea Billboard',
-					subtitle: 'subtitle',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Video,
-						source: video1,
-					},
 				},
 			],
 		},

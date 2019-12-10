@@ -7,10 +7,11 @@ const img2 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2b.jpg
 const img3 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2c.jpg'
 
 export const tenGreatTeas: IProject = {
-	title: 'Ten Great Teas',
-	subtitle: 'subtitle',
-	thumbnail: thumbnail,
-	tags: [TagType.Infographic],
+	details: {
+		header: 'Ten Great Teas',
+		thumbnail: thumbnail,
+		tags: [TagType.Infographic],
+	},
 	content: [
 		{
 			slideshow: [
