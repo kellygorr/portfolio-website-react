@@ -52,7 +52,7 @@ const AppContainer = styled.div`
 	height: 100%;
 	width: 100%;
 	display: grid;
-	grid-template-rows: [header] 150px [canvas] auto [footer] 200px;
+	grid-template-rows: [header] 150px [canvas] auto [footer] auto;
 
 	color: ${PrimaryColor};
 	font-family: 'open_sansregular';

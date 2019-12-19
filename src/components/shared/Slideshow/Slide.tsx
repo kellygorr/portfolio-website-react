@@ -1,19 +1,20 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { ISlideshow, FileType } from '../../data/IProject'
+import { FileType, ISlide } from '../../data/IProject'
 import { LoadingColor, PrimaryColor } from '../../../GlobalStyles'
 
 interface IPageProps {
 	index: number
 	isActive: boolean
 	isScrolling: boolean
-	data: ISlideshow
+	activeColor?: string
+	data: ISlide
 	setIsScrolling: (isScrolling: boolean) => void
 	slideshowRef: React.RefObject<HTMLDivElement>
 }
 
 export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
-	const { data, isActive, isScrolling, setIsScrolling, slideshowRef, index } = props
+	const { data, isActive, isScrolling, setIsScrolling, slideshowRef, index, activeColor } = props
 	const [isLoaded, setIsLoaded] = React.useState(false)
 
 	React.useEffect(() => window.scrollTo(0, 0), [])
@@ -35,7 +36,7 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 				}
 			}}
 			style={{
-				borderColor: isActive ? (isScrolling ? 'transparent' : PrimaryColor) : 'transparent',
+				borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
 				transitionDuration: isScrolling ? '0s' : '300ms',
 			}}
 		>

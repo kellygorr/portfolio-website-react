@@ -46,6 +46,7 @@ export const relatedTags: (TagType | SkillType | ToolType)[][] = [
 	[ToolType.Photoshop, SkillType.Illustration, ToolType.Illustrator],
 	[SkillType.PHP, SkillType.MySQL],
 	[TagType.Xbox, TagType.Kinect],
+	[TagType.Tooling, TagType.Plugin],
 ]
 
 export enum SectionType {
@@ -70,13 +71,17 @@ export interface IProject {
 
 export interface ISection {
 	header?: string
-	slideshow?: ISlideshow[]
+	slideshow?: ISlideshow
 	body?: string
 	highlight?: IHighlight[]
 	attachments?: IThumbnail[]
 }
 
 export interface ISlideshow {
+	activeColor?: string
+	slides: ISlide[]
+}
+export interface ISlide {
 	img: string
 	caption?: string
 	file?: IFile

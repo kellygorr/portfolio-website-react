@@ -8,7 +8,6 @@ const video1 = 'https://www.kellygorr.com/assets/videos/starWars.mp4'
 const img1 = 'https://www.kellygorr.com/assets/images/star-wars/starwars1.png'
 const img2 = 'https://www.kellygorr.com/assets/images/star-wars/starwars2.png'
 const img3 = 'https://www.kellygorr.com/assets/images/star-wars/starwars3.png'
-const img4 = 'https://www.kellygorr.com/assets/images/star-wars/starwars4.jpg'
 const img5 = 'https://www.kellygorr.com/assets/images/star-wars/starwars5.png'
 
 export const starWars: IProject = {
@@ -19,36 +18,34 @@ export const starWars: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+						file: {
+							type: FileType.Video,
+							source: video1,
+						},
 					},
-				},
-				{
-					img: img2,
-					caption: 'Slideshow',
-				},
-				{
-					img: img3,
-					caption: 'Billboard promotion',
-				},
-				{
-					img: img4,
-					caption: "Kotaku article (<a href='http://kotaku.com/the-force-awakens-on-game-consoles-1768991827#'>full</a>)",
-				},
-				{
-					img: img5,
-					caption: 'Placement on the Xbox Dashboard',
-				},
-			],
+					{
+						img: img2,
+						caption: 'Slideshow',
+					},
+					{
+						img: img3,
+						caption: 'Billboard promotion',
+					},
+					{
+						img: img5,
+						caption: 'Placement on the Xbox Dashboard',
+					},
+				],
+			},
 		},
 		{
 			header: 'Role',
 			body:
-				'A promotion for Star Wars Movies that was featured in a Kotaku article.  I build the homepage, and inner pages (excluding the product pages and video app), and added the content and localized text.',
+				'I built a promotion for Star Wars that included a home page, slideshow, and promotional offer billboard. I also added all the assets and localized text.',
 		},
 		{
 			header: 'Details',
@@ -80,6 +77,19 @@ export const starWars: IProject = {
 				{
 					header: 'Interaction Design',
 					body: 'Kelly Gorr & Jana Sheehan',
+				},
+			],
+		},
+		{
+			header: 'Hype',
+			attachments: [
+				{
+					header: 'Kotaku article',
+					thumbnail: thumbnail,
+					file: {
+						type: FileType.Link,
+						source: 'http://kotaku.com/the-force-awakens-on-game-consoles-1768991827#',
+					},
 				},
 			],
 		},

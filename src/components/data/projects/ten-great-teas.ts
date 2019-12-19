@@ -1,4 +1,5 @@
 import { IProject, TagType, ToolType } from '../IProject'
+import { LoadingColor } from '../../../GlobalStyles'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/2.jpg'
 
@@ -14,20 +15,23 @@ export const tenGreatTeas: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Main screen',
-				},
-				{
-					img: img2,
-					caption: 'Main screen with selected state',
-				},
-				{
-					img: img3,
-					caption: 'Tea details screen',
-				},
-			],
+			slideshow: {
+				activeColor: LoadingColor,
+				slides: [
+					{
+						img: img1,
+						caption: 'Main screen',
+					},
+					{
+						img: img2,
+						caption: 'Main screen with selected state',
+					},
+					{
+						img: img3,
+						caption: 'Tea details screen',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

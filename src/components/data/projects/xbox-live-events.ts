@@ -47,14 +47,16 @@ export const xboxLiveEvents: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-				},
-				{
-					img: img2,
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+					},
+					{
+						img: img2,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',
@@ -105,46 +107,48 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'The Game Awards 2015',
-			slideshow: [
-				{
-					img: img9,
-					caption: 'Exclusive Xbox game promo',
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				slides: [
+					{
+						img: img9,
+						caption: 'Exclusive Xbox game promo',
+						file: {
+							type: FileType.Video,
+							source: video1,
+						},
 					},
-				},
-				{
-					img: img10,
-					caption: 'The Game Awards Video Capture',
-					file: {
-						type: FileType.Video,
-						source: video2,
+					{
+						img: img10,
+						caption: 'The Game Awards Video Capture',
+						file: {
+							type: FileType.Video,
+							source: video2,
+						},
 					},
-				},
-				{
-					img: img3,
-				},
-				{
-					img: img4,
-				},
-				{
-					img: img5,
-					caption: 'Lower thirds leaderboard',
-				},
-				{
-					img: img6,
-					caption: 'Full screen leaderboard',
-				},
-				{
-					img: img7,
-					caption: 'Fullscreen user stats',
-				},
-				{
-					img: img8,
-					caption: 'Taco bell promo',
-				},
-			],
+					{
+						img: img3,
+					},
+					{
+						img: img4,
+					},
+					{
+						img: img5,
+						caption: 'Lower thirds leaderboard',
+					},
+					{
+						img: img6,
+						caption: 'Full screen leaderboard',
+					},
+					{
+						img: img7,
+						caption: 'Fullscreen user stats',
+					},
+					{
+						img: img8,
+						caption: 'Taco bell promo',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',
@@ -212,50 +216,52 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Gamescom 2015: Xbox Daily Show',
-			slideshow: [
-				{
-					img: img24,
-					caption: 'Daily Show and Interactive Promo',
-					file: {
-						type: FileType.Video,
-						source: video3,
+			slideshow: {
+				slides: [
+					{
+						img: img24,
+						caption: 'Daily Show and Interactive Promo',
+						file: {
+							type: FileType.Video,
+							source: video3,
+						},
 					},
-				},
-				{
-					img: img25,
-					caption: 'Tomb Raider Quiz',
-					file: {
-						type: FileType.Video,
-						source: video4,
+					{
+						img: img25,
+						caption: 'Tomb Raider Quiz',
+						file: {
+							type: FileType.Video,
+							source: video4,
+						},
 					},
-				},
-				{
-					img: img11,
-				},
-				{
-					img: img12,
-					caption: 'Preshow poll',
-				},
-				{
-					img: img13,
-					caption: 'Preshow quiz pt.1',
-				},
-				{
-					img: img14,
-					caption: 'Preshow quiz pt.2',
-				},
-				{
-					img: img15,
-					caption: 'Poll',
-				},
-				{
-					img: img16,
-				},
-				{
-					img: img17,
-					caption: 'Xbox Gamescom promotion',
-				},
-			],
+					{
+						img: img11,
+					},
+					{
+						img: img12,
+						caption: 'Preshow poll',
+					},
+					{
+						img: img13,
+						caption: 'Preshow quiz pt.1',
+					},
+					{
+						img: img14,
+						caption: 'Preshow quiz pt.2',
+					},
+					{
+						img: img15,
+						caption: 'Poll',
+					},
+					{
+						img: img16,
+					},
+					{
+						img: img17,
+						caption: 'Xbox Gamescom promotion',
+					},
+				],
+			},
 		},
 		{
 			header: 'Role',
@@ -297,14 +303,16 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'E3 2015: Xbox Daily Show',
-			slideshow: [
-				{
-					img: img18,
-				},
-				{
-					img: img19,
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img18,
+					},
+					{
+						img: img19,
+					},
+				],
+			},
 		},
 		{
 			header: 'Role',
@@ -346,21 +354,23 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Call of Duty Championship 2015',
-			slideshow: [
-				{
-					img: img20,
-				},
-				{
-					img: img21,
-				},
-				{
-					img: img22,
-				},
-				{
-					img: img23,
-					caption: 'Xbox Promotion',
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img20,
+					},
+					{
+						img: img21,
+					},
+					{
+						img: img22,
+					},
+					{
+						img: img23,
+						caption: 'Xbox Promotion',
+					},
+				],
+			},
 		},
 		{
 			header: 'Role',

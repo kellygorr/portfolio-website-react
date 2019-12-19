@@ -17,25 +17,27 @@ export const supersizedUserTesting: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-				},
-				{
-					img: img2,
-					caption: 'Part 1 tested a paper prototype of the interface',
-				},
-				{
-					img: img3,
-					caption: 'I experimented with graph visualizations',
-				},
-				{
-					img: img4,
-				},
-				{
-					img: img5,
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+					},
+					{
+						img: img2,
+						caption: 'Part 1 tested a paper prototype of the interface',
+					},
+					{
+						img: img3,
+						caption: 'I experimented with graph visualizations',
+					},
+					{
+						img: img4,
+					},
+					{
+						img: img5,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { projects } from './data'
 import { Header } from './Page'
-import { Thumbnail } from './shared'
+import { Thumbnail, Tag } from './shared'
 import { IProject, relatedTags, TagType, SkillType } from './data/IProject'
 import { Gallery } from './Home'
+import styled from 'styled-components'
 
 interface ISearchProps {
 	query: string
@@ -68,16 +69,33 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 
 	return (
 		<>
-			<Header>Results for [{props.query}]...</Header>
-			<Gallery>
-				{searchResults.length > 0
-					? searchResults.map((project: IProjectSearch) => <Thumbnail key={project.details.header} data={project.details} />)
-					: 'Sorry, no results'}
-			</Gallery>
+			<Header>
+				Results for {<Tag key={props.query} isLastTag={true} tag={props.query} isLinkDisabled={true} />}
+				...
+			</Header>
+			{searchResults.length > 0 ? (
+				<Gallery>
+					{searchResults.map((project: IProjectSearch) => (
+						<Thumbnail key={project.details.header} data={project.details} />
+					))}
+				</Gallery>
+			) : (
+				<Message>
+					{props.query === SkillType.TypeScript || props.query === SkillType.React
+						? `Sorry, no results. I have build many things using ${props.query} (including this website), but I haven't added any projects yet. `
+						: 'Sorry, no results'}
+				</Message>
+			)}
 
 			{relatedResults.length > 0 && (
 				<>
-					<Header>Related results {relatedResultTags.map((x) => '[' + x + ']')}...</Header>
+					<Header>
+						Related results [
+						{relatedResultTags.map((tag, index) => (
+							<Tag key={tag} isLastTag={tag ? index === relatedResultTags.length - 1 : false} tag={tag} />
+						))}
+						]...
+					</Header>
 					<Gallery>
 						{relatedResults.map((project: IProjectSearch) => (
 							<Thumbnail key={project.details.header} data={project.details} />
@@ -88,3 +106,7 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 		</>
 	)
 }
+
+const Message = styled.div`
+	padding: 10px 5%;
+`

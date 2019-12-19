@@ -41,9 +41,9 @@ const Container = styled.div`
 	background-color: ${AccentColor};
 	color: ${PrimaryAccentColor};
 	padding: 20px 5%;
+	font-size: 0.9em;
 `
 const Title = styled.div`
-	font-size: 1em;
 	margin-top: 10px;
 	&:first-child {
 		margin: 0;
@@ -53,8 +53,6 @@ const Title = styled.div`
 	}
 `
 const Contact = styled.div`
-	font-size: 0.9em;
-
 	&:hover {
 		text-decoration: underline;
 	}

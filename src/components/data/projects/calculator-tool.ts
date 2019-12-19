@@ -17,29 +17,31 @@ export const calculatorTool: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-				},
-				{
-					img: img2,
-				},
-				{
-					img: img3,
-				},
-				{
-					img: img4,
-					caption: 'Items successfully calculated',
-				},
-				{
-					img: img5,
-					caption: 'One of the error messages',
-				},
-				{
-					img: img6,
-					caption: 'Some messages from the fish',
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+					},
+					{
+						img: img2,
+					},
+					{
+						img: img3,
+					},
+					{
+						img: img4,
+						caption: 'Items successfully calculated',
+					},
+					{
+						img: img5,
+						caption: 'One of the error messages',
+					},
+					{
+						img: img6,
+						caption: 'Some messages from the fish',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

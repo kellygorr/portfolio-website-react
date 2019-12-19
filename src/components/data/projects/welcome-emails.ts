@@ -1,4 +1,5 @@
 import { IProject, ToolType, SkillType } from '../IProject'
+import { LoadingColor } from '../../../GlobalStyles'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/26.jpg'
 
@@ -13,17 +14,20 @@ export const welcomeEmails: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-				},
-				{
-					img: img2,
-				},
-				{
-					img: img3,
-				},
-			],
+			slideshow: {
+				activeColor: LoadingColor,
+				slides: [
+					{
+						img: img1,
+					},
+					{
+						img: img2,
+					},
+					{
+						img: img3,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

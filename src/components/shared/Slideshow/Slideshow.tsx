@@ -1,10 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { ISlideshow } from '../../data/IProject'
+import { ISlide } from '../../data/IProject'
 import { Slide } from '..'
 
 interface IPageProps {
-	data: ISlideshow[]
+	data: ISlide[]
+	activeColor?: string
 	slideshowRef: React.RefObject<HTMLDivElement>
 }
 
@@ -35,12 +36,13 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 					}, 150)
 				}}
 			>
-				{props.data.map((slide: ISlideshow, index) => (
+				{props.data.map((slide: ISlide, index) => (
 					<Slide
 						key={slide.img}
 						index={index}
-						isActive={index === active}
+						isActive={index === active && props.data.length > 1}
 						isScrolling={isScrolling}
+						activeColor={props.activeColor}
 						data={slide}
 						setIsScrolling={setIsScrolling}
 						slideshowRef={slideshowRef}

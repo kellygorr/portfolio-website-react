@@ -1,4 +1,5 @@
 import { IProject, TagType, SkillType } from '../IProject'
+import { LoadingColor } from '../../../GlobalStyles'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/42.jpg'
 
@@ -12,28 +13,31 @@ export const xboxBillboardGenerator: IProject = {
 	details: {
 		header: 'Xbox Billboard Generator',
 		thumbnail: thumbnail,
-		tags: [TagType.Xbox, TagType.Tooling],
+		tags: [TagType.Xbox, TagType.Plugin, TagType.Tooling],
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Billboard generator tool (options condensed)',
-				},
-				{
-					img: img2,
-				},
-				{
-					img: img3,
-				},
-				{
-					img: img4,
-				},
-				{
-					img: img5,
-				},
-			],
+			slideshow: {
+				activeColor: LoadingColor,
+				slides: [
+					{
+						img: img1,
+						caption: 'Billboard generator tool (options condensed)',
+					},
+					{
+						img: img2,
+					},
+					{
+						img: img3,
+					},
+					{
+						img: img4,
+					},
+					{
+						img: img5,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

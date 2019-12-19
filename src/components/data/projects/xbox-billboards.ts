@@ -21,40 +21,42 @@ export const xboxBillboards: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img7,
-					caption: 'Iggy Azalea Billboard',
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				slides: [
+					{
+						img: img7,
+						caption: 'Iggy Azalea Billboard',
+						file: {
+							type: FileType.Video,
+							source: video1,
+						},
 					},
-				},
-				{
-					img: img2,
-					caption: 'Stacked buttons',
-				},
-				{
-					img: img1,
-					caption: 'Two buttons with left aligned T&C button',
-				},
-				{
-					img: img3,
-					caption: 'One button template launches video',
-				},
-				{
-					img: img4,
-					caption: 'Sweepstakes billboard',
-				},
-				{
-					img: img5,
-					caption: 'Billboard with countdown clock',
-				},
-				{
-					img: img6,
-					caption: 'Fifa Points billboard',
-				},
-			],
+					{
+						img: img2,
+						caption: 'Stacked buttons',
+					},
+					{
+						img: img1,
+						caption: 'Two buttons with left aligned T&C button',
+					},
+					{
+						img: img3,
+						caption: 'One button template launches video',
+					},
+					{
+						img: img4,
+						caption: 'Sweepstakes billboard',
+					},
+					{
+						img: img5,
+						caption: 'Billboard with countdown clock',
+					},
+					{
+						img: img6,
+						caption: 'Fifa Points billboard',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

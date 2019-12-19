@@ -17,28 +17,30 @@ export const previewAppLinkGenerator: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Starting screen',
-				},
-				{
-					img: img2,
-					caption: 'Error messages are included to help users include all the required information',
-				},
-				{
-					img: img3,
-					caption: 'Link generated successfully',
-				},
-				{
-					img: img4,
-					caption: 'Information section',
-				},
-				{
-					img: img5,
-					caption: 'Just for fun',
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+						caption: 'Starting screen',
+					},
+					{
+						img: img2,
+						caption: 'Error messages are included to help users include all the required information',
+					},
+					{
+						img: img3,
+						caption: 'Link generated successfully',
+					},
+					{
+						img: img4,
+						caption: 'Information section',
+					},
+					{
+						img: img5,
+						caption: 'Just for fun',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

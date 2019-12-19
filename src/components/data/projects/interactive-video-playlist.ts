@@ -1,8 +1,9 @@
 import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
+import { AccentColor } from '../../../GlobalStyles'
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/66.jpg'
 
-const video1 = 'https://www.kellygorr.com/assets/videos/summerME.mp4'
+// const video1 = 'https://www.kellygorr.com/assets/videos/summerME.mp4'
 const video2 = 'https://www.kellygorr.com/assets/videos/slipknotXboxI.mp4'
 
 const img1 = 'https://www.kellygorr.com/assets/images/interactive-video-playlist/summer5.png'
@@ -30,50 +31,48 @@ export const interactiveVideoPlaylist: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				slides: [
+					{
+						img: img1,
 					},
-				},
-				{
-					img: img2,
-					caption: 'Polls and quizzes are added dynamically over the video',
-				},
-				{
-					img: img3,
-				},
-				{
-					img: img4,
-					caption: 'Buttons can link to full length videos or purchasable content',
-				},
-				{
-					img: img5,
-					caption: 'The dynamic content is customizable',
-				},
-				{
-					img: img6,
-				},
-				{
-					img: img7,
-					caption: 'Joke xbox achievement image',
-				},
-				{
-					img: img8,
-					caption: 'A fallback quiz can be inserted if the polling database is unavailable',
-				},
-				{
-					img: img9,
-				},
-				{
-					img: img10,
-				},
-				{
-					img: img11,
-				},
-			],
+					{
+						img: img2,
+						caption: 'Polls and quizzes are added dynamically over the video',
+					},
+					{
+						img: img3,
+					},
+					{
+						img: img4,
+						caption: 'Buttons can link to full length videos or purchasable content',
+					},
+					{
+						img: img5,
+						caption: 'The dynamic content is customizable',
+					},
+					{
+						img: img6,
+					},
+					{
+						img: img7,
+						caption: 'Joke xbox achievement image',
+					},
+					{
+						img: img8,
+						caption: 'A fallback quiz can be inserted if the polling database is unavailable',
+					},
+					{
+						img: img9,
+					},
+					{
+						img: img10,
+					},
+					{
+						img: img11,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',
@@ -104,27 +103,30 @@ export const interactiveVideoPlaylist: IProject = {
 		},
 		{
 			header: 'Interactive Slipknot Music Video',
-			slideshow: [
-				{
-					img: img12,
-					file: {
-						type: FileType.Video,
-						source: video2,
+			slideshow: {
+				activeColor: AccentColor,
+				slides: [
+					{
+						img: img12,
+						file: {
+							type: FileType.Video,
+							source: video2,
+						},
 					},
-				},
-				{
-					img: img13,
-					caption: 'Fact/trivia',
-				},
-				{
-					img: img14,
-					caption: 'Poll',
-				},
-				{
-					img: img15,
-					caption: 'Two button billboard with T&C button',
-				},
-			],
+					{
+						img: img13,
+						caption: 'Fact/trivia',
+					},
+					{
+						img: img14,
+						caption: 'Poll',
+					},
+					{
+						img: img15,
+						caption: 'Two button billboard with T&C button',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

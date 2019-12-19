@@ -8,7 +8,7 @@ import { Gallery } from '../Home'
 
 interface ISectionProps {
 	type: string
-	data: string | ISlideshow[] | IThumbnail[] | IHighlight[]
+	data: string | ISlideshow | IThumbnail[] | IHighlight[]
 }
 
 export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
@@ -16,7 +16,11 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 		<>
 			{props.type === SectionType.Header && <Header>{props.data as string}</Header>}
 			{props.type === SectionType.Slideshow && (
-				<Slideshow data={props.data as ISlideshow[]} slideshowRef={createRef<HTMLDivElement>()} />
+				<Slideshow
+					data={(props.data as ISlideshow).slides}
+					activeColor={(props.data as ISlideshow).activeColor}
+					slideshowRef={createRef<HTMLDivElement>()}
+				/>
 			)}
 			{props.type === SectionType.Body && <Paragraph>{props.data as string}</Paragraph>}
 			{props.type === SectionType.Highlight &&

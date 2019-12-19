@@ -15,20 +15,22 @@ export const crimeSpot: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Mobile and web',
-				},
-				{
-					img: img2,
-					caption: 'Start, settings, and map screens',
-				},
-				{
-					img: img3,
-					caption: "Map filtered by 'assualt' and 'homicide', map with selection, and news details",
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+						caption: 'Mobile and web',
+					},
+					{
+						img: img2,
+						caption: 'Start, settings, and map screens',
+					},
+					{
+						img: img3,
+						caption: "Map filtered by 'assualt' and 'homicide', map with selection, and news details",
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

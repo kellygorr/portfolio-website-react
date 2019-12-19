@@ -1,5 +1,6 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
+import { AccentColor } from '../../../GlobalStyles'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/60.jpg'
 
@@ -28,68 +29,71 @@ export const theWitcher3: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Main menu with animated background (Pre-launch)',
-				},
-				{
-					img: img2,
-					caption: 'Watch section shows subnav with trailers and gameplay',
-				},
-				{
-					img: img3,
-					caption: 'Character gallery with center carousel navigation.',
-				},
-				{
-					img: img4,
-					caption: 'Character details page',
-				},
-				{
-					img: img5,
-					caption: 'Image slideshow',
-				},
-				{
-					img: img6,
-					caption: 'Quiz with animated background',
-				},
-				{
-					img: img7,
-					caption: 'Quiz question',
-				},
-				{
-					img: img8,
-					caption: 'Quiz incorrect answer message',
-				},
-				{
-					img: img9,
-					caption: 'Quiz results page with animated background',
-				},
-				{
-					img: img10,
-					caption: 'Post-launch experience with new content',
-				},
-				{
-					img: img11,
-					caption: 'Post-launch poll',
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				activeColor: AccentColor,
+				slides: [
+					{
+						img: img1,
+						caption: 'Main menu with animated background (Pre-launch)',
 					},
-				},
-				{
-					img: img12,
-					caption: 'Post-launch monster bestiary',
-				},
-				{
-					img: img13,
-					caption: 'Quiz featured as a stand-alone experience on the Xbox One',
-				},
-				{
-					img: img14,
-					caption: 'Xbox One games section feature',
-				},
-			],
+					{
+						img: img2,
+						caption: 'Watch section shows subnav with trailers and gameplay',
+					},
+					{
+						img: img3,
+						caption: 'Character gallery with center carousel navigation.',
+					},
+					{
+						img: img4,
+						caption: 'Character details page',
+					},
+					{
+						img: img5,
+						caption: 'Image slideshow',
+					},
+					{
+						img: img6,
+						caption: 'Quiz with animated background',
+					},
+					{
+						img: img7,
+						caption: 'Quiz question',
+					},
+					{
+						img: img8,
+						caption: 'Quiz incorrect answer message',
+					},
+					{
+						img: img9,
+						caption: 'Quiz results page with animated background',
+					},
+					{
+						img: img10,
+						caption: 'Post-launch experience with new content',
+					},
+					{
+						img: img11,
+						caption: 'Post-launch poll',
+						file: {
+							type: FileType.Video,
+							source: video1,
+						},
+					},
+					{
+						img: img12,
+						caption: 'Post-launch monster bestiary',
+					},
+					{
+						img: img13,
+						caption: 'Quiz featured as a stand-alone experience on the Xbox One',
+					},
+					{
+						img: img14,
+						caption: 'Xbox One games section feature',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

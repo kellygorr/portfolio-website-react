@@ -1,5 +1,6 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
+import { AccentColor } from '../../../GlobalStyles'
 
 const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/43.jpg'
 
@@ -27,44 +28,46 @@ export const xboxQuizzes: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					caption: 'Fifa 16 quiz',
-					file: {
-						type: FileType.Video,
-						source: video1,
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+						caption: 'Fifa 16 quiz',
+						file: {
+							type: FileType.Video,
+							source: video1,
+						},
 					},
-				},
-				{
-					img: img2,
-					caption: 'Witcher 3: Four choice quiz',
-				},
-				{
-					img: img3,
-					caption: 'World Cup Quiz: Five choice quiz',
-				},
-				{
-					img: img4,
-					caption: 'South Park Quiz: Five choice quiz with multiple sounds for right/wrong answers',
-				},
-				{
-					img: img5,
-					caption: 'Witcher 3 Quiz: User got the question incorrect',
-				},
-				{
-					img: img6,
-					caption: 'Daredevil Quiz: User got the question correct',
-				},
-				{
-					img: img7,
-					caption: 'World Cup Quiz: Results page',
-				},
-				{
-					img: img8,
-					caption: 'Tomb Raider Quiz: Results page with community performance',
-				},
-			],
+					{
+						img: img2,
+						caption: 'Witcher 3: Four choice quiz',
+					},
+					{
+						img: img3,
+						caption: 'World Cup Quiz: Five choice quiz',
+					},
+					{
+						img: img4,
+						caption: 'South Park Quiz: Five choice quiz with multiple sounds for right/wrong answers',
+					},
+					{
+						img: img5,
+						caption: 'Witcher 3 Quiz: User got the question incorrect',
+					},
+					{
+						img: img6,
+						caption: 'Daredevil Quiz: User got the question correct',
+					},
+					{
+						img: img7,
+						caption: 'World Cup Quiz: Results page',
+					},
+					{
+						img: img8,
+						caption: 'Tomb Raider Quiz: Results page with community performance',
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',
@@ -103,24 +106,27 @@ export const xboxQuizzes: IProject = {
 		},
 		{
 			header: 'Game of Thrones Quiz',
-			slideshow: [
-				{
-					img: img9,
-					file: {
-						type: FileType.Video,
-						source: video2,
+			slideshow: {
+				activeColor: AccentColor,
+				slides: [
+					{
+						img: img9,
+						file: {
+							type: FileType.Video,
+							source: video2,
+						},
 					},
-				},
-				{
-					img: img10,
-					caption: 'Question section (The answer is Stallion)',
-				},
-				{
-					img: img11,
-					caption:
-						"The results screen had 6 possible messages and sound clips from previous Game of Thrones seasons, based on the user's score.",
-				},
-			],
+					{
+						img: img10,
+						caption: 'Question section (The answer is Stallion)',
+					},
+					{
+						img: img11,
+						caption:
+							"The results screen had 6 possible messages and sound clips from previous Game of Thrones seasons, based on the user's score.",
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

@@ -13,11 +13,13 @@ export const earthquakeMap: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-				},
-			],
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+					},
+				],
+			},
 		},
 		{
 			header: 'Overview',

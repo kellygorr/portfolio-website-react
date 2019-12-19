@@ -12,15 +12,17 @@ export const jewelBoxCafe: IProject = {
 	},
 	content: [
 		{
-			slideshow: [
-				{
-					img: img1,
-					file: {
-						type: FileType.Link,
-						source: 'sites/type_website/',
+			slideshow: {
+				slides: [
+					{
+						img: img1,
+						file: {
+							type: FileType.Link,
+							source: 'sites/type_website/',
+						},
 					},
-				},
-			],
+				],
+			},
 		},
 		{
 			header: 'Overview',
