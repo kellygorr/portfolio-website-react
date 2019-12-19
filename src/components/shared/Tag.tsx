@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom'
 interface ITagProps {
 	isLastTag: boolean
 	tag: string
+	isLinkDisabled?: boolean
 }
 
 export const Tag: React.FC<ITagProps> = (props: ITagProps) => {
-	const { isLastTag, tag } = props
+	const { isLastTag, tag, isLinkDisabled } = props
+	const tagName = tag === 'UI-UX' ? 'UI/UX' : tag
 	return (
 		<>
-			<TagLink to={'/search/' + tag}>{tag}</TagLink>
+			{isLinkDisabled ? tagName : <TagLink to={'/search/' + tag}>{tagName}</TagLink>}
 			{!isLastTag && ', '}
 		</>
 	)
