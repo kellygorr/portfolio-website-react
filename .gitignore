@@ -1,6 +1,28 @@
+# dependencies
 node_modules
-src/assets/.DS_Store
-src/assets/.DS_Store
-src/assets/fonts/opensans/.DS_Store
-src/assets/fonts/.DS_Store
-build
+
+# system files
+.DS_Store
+
+# Logs
+*.log
+
+# build artifacts
+www/
+build/
+
+# Logs
+*.log
+
+# vs code workspace
+.code-workspace
+
+# misc files
+package-deps.json
+package-lock.json
+/.env
+/yarn.lock
+/.cache
+
+# Assets
+src/assets
