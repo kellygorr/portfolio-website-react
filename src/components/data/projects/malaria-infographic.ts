@@ -1,10 +1,10 @@
 import { IProject, FileType, TagType, ToolType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/4.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/19.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/4.jpg'
+const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/19.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/malaria-infographic/large4a.jpg'
-const pdf = 'https://www.kellygorr.com/assets/images/malaria-infographic/research_based_design.pdf'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/malaria-infographic/large4a.jpg'
+const pdf = process.env.REACT_APP_IMAGE_URL + 'assets/images/malaria-infographic/research_based_design.pdf'
 
 export const malariaInfographic: IProject = {
 	details: {

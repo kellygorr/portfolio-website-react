@@ -1,10 +1,10 @@
 import { IProject, FileType, TagType, SkillType, ToolType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/17.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/21.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/17.jpg'
+const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/21.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/earthquake-map/large17.jpg'
-
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/earthquake-map/large17.jpg'
+const pdf1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/earthquake-map/Kelly_Gorr_Code_Sample.pdf'
 export const earthquakeMap: IProject = {
 	details: {
 		header: 'Earthquake Map',
@@ -61,7 +61,7 @@ export const earthquakeMap: IProject = {
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Pdf,
-						source: 'http://www.kellygorr.com/img/Kelly_Gorr_Code_Sample.pdf',
+						source: pdf1,
 					},
 				},
 			],

@@ -1,11 +1,11 @@
 import { IProject, TagType, ToolType } from '../IProject'
 import { LoadingColor } from '../../../GlobalStyles'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/2.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/2.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2a.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2b.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/ten-great-teas/large2c.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/ten-great-teas/large2a.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/ten-great-teas/large2b.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/ten-great-teas/large2c.jpg'
 
 export const tenGreatTeas: IProject = {
 	details: {

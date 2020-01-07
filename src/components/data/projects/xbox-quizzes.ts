@@ -2,23 +2,23 @@ import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 import { AccentColor } from '../../../GlobalStyles'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/43.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/43.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz7.png'
-const img2 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz8.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz4.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz22.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz11.jpg'
-const img6 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz14.png'
-const img7 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz13.png'
-const img8 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/quiz9.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz7.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz8.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz4.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz22.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz11.jpg'
+const img6 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz14.png'
+const img7 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz13.png'
+const img8 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/quiz9.png'
 
-const img9 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz4.jpg'
-const img10 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz2.jpg'
-const img11 = 'https://www.kellygorr.com/assets/images/xbox-quizzes/gotquiz3.jpg'
+const img9 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/gotquiz4.jpg'
+const img10 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/gotquiz2.jpg'
+const img11 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-quizzes/gotquiz3.jpg'
 
-const video1 = 'https://www.kellygorr.com/assets/videos/fifaQuiz.mp4'
-const video2 = 'https://www.kellygorr.com/assets/videos/gameofthronesquiz.mp4'
+const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/videos/fifaQuiz.mp4'
+const video2 = process.env.REACT_APP_IMAGE_URL + 'assets/videos/gameofthronesquiz.mp4'
 
 export const xboxQuizzes: IProject = {
 	details: {

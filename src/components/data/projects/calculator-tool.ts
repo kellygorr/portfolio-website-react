@@ -1,13 +1,13 @@
 import { IProject, TagType, SkillType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/53.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/53.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc1.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc2.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc3.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc4.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc5.jpg'
-const img6 = 'https://www.kellygorr.com/assets/images/calculator-tool/itemcalc7.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc1.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc2.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc3.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc4.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc5.jpg'
+const img6 = process.env.REACT_APP_IMAGE_URL + 'assets/images/calculator-tool/itemcalc7.jpg'
 
 export const calculatorTool: IProject = {
 	details: {

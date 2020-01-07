@@ -1,13 +1,13 @@
 import { IProject, FileType, TagType, SkillType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/47.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/34.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/47.jpg'
+const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/34.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp1.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp4.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp6.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp3.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/preview-app-link-generator/previewApp2.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp1.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp4.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp6.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp3.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp2.jpg'
 
 export const previewAppLinkGenerator: IProject = {
 	details: {

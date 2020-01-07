@@ -1,11 +1,11 @@
 import { IProject, ToolType, SkillType } from '../IProject'
 import { LoadingColor } from '../../../GlobalStyles'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/26.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/26.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/welcome-emails/email1.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/welcome-emails/email2.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/welcome-emails/email3.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/welcome-emails/email1.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/welcome-emails/email2.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/welcome-emails/email3.jpg'
 
 export const welcomeEmails: IProject = {
 	details: {

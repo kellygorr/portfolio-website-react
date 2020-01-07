@@ -1,12 +1,13 @@
 import { IProject, FileType, TagType, ToolType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/22.jpg'
-const thumbnail2 = 'https://www.kellygorr.com/assets/thumbnails/19.png'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/22.jpg'
+const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/19.png'
 
-const img1 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_1.png'
-const img2 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_2.png'
-const img3 = 'https://www.kellygorr.com/assets/images/crime-spot/crimespot_3.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/crime-spot/crimespot_1.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/crime-spot/crimespot_2.png'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/crime-spot/crimespot_3.png'
 
+const pdf1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/crime-spot/kelly_gorr_web_integration.pdf'
 export const crimeSpot: IProject = {
 	details: {
 		header: 'Crime Spot',
@@ -54,7 +55,7 @@ export const crimeSpot: IProject = {
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Pdf,
-						source: 'http://www.kellygorr.com/img/kelly_gorr_web_integration.pdf',
+						source: pdf1,
 					},
 				},
 			],

@@ -1,14 +1,14 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/49.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/49.jpg'
 
-const video1 = 'https://www.kellygorr.com/assets/videos/starWars.mp4'
+const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/videos/starWars.mp4'
 
-const img1 = 'https://www.kellygorr.com/assets/images/star-wars/starwars1.png'
-const img2 = 'https://www.kellygorr.com/assets/images/star-wars/starwars2.png'
-const img3 = 'https://www.kellygorr.com/assets/images/star-wars/starwars3.png'
-const img5 = 'https://www.kellygorr.com/assets/images/star-wars/starwars5.png'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/star-wars/starwars1.png'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/star-wars/starwars2.png'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/star-wars/starwars3.png'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/star-wars/starwars5.png'
 
 export const starWars: IProject = {
 	details: {

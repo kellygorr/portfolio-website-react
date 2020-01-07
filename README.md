@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## .env file setup
+
+The base url for images and fonts needs to be added to the .env file (create file and add the two lines below)
+REACT_APP_IMAGE_URL=http://www.kellygorr.com/
+REACT_APP_FONT_URL=http://www.kellygorr.com/
+
 ## Available Scripts
 
 In the project directory, you can run:

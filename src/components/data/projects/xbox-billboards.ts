@@ -1,17 +1,17 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/28.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/28.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard3.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard1.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard2.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/xbox-billboards/ffSweepstakes.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
-const img6 = 'https://www.kellygorr.com/assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
-const img7 = 'https://www.kellygorr.com/assets/images/xbox-billboards/billboard5.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/billboard3.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/billboard1.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/billboard2.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/ffSweepstakes.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/X1-COMP-Billboard-GoldGameE3Promo-ES-MX-v2.jpg'
+const img6 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/X1-FUT-Anniversary-billboard-MX-v2-COMP.jpg'
+const img7 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboards/billboard5.jpg'
 
-const video1 = 'https://www.kellygorr.com/assets/videos/iggyazalea.mp4'
+const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/videos/iggyazalea.mp4'
 
 export const xboxBillboards: IProject = {
 	details: {

@@ -1,13 +1,13 @@
 import { IProject, TagType, SkillType } from '../IProject'
 import { LoadingColor } from '../../../GlobalStyles'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/42.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/42.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen0.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen2.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen3.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen4.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/xbox-billboard-generator/billGen5.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboard-generator/billGen0.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboard-generator/billGen2.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboard-generator/billGen3.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboard-generator/billGen4.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/xbox-billboard-generator/billGen5.jpg'
 
 export const xboxBillboardGenerator: IProject = {
 	details: {

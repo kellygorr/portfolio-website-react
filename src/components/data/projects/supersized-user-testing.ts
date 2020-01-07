@@ -1,14 +1,14 @@
 import { IProject, FileType, ToolType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/23.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/23.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22e.jpg'
-const img2 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22a.jpg'
-const img3 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22b.jpg'
-const img4 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22c.jpg'
-const img5 = 'https://www.kellygorr.com/assets/images/supersized-user-testing/large22d.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/large22e.jpg'
+const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/large22a.jpg'
+const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/large22b.jpg'
+const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/large22c.jpg'
+const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/large22d.jpg'
 
-const pdf = 'https://www.kellygorr.com/assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
+const pdf = process.env.REACT_APP_IMAGE_URL + 'assets/images/supersized-user-testing/kelly_gorr_user_testing_plan.pdf'
 
 export const supersizedUserTesting: IProject = {
 	details: {

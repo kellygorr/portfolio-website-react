@@ -1,8 +1,8 @@
 import { IProject, FileType, TagType, SkillType, ToolType } from '../IProject'
 
-const thumbnail = 'https://www.kellygorr.com/assets/thumbnails/5.jpg'
+const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/5.jpg'
 
-const img1 = 'https://www.kellygorr.com/assets/images/jewel-box-cafe-redesign/large5.jpg'
+const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/jewel-box-cafe-redesign/large5.jpg'
 
 export const jewelBoxCafe: IProject = {
 	details: {
