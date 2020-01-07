@@ -23,8 +23,8 @@ const App: React.FC = () => {
 							render={({ match }) => {
 								const project = projects.find(
 									(project) =>
-										match.params.title.replace(/[^\w\s]/gi, '') ===
-										project.details.header.replace(' ', '').toLowerCase()
+										match.params.title.replace(/[^\w\s]/gi, '').toLowerCase() ===
+										project.details.header.toLowerCase().replace(/ /g, '')
 								)
 								return project && <Page data={project} />
 							}}

@@ -22,12 +22,12 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 			/>
 			<H3>{data.header}</H3>
 			{/* We don't want to nest <a>'s*/}
-			<ThumbnailLink to={`/page/${data.header.replace(' ', '').toLowerCase()}`} />
+			<ThumbnailLink to={`/page/${data.header.toLowerCase().replace(/ /g, '-')}`} />
 
 			{data.tags && (
 				<Tags>
 					[{/* We want the thumbnail link behind the tag links */}
-					<ThumbnailLink to={`/page/${data.header.replace(' ', '').toLowerCase()}`} />
+					<ThumbnailLink to={`/page/${data.header.toLowerCase().replace(/ /g, '-')}`} />
 					{data.tags.map((tag, index) => (
 						<Tag key={index} isLastTag={data.tags ? index === data.tags.length - 1 : false} tag={tag} />
 					))}
