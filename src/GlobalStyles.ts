@@ -44,26 +44,26 @@ export const GlobalStyles = createGlobalStyle`
 
 	@font-face {
 		font-family: 'open_sansregular';
-		src: url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/opensans/OpenSans-Regular-webfont.eot'});
-		src: url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/opensans/OpenSans-Regular-webfont.eot?#iefix'}) format('embedded-opentype'),
-		url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/opensans/OpenSans-Regular-webfont.woff'}) format('woff'),
-		url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/opensans/OpenSans-Regular-webfont.ttf'}) format('truetype'),
-		url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular'}) format('svg');
+		src: url('http://www.kellygorr.com/assets/fonts/opensans/OpenSans-Regular-webfont.eot');
+		src: url('http://www.kellygorr.com/assets/fonts/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('http://www.kellygorr.com/assets/fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+		url('http://www.kellygorr.com/assets/fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype'),
+		url('http://www.kellygorr.com/assets/fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
 		font-weight: normal;
 		font-style: normal;
 	  }
 	  
 	@font-face {
 		font-family: 'montserrat';
-		src: url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/montserrat/Montserrat-SemiBold.otf'}) format('opentype');
+		src: url('http://www.kellygorr.com/assets/fonts/montserrat/Montserrat-SemiBold.otf') format('opentype');
 		font-weight: normal;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'Museo_Slab_500_2';
-		src: url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/museoslab/museoslab.woff2'}) format('woff2'), 
-		url(${process.env.REACT_APP_FONT_URL + 'assets/fonts/museoslab/museoslab.woff'}) format('woff');
+		src: url('http://www.kellygorr.com/assets/fonts/museoslab/museoslab.woff2') format('woff2'), 
+		url('http://www.kellygorr.com/assets/fonts/museoslab/museoslab.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 	}
