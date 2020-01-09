@@ -2,9 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## .env file setup
 
-The base url for images and fonts needs to be added to the .env file (create file and add the two lines below)
+The base url for images and fonts needs to be added to the .env file (create file and add the lines below)
 REACT_APP_IMAGE_URL=http://www.kellygorr.com/
-REACT_APP_FONT_URL=http://www.kellygorr.com/
 
 ## Available Scripts
 
