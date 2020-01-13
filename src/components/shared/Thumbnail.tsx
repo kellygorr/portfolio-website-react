@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { IThumbnail } from '../data/IProject'
 import { AccentColor, LoadingColor } from '../../GlobalStyles'
@@ -12,7 +12,7 @@ interface IThumbnailProps {
 export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => {
 	const { data } = props
 	const [isLoaded, setIsLoaded] = React.useState(false)
-
+	const link = data.file ? data.file.source : `/page/${data.header.toLowerCase().replace(/ /g, '-')}`
 	return (
 		<ThumbnailContainer>
 			<ThumbnailImage
@@ -22,12 +22,12 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 			/>
 			<H3>{data.header}</H3>
 			{/* We don't want to nest <a>'s*/}
-			<ThumbnailLink to={`/page/${data.header.toLowerCase().replace(/ /g, '-')}`} />
+			{data.file ? <ThumbnailLinkStandard href={link} /> : <ThumbnailLink to={link} />}
 
 			{data.tags && (
 				<Tags>
 					[{/* We want the thumbnail link behind the tag links */}
-					<ThumbnailLink to={`/page/${data.header.toLowerCase().replace(/ /g, '-')}`} />
+					{data.file ? <ThumbnailLinkStandard href={link} /> : <ThumbnailLink to={link} />}
 					{data.tags.map((tag, index) => (
 						<Tag key={index} isLastTag={data.tags ? index === data.tags.length - 1 : false} tag={tag} />
 					))}
@@ -39,7 +39,7 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 	)
 }
 
-const ThumbnailLink = styled(Link)`
+const linkStyle = css`
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -48,6 +48,12 @@ const ThumbnailLink = styled(Link)`
 	grid-column: gallery;
 `
 
+const ThumbnailLink = styled(Link)`
+	${linkStyle}
+`
+const ThumbnailLinkStandard = styled.a`
+	${linkStyle}
+`
 const ThumbnailImage = styled.div`
 	width: 100%;
 	height: 175px;
