@@ -24,18 +24,23 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 	)
 }
 
-const Container = styled.div`
-	height: 100%;
-	width: 100%;
-	padding-bottom: 5%;
-`
-
 export const Header = styled.h2`
 	font-family: 'Museo_Slab_500_2';
 	font-size: 1.5em;
 	padding: 10px 5%;
 
 	&:first-child {
+		padding-top: 0;
+	}
+`
+
+const Container = styled.div`
+	height: 100%;
+	width: 100%;
+	padding-bottom: 5%;
+
+	/* The paragraph immediately after a header does not need to have padding-top (this is covered by the header) */
+	${Header} + p {
 		padding-top: 0;
 	}
 `

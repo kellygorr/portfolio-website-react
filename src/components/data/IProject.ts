@@ -1,5 +1,6 @@
 export enum TagType {
 	Xbox = 'Xbox',
+	Microsoft = 'Microsoft',
 	Poll = 'poll',
 	Quiz = 'quiz',
 	Plugin = 'plugin',
@@ -13,6 +14,7 @@ export enum TagType {
 }
 export enum SkillType {
 	UIUX = 'UI-UX',
+	Prototyping = 'prototyping',
 	Design = 'design',
 	Illustration = 'illustration',
 	JQuery = 'jQuery',
@@ -26,6 +28,7 @@ export enum SkillType {
 	JSON = 'JSON',
 	HTML = 'HTML',
 	CSS = 'CSS',
+	Fabric = 'UI Fabric',
 }
 
 export enum ToolType {
@@ -45,6 +48,7 @@ export const relatedTags: (TagType | SkillType | ToolType)[][] = [
 	[TagType.Website, SkillType.HTML, SkillType.CSS],
 	[ToolType.Photoshop, SkillType.Illustration, ToolType.Illustrator],
 	[SkillType.PHP, SkillType.MySQL],
+	[TagType.Xbox, TagType.Microsoft],
 	[TagType.Xbox, TagType.Kinect],
 	[TagType.Tooling, TagType.Plugin],
 ]

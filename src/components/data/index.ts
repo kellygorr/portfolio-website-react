@@ -17,8 +17,10 @@ import { welcomeEmails } from './projects/welcome-emails'
 import { kMonogram } from './projects/k-monogram'
 import { supersizedUserTesting } from './projects/supersized-user-testing'
 import { jewelBoxCafe } from './projects/jewel-box-cafe-redesign'
+import { owaCalendar } from './projects/owa-calendar'
 
 export const projects: IProject[] = [
+	owaCalendar,
 	theWitcher3,
 	xboxBillboards,
 	xboxLiveEvents,

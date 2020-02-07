@@ -48,9 +48,6 @@ const Title = styled.div`
 	&:first-child {
 		margin: 0;
 	}
-	&::after {
-		content: ': ';
-	}
 `
 const Contact = styled.div`
 	&:hover {

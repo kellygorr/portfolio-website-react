@@ -38,5 +38,5 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 
 const Paragraph = styled.p`
 	font-size: 16px;
-	padding: 0 5%;
+	padding: 10px 5% 0px 5%;
 `
