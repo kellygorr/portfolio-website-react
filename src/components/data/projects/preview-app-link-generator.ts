@@ -18,6 +18,7 @@ export const previewAppLinkGenerator: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1000,
 				slides: [
 					{
 						img: img1,

@@ -18,6 +18,7 @@ export const xboxBillboardGenerator: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1000,
 				activeColor: LoadingColor,
 				slides: [
 					{

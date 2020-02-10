@@ -18,6 +18,7 @@ export const calculatorTool: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1100,
 				slides: [
 					{
 						img: img1,

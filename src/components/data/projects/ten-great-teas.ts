@@ -16,6 +16,7 @@ export const tenGreatTeas: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1250,
 				activeColor: LoadingColor,
 				slides: [
 					{

@@ -6,6 +6,7 @@ import { Slide } from '..'
 interface IPageProps {
 	data: ISlide[]
 	activeColor?: string
+	defaultWidth: number
 	slideshowRef: React.RefObject<HTMLDivElement>
 }
 
@@ -43,6 +44,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 						isActive={index === active && props.data.length > 1}
 						isScrolling={isScrolling}
 						activeColor={props.activeColor}
+						defaultWidth={props.defaultWidth}
 						data={slide}
 						setIsScrolling={setIsScrolling}
 						slideshowRef={slideshowRef}
@@ -56,6 +58,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 				}}
 			>
 				{props.data[active].caption}
+				<Key>{`${active + 1} of ${props.data.length}`}</Key>
 			</Caption>
 		</>
 	)
@@ -75,11 +78,6 @@ const isElementCentered = (el: HTMLDivElement) => {
 	var rect = el.getBoundingClientRect()
 	const center = document.documentElement.clientWidth / 2
 	return rect.left < center && center < rect.right
-}
-
-interface IStyle {
-	isActive?: boolean
-	isScrolling?: boolean
 }
 
 const Slides = styled.div`
@@ -110,8 +108,9 @@ const Slides = styled.div`
 	}
 `
 
-const Caption = styled.div<IStyle>`
+const Caption = styled.div`
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -119,5 +118,10 @@ const Caption = styled.div<IStyle>`
 	padding: 0px 5%;
 	opacity: 1;
 	transition: opacity linear;
-	min-height: 3em;
+	min-height: 4em;
+`
+
+const Key = styled.div`
+	font-size: 0.8em;
+	width: 100%;
 `

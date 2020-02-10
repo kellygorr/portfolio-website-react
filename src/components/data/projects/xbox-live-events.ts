@@ -48,6 +48,7 @@ export const xboxLiveEvents: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1920,
 				slides: [
 					{
 						img: img1,
@@ -108,6 +109,7 @@ export const xboxLiveEvents: IProject = {
 		{
 			header: 'The Game Awards 2015',
 			slideshow: {
+				width: 1408,
 				slides: [
 					{
 						img: img9,
@@ -217,6 +219,7 @@ export const xboxLiveEvents: IProject = {
 		{
 			header: 'Gamescom 2015: Xbox Daily Show',
 			slideshow: {
+				width: 1440,
 				slides: [
 					{
 						img: img24,
@@ -304,6 +307,7 @@ export const xboxLiveEvents: IProject = {
 		{
 			header: 'E3 2015: Xbox Daily Show',
 			slideshow: {
+				width: 1914,
 				slides: [
 					{
 						img: img18,
@@ -355,6 +359,7 @@ export const xboxLiveEvents: IProject = {
 		{
 			header: 'Call of Duty Championship 2015',
 			slideshow: {
+				width: 1920,
 				slides: [
 					{
 						img: img20,

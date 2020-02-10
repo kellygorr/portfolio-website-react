@@ -22,6 +22,7 @@ export const owaCalendar: IProject = {
 		{
 			slideshow: {
 				activeColor: LoadingColor,
+				width: 1735,
 				slides: [
 					{
 						img: img1,

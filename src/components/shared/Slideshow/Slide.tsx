@@ -8,17 +8,16 @@ interface IPageProps {
 	isActive: boolean
 	isScrolling: boolean
 	activeColor?: string
+	defaultWidth: number
 	data: ISlide
 	setIsScrolling: (isScrolling: boolean) => void
 	slideshowRef: React.RefObject<HTMLDivElement>
 }
 
 export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
-	const { data, isActive, isScrolling, setIsScrolling, slideshowRef, index, activeColor } = props
-	const [isLoaded, setIsLoaded] = React.useState(false)
-
+	const { data, isActive, isScrolling, setIsScrolling, slideshowRef, index, activeColor, defaultWidth } = props
 	React.useEffect(() => window.scrollTo(0, 0), [])
-	console.log('isLoaded', isLoaded)
+
 	return (
 		<Container
 			onClick={() => {
@@ -46,7 +45,7 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 					style={{
 						borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
 						transitionDuration: isScrolling ? '0s' : '300ms',
-						maxWidth: data.width ? data.width + 'px' : '1000px',
+						maxWidth: data.width ? data.width + 'px' : defaultWidth + 'px',
 					}}
 				>
 					<source src={data.file.source} type="video/mp4" />
@@ -58,11 +57,10 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 					style={{
 						borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
 						transitionDuration: isScrolling ? '0s' : '300ms',
-						maxWidth: data.width ? data.width + 'px' : '1000px',
+						maxWidth: data.width ? data.width + 'px' : defaultWidth + 'px',
 					}}
 				/>
 			)}
-			<LoadingImage src={data.img} onLoad={() => setIsLoaded(true)} />
 		</Container>
 	)
 }
@@ -93,8 +91,4 @@ const Container = styled.div<IStyle>`
 
 		transition: border-color linear;
 	}
-`
-
-const LoadingImage = styled.img`
-	display: none;
 `

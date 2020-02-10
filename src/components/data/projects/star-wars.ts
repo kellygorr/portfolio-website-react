@@ -19,6 +19,7 @@ export const starWars: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1920,
 				slides: [
 					{
 						img: img1,

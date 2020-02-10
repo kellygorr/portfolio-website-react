@@ -84,6 +84,7 @@ export interface ISection {
 export interface ISlideshow {
 	activeColor?: string
 	slides: ISlide[]
+	width: number
 }
 export interface ISlide {
 	img: string

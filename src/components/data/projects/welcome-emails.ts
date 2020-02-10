@@ -15,6 +15,7 @@ export const welcomeEmails: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 738,
 				activeColor: LoadingColor,
 				slides: [
 					{

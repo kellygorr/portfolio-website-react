@@ -19,6 +19,7 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 				<Slideshow
 					data={(props.data as ISlideshow).slides}
 					activeColor={(props.data as ISlideshow).activeColor}
+					defaultWidth={(props.data as ISlideshow).width}
 					slideshowRef={createRef<HTMLDivElement>()}
 				/>
 			)}

@@ -22,6 +22,7 @@ export const xboxBillboards: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1250,
 				slides: [
 					{
 						img: img7,

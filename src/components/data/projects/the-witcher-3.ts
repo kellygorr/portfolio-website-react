@@ -31,6 +31,7 @@ export const theWitcher3: IProject = {
 		{
 			slideshow: {
 				activeColor: AccentColor,
+				width: 1440,
 				slides: [
 					{
 						img: img1,

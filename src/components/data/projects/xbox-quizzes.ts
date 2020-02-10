@@ -29,6 +29,7 @@ export const xboxQuizzes: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1250,
 				slides: [
 					{
 						img: img1,
@@ -107,6 +108,7 @@ export const xboxQuizzes: IProject = {
 		{
 			header: 'Game of Thrones Quiz',
 			slideshow: {
+				width: 1250,
 				activeColor: AccentColor,
 				slides: [
 					{

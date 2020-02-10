@@ -18,6 +18,7 @@ export const supersizedUserTesting: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1250,
 				slides: [
 					{
 						img: img1,

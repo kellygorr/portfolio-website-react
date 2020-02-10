@@ -32,6 +32,7 @@ export const interactiveVideoPlaylist: IProject = {
 	content: [
 		{
 			slideshow: {
+				width: 1920,
 				slides: [
 					{
 						img: img1,
@@ -105,6 +106,7 @@ export const interactiveVideoPlaylist: IProject = {
 			header: 'Interactive Slipknot Music Video',
 			slideshow: {
 				activeColor: AccentColor,
+				width: 1250,
 				slides: [
 					{
 						img: img12,
