@@ -103,7 +103,7 @@ export const owaCalendar: IProject = {
 			header: 'Hype',
 			attachments: [
 				{
-					header: 'The Verge article',
+					header: 'The Verge',
 					thumbnail: thumbnail2,
 					file: {
 						type: FileType.Link,
@@ -111,7 +111,7 @@ export const owaCalendar: IProject = {
 					},
 				},
 				{
-					header: 'Microsoft article',
+					header: 'Microsoft',
 					thumbnail: thumbnail3,
 					file: {
 						type: FileType.Link,
@@ -120,7 +120,7 @@ export const owaCalendar: IProject = {
 					},
 				},
 				{
-					header: 'Microsoft article',
+					header: 'Microsoft',
 					thumbnail: thumbnail4,
 					file: {
 						type: FileType.Link,

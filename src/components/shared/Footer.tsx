@@ -10,7 +10,9 @@ export const Footer: React.FC = () => (
 	<Container>
 		<Title>Contact/Resume</Title>
 		<Contact>
-			<a href="https://www.linkedin.com/in/kellygorr/">LinkedIn</a>
+			<a href="https://www.linkedin.com/in/kellygorr/" rel="noopener noreferrer" target="_blank">
+				LinkedIn
+			</a>
 		</Contact>
 		<Title>Website Info</Title>
 		<Tags>
@@ -22,7 +24,9 @@ export const Footer: React.FC = () => (
 		</Tags>
 
 		<Contact>
-			<a href="https://github.com/kellygorr/portfolio-website-react">https://github.com/kellygorr/portfolio-website-react</a>
+			<a href="https://github.com/kellygorr/portfolio-website-react" rel="noopener noreferrer" target="_blank">
+				https://github.com/kellygorr/portfolio-website-react
+			</a>
 		</Contact>
 
 		{/* <Title>Other Projects</Title>
