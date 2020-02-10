@@ -89,6 +89,7 @@ export interface ISlide {
 	img: string
 	caption?: string
 	file?: IFile
+	width?: number
 }
 
 export interface IHighlight {

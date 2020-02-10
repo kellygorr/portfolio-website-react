@@ -36,16 +36,31 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 				}
 			}}
 			style={{
-				borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
-				transitionDuration: isScrolling ? '0s' : '300ms',
+				cursor: isActive ? 'default' : 'pointer',
 			}}
 		>
 			{data.file && data.file.type === FileType.Video ? (
-				<video controls poster={data.img}>
+				<video
+					controls
+					poster={data.img}
+					style={{
+						borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
+						transitionDuration: isScrolling ? '0s' : '300ms',
+						maxWidth: data.width ? data.width + 'px' : '1000px',
+					}}
+				>
 					<source src={data.file.source} type="video/mp4" />
 				</video>
 			) : (
-				<img src={data.img} alt={data.img} />
+				<img
+					src={data.img}
+					alt={data.img}
+					style={{
+						borderColor: isActive ? (isScrolling ? 'transparent' : activeColor ? activeColor : PrimaryColor) : 'transparent',
+						transitionDuration: isScrolling ? '0s' : '300ms',
+						maxWidth: data.width ? data.width + 'px' : '1000px',
+					}}
+				/>
 			)}
 			<LoadingImage src={data.img} onLoad={() => setIsLoaded(true)} />
 		</Container>
@@ -68,15 +83,15 @@ const Container = styled.div<IStyle>`
 	/* snap align center  */
 	scroll-snap-align: center;
 
-	border: 3px solid;
-	background-clip: padding-box;
-	background-color: ${LoadingColor};
-
-	transition: border-color linear;
-
 	img,
 	video {
 		width: 100%;
+		background-color: ${LoadingColor};
+
+		border: 3px solid;
+		background-clip: padding-box;
+
+		transition: border-color linear;
 	}
 `
 

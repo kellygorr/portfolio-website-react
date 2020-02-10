@@ -10,7 +10,7 @@ const img6 = process.env.REACT_APP_IMAGE_URL + 'assets/images/6.jpg'
 
 export const test: IProject = {
 	details: {
-		header: ' ',
+		header: 'Test',
 		thumbnail: thumbnail,
 	},
 	content: [
@@ -20,6 +20,7 @@ export const test: IProject = {
 					{
 						img: 'https://www.thewowstyle.com/wp-content/uploads/2015/03/Desktop-Wallpaper-HD2.jpg',
 						caption: 'Text',
+						width: 800,
 					},
 					{
 						img: img2,
@@ -28,18 +29,22 @@ export const test: IProject = {
 					{
 						img: img3,
 						caption: 'Text 3',
+						width: 500,
 					},
 					{
 						img: img4,
 						caption: 'Text 4',
+						width: 500,
 					},
 					{
 						img: img5,
 						caption: 'Text 5',
+						width: 500,
 					},
 					{
 						img: img6,
 						caption: 'Text 6',
+						width: 500,
 					},
 				],
 			},

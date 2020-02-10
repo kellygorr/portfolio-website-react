@@ -24,7 +24,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	}, [isScrolling])
 
 	return (
-		<Container>
+		<>
 			<Slides
 				ref={slideshowRef}
 				onScroll={() => {
@@ -57,7 +57,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			>
 				{props.data[active].caption}
 			</Caption>
-		</Container>
+		</>
 	)
 }
 
@@ -82,10 +82,7 @@ interface IStyle {
 	isScrolling?: boolean
 }
 
-const Container = styled.div``
-
 const Slides = styled.div`
-	height: 100%;
 	display: flex;
 	align-items: center;
 
