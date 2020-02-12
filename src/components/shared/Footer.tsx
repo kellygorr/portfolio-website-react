@@ -14,6 +14,12 @@ export const Footer: React.FC = () => (
 				LinkedIn
 			</a>
 		</Contact>
+		<Title>Photography</Title>
+		<Contact>
+			<a href="https://photography.kellygorr.com/" rel="noopener noreferrer" target="_blank">
+				photography.kellygorr.com
+			</a>
+		</Contact>
 		<Title>Website Info</Title>
 		<Tags>
 			[
