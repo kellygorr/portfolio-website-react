@@ -77,7 +77,7 @@ const Container = styled.div`
 	height: 100%;
 	color: ${PrimaryAccentColor};
 	font-size: 0.9em;
-	background-color: #000000;
+	background-color: #0c0c0c;
 	justify-content: space-between;
 `
 
