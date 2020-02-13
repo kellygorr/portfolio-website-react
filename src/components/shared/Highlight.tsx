@@ -14,11 +14,11 @@ export const Highlight: React.FC<IHighlightProps> = (props: IHighlightProps) => 
 			<Header>{data.header}</Header>
 			{data.tags && data.tags.length > 0 && (
 				<List>
-					[
+					[{' '}
 					{data.tags &&
 						(data.tags as (TagType | SkillType | ToolType)[]).map((tag: TagType | SkillType | ToolType, index) => (
 							<Tag key={index} isLastTag={data.tags ? index === data.tags.length - 1 : false} tag={tag} />
-						))}
+						))}{' '}
 					]
 				</List>
 			)}
