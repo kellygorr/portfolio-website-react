@@ -51,12 +51,13 @@ const Title = styled.div`
 	}
 `
 const StyledLink = styled.a`
-	word-wrap: none;
+	white-space: nowrap;
 	&:hover {
 		text-decoration: underline;
 	}
 `
 
 const Tags = styled.div`
+	white-space: nowrap;
 	width: 100%;
 `
