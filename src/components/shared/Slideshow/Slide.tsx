@@ -21,7 +21,7 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 	return (
 		<Container
 			onClick={() => {
-				if (!isActive && slideshowRef && slideshowRef.current) {
+				if (!isActive && slideshowRef && slideshowRef.current && setIsScrolling) {
 					setIsScrolling(true)
 
 					const nextScroll = slideshowRef.current.clientWidth * 0.75 * index
@@ -35,7 +35,7 @@ export const Slide: React.FC<IPageProps> = (props: IPageProps) => {
 				}
 			}}
 			style={{
-				cursor: isActive ? 'default' : 'pointer',
+				cursor: isActive || !setIsScrolling ? 'default' : 'pointer',
 			}}
 		>
 			{data.file && data.file.type === FileType.Video ? (

@@ -29,12 +29,14 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 			<Slides
 				ref={slideshowRef}
 				onScroll={() => {
-					setIsScrolling(true)
-					clearTimeout(ScrollTimer)
+					if (props.data.length > 1) {
+						setIsScrolling(true)
+						clearTimeout(ScrollTimer)
 
-					ScrollTimer = setTimeout(function() {
-						setIsScrolling(false)
-					}, 150)
+						ScrollTimer = setTimeout(function() {
+							setIsScrolling(false)
+						}, 150)
+					}
 				}}
 			>
 				{props.data.map((slide: ISlide, index) => (
@@ -46,17 +48,12 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 						activeColor={props.activeColor}
 						defaultWidth={props.defaultWidth}
 						data={slide}
-						setIsScrolling={setIsScrolling}
+						setIsScrolling={props.data.length > 1 && setIsScrolling}
 						slideshowRef={slideshowRef}
 					/>
 				))}
 			</Slides>
-			<Caption
-				style={{
-					opacity: isScrolling ? 0 : 1,
-					transitionDuration: isScrolling ? '0s' : '300ms',
-				}}
-			>
+			<Caption>
 				{props.data[active].caption}
 				<Key>{`${active + 1} of ${props.data.length}`}</Key>
 			</Caption>

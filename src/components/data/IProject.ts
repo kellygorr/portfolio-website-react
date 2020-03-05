@@ -39,14 +39,14 @@ export enum ToolType {
 
 export const relatedTags: (TagType | SkillType | ToolType)[][] = [
 	[SkillType.HTML, SkillType.CSS],
-	[SkillType.Illustration, TagType.Infographic],
+	[SkillType.Illustration, TagType.Infographic, ToolType.Illustrator],
 	[TagType.Poll, TagType.Quiz],
 	[SkillType.Design, SkillType.UIUX],
 	[TagType.Website, TagType.Mobile],
 	[SkillType.JavaScript, SkillType.TypeScript, SkillType.React],
 	[SkillType.JavaScript, SkillType.JQuery, SkillType.Ajax],
 	[TagType.Website, SkillType.HTML, SkillType.CSS],
-	[ToolType.Photoshop, SkillType.Illustration, ToolType.Illustrator],
+	[ToolType.Photoshop, ToolType.Illustrator],
 	[SkillType.PHP, SkillType.MySQL],
 	[TagType.Xbox, TagType.Microsoft],
 	[TagType.Xbox, TagType.Kinect],
