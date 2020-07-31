@@ -4,11 +4,44 @@ import { Thumbnail } from './shared'
 import { projects } from './data'
 
 export const Home: React.FC = () => {
+	const ref = React.useRef<HTMLDivElement>()
+	const [rowLength, setRowLength] = React.useState(0)
+	const handleResize = () => {
+		if (ref) {
+			const width = ref.current && ref.current.clientWidth
+
+			const childWidth = ref.current.children[0].clientWidth
+
+			const rowLength = Math.floor(width / childWidth)
+			setRowLength(rowLength)
+			console.log('rowLength', rowLength)
+		}
+	}
+
+	React.useEffect(() => {
+		window.addEventListener('resize', handleResize)
+		handleResize()
+		// cleanup this component
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
+
 	return (
-		<Gallery>
-			{projects.map((project) => (
-				<Thumbnail key={project.details.header} data={project.details} />
-			))}
+		<Gallery ref={ref}>
+			{projects.map((project, index) => {
+				const isRowEven = Math.floor(index / rowLength) % 2 === 0
+				console.log('isOddRow', index, index / rowLength)
+				return (
+					<Thumbnail
+						key={project.details.header}
+						data={project.details}
+						style={{
+							right: rowLength <= 2 ? 'initial' : isRowEven ? '20px' : '-20px',
+						}}
+					/>
+				)
+			})}
 		</Gallery>
 	)
 }

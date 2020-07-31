@@ -7,14 +7,15 @@ import { Tag } from '.'
 
 interface IThumbnailProps {
 	data: IThumbnail
+	style?: React.CSSProperties
 }
 
 export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => {
-	const { data } = props
+	const { data, style } = props
 	const [isLoaded, setIsLoaded] = React.useState(false)
 	const link = data.file ? data.file.source : `/page/${data.header.toLowerCase().replace(/ /g, '-')}`
 	return (
-		<ThumbnailContainer>
+		<ThumbnailContainer style={style}>
 			<ThumbnailImage
 				style={{
 					backgroundImage: isLoaded ? `url('${data.thumbnail}')` : `url('data:image/png;base64,${transparentBase64}')`,

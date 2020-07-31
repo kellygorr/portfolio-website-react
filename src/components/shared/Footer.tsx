@@ -52,7 +52,7 @@ const info: IFooterList[] = [
 			{
 				tags: [SkillType.TypeScript, SkillType.React, SkillType.HTML, SkillType.CSS],
 				title: 'https://github.com/kellygorr',
-				URL: 'https://github.com/kellygorr?tab=repositories',
+				URL: 'https://github.com/kellygorr/portfolio-website-react',
 			},
 		],
 	},
@@ -78,7 +78,6 @@ const Container = styled.div`
 
 	color: ${PrimaryAccentColor};
 	font-size: 0.9em;
-	background-color: #0c0c0c;
 `
 
 const Columns = css`
