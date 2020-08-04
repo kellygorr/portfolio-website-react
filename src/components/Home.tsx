@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
 						key={project.details.header}
 						data={project.details}
 						style={{
-							right: rowLength <= 2 ? 'initial' : isRowEven ? '20px' : '-20px',
+							right: rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
 						}}
 					/>
 				)
@@ -51,8 +51,5 @@ export const Gallery = styled.div`
 	width: 100%;
 	display: grid;
 	grid-template-columns: [gallery] repeat(auto-fill, minmax(260px, 1fr));
-	grid-gap: 10px;
-
-	padding: 5%;
-	padding-top: 0;
+	grid-gap: 20px;
 `

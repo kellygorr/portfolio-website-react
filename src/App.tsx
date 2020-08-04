@@ -61,6 +61,13 @@ const Header = styled.header`
 
 const Canvas = styled.div`
 	grid-row: canvas;
+	padding: 15%;
+	padding-top: 0;
+
+	@media (max-width: 1200px) {
+		padding: 8%;
+		padding-top: 0;
+	}
 `
 const Footer = styled.footer`
 	grid-row: footer;
