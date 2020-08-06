@@ -27,11 +27,13 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 			{props.type === SectionType.Highlight &&
 				(props.data as IHighlight[]).map((data, index) => <Highlight key={index} data={data as IHighlight} />)}
 			{props.type === SectionType.Attachments && (
-				<Gallery>
-					{(props.data as IThumbnail[]).map((data, index) => (
-						<Thumbnail key={index} data={data} />
-					))}
-				</Gallery>
+				<GalleryWrapper>
+					<Gallery>
+						{(props.data as IThumbnail[]).map((data, index) => (
+							<Thumbnail key={index} data={data} />
+						))}
+					</Gallery>
+				</GalleryWrapper>
 			)}
 		</>
 	)
@@ -40,4 +42,8 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 const Paragraph = styled.p`
 	font-size: 16px;
 	padding: 10px 5% 0px 5%;
+`
+
+const GalleryWrapper = styled.div`
+	padding: 0 5%;
 `

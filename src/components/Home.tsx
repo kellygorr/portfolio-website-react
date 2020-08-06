@@ -5,6 +5,7 @@ import { projects } from './data'
 
 export const Home: React.FC = () => {
 	const ref = React.useRef<HTMLDivElement>()
+
 	const [rowLength, setRowLength] = React.useState(0)
 	const handleResize = () => {
 		if (ref) {
@@ -14,7 +15,6 @@ export const Home: React.FC = () => {
 
 			const rowLength = Math.floor(width / childWidth)
 			setRowLength(rowLength)
-			console.log('rowLength', rowLength)
 		}
 	}
 
@@ -31,13 +31,18 @@ export const Home: React.FC = () => {
 		<Gallery ref={ref}>
 			{projects.map((project, index) => {
 				const isRowEven = Math.floor(index / rowLength) % 2 === 0
-				console.log('isOddRow', index, index / rowLength)
+				const unevenAmount = projects.length % rowLength
+				const unevenDif = projects.length - unevenAmount
+				// If we have an uneven amount in the last row, we need to center these items
+				const isUnevenLastRow = index >= projects.length - unevenAmount
+				const unevenPercent = (50 - unevenDif) / 2
+
 				return (
 					<Thumbnail
 						key={project.details.header}
 						data={project.details}
 						style={{
-							right: rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
+							right: isUnevenLastRow ? `-${unevenPercent}vw` : rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
 						}}
 					/>
 				)
