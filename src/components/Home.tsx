@@ -53,7 +53,7 @@ export const Home: React.FC = () => {
 						<BlankCard
 							key={x + index}
 							style={{
-								opacity: 0.5,
+								opacity: 0.4,
 								right: isRowEven ? '30px' : '-30px',
 							}}
 						>

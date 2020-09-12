@@ -16,7 +16,15 @@ const App: React.FC = () => (
 			</Header>
 			<Canvas>
 				<Switch>
-					<Route exact path="/" render={() => <Home />} />
+					<Route
+						exact
+						path="/"
+						render={() => (
+							<Wrapper>
+								<Home />
+							</Wrapper>
+						)}
+					/>
 					<Route
 						path="/page/:title?"
 						render={({ match }) => {
@@ -31,7 +39,9 @@ const App: React.FC = () => (
 					<Route
 						path="/search/:query?"
 						render={({ match }) => (
-							<Search query={match.params.query === 'UI-UX' ? 'UI-UX' : match.params.query.replace(/[^\w\s]/gi, '')} />
+							<Wrapper>
+								<Search query={match.params.query === 'UI-UX' ? 'UI-UX' : match.params.query.replace(/[^\w\s]/gi, '')} />
+							</Wrapper>
 						)}
 					/>
 				</Switch>
@@ -61,6 +71,8 @@ const Header = styled.header`
 
 const Canvas = styled.div`
 	grid-row: canvas;
+`
+const Wrapper = styled.div`
 	padding: 15%;
 	padding-top: 0;
 
@@ -69,6 +81,7 @@ const Canvas = styled.div`
 		padding-top: 0;
 	}
 `
+
 const Footer = styled.footer`
 	grid-row: footer;
 	background-color: #0c0c0c;
