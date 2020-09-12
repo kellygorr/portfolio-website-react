@@ -9,36 +9,36 @@ interface IBlankCardsProps {
 
 export const BlankCards = (props: IBlankCardsProps) => {
 	const missingAmount = props.rowLength - (props.projectLength % props.rowLength)
+	const newArray = missingAmount > 0 ? Array.from(Array(missingAmount).keys()) : []
 	return (
 		<>
-			{missingAmount &&
-				Array.from(Array(missingAmount).keys()).map((x: number, index: number) => {
-					const isRowEven = Math.floor((index + props.projectLength) / props.rowLength) % 2 === 0
-					const tagLength = Array.from(Array(Math.floor(Math.random() * 3) + 1).keys())
-					return (
-						<BlankCard
-							key={x + index}
+			{(newArray || []).map((x: number, index: number) => {
+				const isRowEven = Math.floor((index + props.projectLength) / props.rowLength) % 2 === 0
+				const tagLength = Array.from(Array(Math.floor(Math.random() * 3) + 1).keys())
+				return (
+					<BlankCard
+						key={x + index}
+						style={{
+							opacity: 0.4,
+							right: props.rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
+						}}
+					>
+						<ThumbnailImage
 							style={{
-								opacity: 0.4,
-								right: props.rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
+								backgroundImage: `url('data:image/png;base64,${transparentBase64}')`,
 							}}
-						>
-							<ThumbnailImage
-								style={{
-									backgroundImage: `url('data:image/png;base64,${transparentBase64}')`,
-								}}
-							/>
-							<H3>{RandomStr()}</H3>
-							<Tags>
-								[{' '}
-								{tagLength.map((x: number, index) => {
-									return <Tag key={x + index}>{tagLength.length !== index + 1 ? RandomStr() + ', ' : RandomStr()}</Tag>
-								})}{' '}
-								]
-							</Tags>
-						</BlankCard>
-					)
-				})}
+						/>
+						<H3>{RandomStr()}</H3>
+						<Tags>
+							[{' '}
+							{tagLength.map((x: number, index) => {
+								return <Tag key={x + index}>{tagLength.length !== index + 1 ? RandomStr() + ', ' : RandomStr()}</Tag>
+							})}{' '}
+							]
+						</Tags>
+					</BlankCard>
+				)
+			})}
 		</>
 	)
 }
