@@ -41,7 +41,7 @@ export const Home: React.FC = () => {
 					/>
 				)
 			})}
-			<BlankCards projectLength={projects.length} rowLength={rowLength} />
+			{rowLength >= 2 && <BlankCards projectLength={projects.length} rowLength={rowLength} />}
 		</Gallery>
 	)
 }
