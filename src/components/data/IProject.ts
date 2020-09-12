@@ -11,6 +11,7 @@ export enum TagType {
 	Web = 'web',
 	Kinect = 'Xbox Kinect',
 	Print = 'print',
+	Figma = 'Figma',
 }
 export enum SkillType {
 	UIUX = 'UI-UX',
