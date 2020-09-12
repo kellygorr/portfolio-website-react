@@ -18,8 +18,10 @@ import { kMonogram } from './projects/k-monogram'
 import { supersizedUserTesting } from './projects/supersized-user-testing'
 import { jewelBoxCafe } from './projects/jewel-box-cafe-redesign'
 import { owaCalendar } from './projects/owa-calendar'
+import { focusOrderer } from './projects/figma-focus-order'
 
 export const projects: IProject[] = [
+	focusOrderer,
 	owaCalendar,
 	theWitcher3,
 	xboxBillboards,

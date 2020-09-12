@@ -40,6 +40,12 @@ export const Highlight: React.FC<IHighlightProps> = (props: IHighlightProps) => 
 const HighlightSection = styled.div`
 	display: flex;
 	padding: 0 5%;
+
+	padding: 0 15%;
+
+	@media (max-width: 1200px) {
+		padding: 0 8%;
+	}
 `
 
 const Header = styled.h4`

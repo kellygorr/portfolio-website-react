@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { createRef } from 'react'
 import { ISlideshow, SectionType, IHighlight, IThumbnail } from '../data/IProject'
-import { Slideshow, Highlight, Thumbnail } from './'
+import { Slideshow, Highlight, Thumbnail } from '.'
 import { Header } from '../Page'
 import { Gallery } from '../Home'
 
@@ -27,11 +27,13 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 			{props.type === SectionType.Highlight &&
 				(props.data as IHighlight[]).map((data, index) => <Highlight key={index} data={data as IHighlight} />)}
 			{props.type === SectionType.Attachments && (
-				<Gallery>
-					{(props.data as IThumbnail[]).map((data, index) => (
-						<Thumbnail key={index} data={data} />
-					))}
-				</Gallery>
+				<GalleryWrapper>
+					<Gallery>
+						{(props.data as IThumbnail[]).map((data, index) => (
+							<Thumbnail key={index} data={data} />
+						))}
+					</Gallery>
+				</GalleryWrapper>
 			)}
 		</>
 	)
@@ -39,5 +41,17 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 
 const Paragraph = styled.p`
 	font-size: 16px;
-	padding: 10px 5% 0px 5%;
+	padding: 10px 15% 0px 15%;
+
+	@media (max-width: 1200px) {
+		padding: 10px 8% 0px 8%;
+	}
+`
+
+const GalleryWrapper = styled.div`
+	padding: 0 15%;
+
+	@media (max-width: 1200px) {
+		padding: 0 8%;
+	}
 `

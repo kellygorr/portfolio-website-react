@@ -96,7 +96,7 @@ export const owaCalendar: IProject = {
 				},
 				{
 					header: 'Engineering',
-					body: 'Calendar Team, Calendar Capture Team',
+					body: 'Kelly Gorr, Calendar Team, Calendar Capture Team',
 				},
 			],
 		},

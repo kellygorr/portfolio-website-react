@@ -121,4 +121,5 @@ const Caption = styled.div`
 const Key = styled.div`
 	font-size: 0.8em;
 	width: 100%;
+	padding: 5px 0;
 `
