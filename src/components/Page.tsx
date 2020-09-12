@@ -27,7 +27,11 @@ export const Page: React.FC<IPageProps> = (props: IPageProps) => {
 export const Header = styled.h2`
 	font-family: 'Museo_Slab_500_2';
 	font-size: 1.5em;
-	padding: 20px 5%;
+	padding: 20px 15%;
+
+	@media (max-width: 1200px) {
+		padding: 20px 8%;
+	}
 
 	&:first-child {
 		padding-top: 0;

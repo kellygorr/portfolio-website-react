@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { projects } from './data'
 import { Header } from './Page'
-import { Thumbnail, Tag } from './shared'
 import { IProject, relatedTags, TagType, SkillType } from './data/IProject'
 import { Gallery } from './Home'
 import styled from 'styled-components'
+import { Thumbnail, Tag } from './shared'
 
 interface ISearchProps {
 	query: string
@@ -69,7 +69,7 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 
 	return (
 		<>
-			<Header>
+			<Header style={{ paddingLeft: 0 }}>
 				Results for {<Tag key={props.query} isLastTag={true} tag={props.query} isLinkDisabled={true} />}
 				...
 			</Header>
@@ -89,7 +89,7 @@ export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
 
 			{relatedResults.length > 0 && (
 				<>
-					<Header>
+					<Header style={{ paddingLeft: 0 }}>
 						Related results [
 						{relatedResultTags.map((tag, index) => (
 							<Tag key={tag} isLastTag={tag ? index === relatedResultTags.length - 1 : false} tag={tag} />

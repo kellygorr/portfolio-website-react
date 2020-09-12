@@ -4,6 +4,7 @@ export { Slideshow } from './Slideshow/Slideshow'
 export { Highlight } from './Highlight'
 export { Slide } from './Slideshow/Slide'
 export { Tag } from './Tag'
+export { BlankCards } from './BlankCards'
 
 export { Header } from './Header'
 export { Footer } from './Footer'
