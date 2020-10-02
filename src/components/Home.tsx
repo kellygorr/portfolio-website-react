@@ -36,7 +36,7 @@ export const Home = () => {
 						key={project.details.header}
 						data={project.details}
 						style={{
-							right: rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
+							transform: `translate3d(${rowLength <= 2 ? '0' : isRowEven ? '-30px' : '30px'}, 0,0)`,
 						}}
 					/>
 				)

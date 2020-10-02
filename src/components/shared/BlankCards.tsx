@@ -20,7 +20,7 @@ export const BlankCards = (props: IBlankCardsProps) => {
 						key={x + index}
 						style={{
 							opacity: 0.4,
-							right: props.rowLength <= 2 ? 'initial' : isRowEven ? '30px' : '-30px',
+							transform: `translate3d(${props.rowLength <= 2 ? '0' : isRowEven ? '-30px' : '30px'}, 0,0)`,
 						}}
 					>
 						<ThumbnailImage
