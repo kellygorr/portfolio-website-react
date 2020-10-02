@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import { projects } from './data'
 import { Thumbnail, BlankCards } from './shared'
 
-export const Home: React.FC = () => {
+export const Home = () => {
 	const ref = React.useRef<HTMLDivElement>()
 	const [rowLength, setRowLength] = React.useState(0)
 

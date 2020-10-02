@@ -6,7 +6,7 @@ import { projects } from './components/data'
 import { GlobalStyles, PrimaryColor } from './GlobalStyles'
 import { Footer as FooterContent, Header as HeaderContent } from './components/shared'
 
-const App: React.FC = () => (
+const App = () => (
 	<Router>
 		<AppContainer>
 			<GlobalStyles />

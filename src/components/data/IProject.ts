@@ -60,6 +60,7 @@ export enum SectionType {
 	Body = 'body',
 	Highlight = 'highlight',
 	Attachments = 'attachments',
+	Link = 'link',
 }
 
 export enum FileType {
@@ -99,6 +100,7 @@ export interface IHighlight {
 	tags?: (TagType | SkillType | ToolType)[]
 	list?: string[]
 	body?: string
+	link?: string
 }
 
 export interface IFile {

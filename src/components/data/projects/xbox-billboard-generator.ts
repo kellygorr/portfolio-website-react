@@ -65,6 +65,14 @@ export const xboxBillboardGenerator: IProject = {
 					header: 'Images',
 					body: 'istockphoto.com',
 				},
+				{
+					header: 'Designer',
+					body: 'Kelly Gorr',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
+				},
 			],
 		},
 	],

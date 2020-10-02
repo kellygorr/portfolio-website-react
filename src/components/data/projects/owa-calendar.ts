@@ -26,12 +26,9 @@ export const owaCalendar: IProject = {
 				slides: [
 					{
 						img: img1,
-						caption: 'Outlook calendar refresh',
+						caption: 'Outlook calendar refresh.  Fabric calendar component (upper left corner)',
 					},
-					{
-						img: img2,
-						caption: 'Previous Outlook calendar design',
-					},
+
 					{
 						img: img3,
 						caption: 'Quick compose',
@@ -44,9 +41,24 @@ export const owaCalendar: IProject = {
 						img: img5,
 						caption: 'First run experience (FRE)',
 					},
+					{
+						img: img2,
+						caption: 'Previous design',
+					},
 				],
 			},
 		},
+		{
+			header: 'URLs',
+
+			body:
+				'Outlook Calendar (subscription required) <br /> <a href="https://outlook-sdf.office.com/calendar/">https://outlook-sdf.office.com/calendar/</a>',
+		},
+		{
+			body:
+				'Fabric calendar component (Rebranded to Fluent)<br /> <a href="https://developer.microsoft.com/en-us/fluentui#/controls/web/calendar">https://developer.microsoft.com/en-us/fluentui#/controls/web/calendar</a>',
+		},
+
 		{
 			header: 'Overview',
 			highlight: [
@@ -59,13 +71,16 @@ export const owaCalendar: IProject = {
 				'In 2018 Outlook launched a new Outlook.com that redesigned and added new features to Outlook Mail and Calendar and was built in React.  I partnered with the Calendar and Calendar Capture team as a UX engineer to implement the new Outlook calendar design and features.',
 		},
 		{
-			header: 'Outlook calendar',
+			header: 'Fabric calendar component',
 			body:
-				'To assist the Calendar team with the new calendar design update, I reworked the Fabric date picker component by updating the design and adding new functionality.  I created a side by side calendar and year view, added additional date math to highlighting the current week, and more.',
+				'The main feature I worked on for the Calendar team was an updated Fabric calendar component.  It was being used in the project in various places to select a date.  I expanded the functionality of the component by: creating a side by side calendar and year view, adding additional date math to highlight the current week, style refresh, and more.',
 		},
 		{
 			header: 'Quick Compose',
-			body: `For the Calendar Capture team I helped to build the new Quick Compose calendar feature.  This feature allows a user to quickly create a calendar event by adding a note to their calendar.  The user can type a note like "Dinner at 7pm McDonalds", and it auto fills an event form with the information.  The user can then make adjustments and save the event.  In the previous year I had created a prototype of this functionality for the Calendar Capture team and I had worked with research to test different ideas and make improvements. Later I was invited back to help the team build it in-product.  In-product I worked on updating some of the functionality and design of the fabric components used in quick compose, and I built the highlighting that occurs on the keywords in the user's typed note.`,
+			body: `For the Calendar Capture team I helped to build the new Quick Compose calendar feature.  This feature allows a user to quickly create a calendar event by adding a note to their calendar.  The user can type a note like "Dinner at 7pm McDonalds", and it auto fills an event form with the information.  The user can then make adjustments and save the event.  I built the highlighting UI that occurs on the keywords as the user types a note, along with updating some of the functionality and design of the fabric components used in quick compose.`,
+		},
+		{
+			body: `In the previous year I had created a prototype of this functionality for the Calendar Capture team and I had participated in the user research that used it.  Throughout the research I built different scenarious to test and made improvements to the prototype. Later I was invited back to help the team build it in-product.`,
 		},
 		{
 			header: 'First Run Experience (FRE)',
