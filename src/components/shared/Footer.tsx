@@ -58,7 +58,7 @@ const info: IFooterList[] = [
 	},
 ]
 
-export const Footer: React.FC = () => (
+export const Footer = () => (
 	<Container>
 		<Left>
 			<FooterList list={sites} />

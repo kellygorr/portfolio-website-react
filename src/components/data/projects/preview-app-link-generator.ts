@@ -1,7 +1,6 @@
-import { IProject, FileType, TagType, SkillType } from '../IProject'
+import { IProject, TagType, SkillType } from '../IProject'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/47.jpg'
-const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/34.jpg'
 
 const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp1.jpg'
 const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/preview-app-link-generator/previewApp4.jpg'
@@ -57,18 +56,22 @@ export const previewAppLinkGenerator: IProject = {
 				},
 			],
 			body:
-				"I was in charge of designing and creating the tool.  In the original version I used AngularJS's two-way data binding so the user could live-edit and create the link (This version is available to test below). In the final version I removed the live-edit functionality and instead used a ‘generate link’ button, because I didn't want users to have access to an unfinished link.Internal details have been removed.",
+				"I was in charge of designing and creating the tool.  In the original version I used AngularJS's two-way data binding so the user could live-edit and create the link (This version is available to test below). In the final version I removed the live-edit functionality and instead used a ‘generate link’ button, because I didn't want users to have access to an unfinished link.  Details from the original app have been altered or removed.",
 		},
 		{
-			header: 'View Website',
-			attachments: [
+			header: 'Details',
+			highlight: [
 				{
-					header: 'v1.0',
-					thumbnail: thumbnail2,
-					file: {
-						type: FileType.Link,
-						source: 'sites/previewApp/',
-					},
+					header: 'Platform',
+					tags: [TagType.Web],
+				},
+				{
+					header: 'Designer',
+					body: 'Kelly Gorr',
+				},
+				{
+					header: 'Interaction Design',
+					body: 'Kelly Gorr',
 				},
 			],
 		},

@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { IHighlight, SkillType, ToolType, TagType } from '../data/IProject'
 import { Tag } from '.'
+import { Link } from './Section'
 
 interface IHighlightProps {
 	data: IHighlight
@@ -32,6 +33,7 @@ export const Highlight: React.FC<IHighlightProps> = (props: IHighlightProps) => 
 					))}
 				</List>
 			)}
+			{data.link && <Link href={data.link}>{data.link}</Link>}
 			{data.body && <Body>{data.body}</Body>}
 		</HighlightSection>
 	)

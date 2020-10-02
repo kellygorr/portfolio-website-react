@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { AccentColor } from '../../GlobalStyles'
 
-export const Header: React.FC = () => {
+export const Header = () => {
 	return (
 		<Container>
 			<Logo>

@@ -5,6 +5,7 @@ import { ISlideshow, SectionType, IHighlight, IThumbnail } from '../data/IProjec
 import { Slideshow, Highlight, Thumbnail } from '.'
 import { Header } from '../Page'
 import { Gallery } from '../Home'
+import { Body, Paragraph } from './Body'
 
 interface ISectionProps {
 	type: string
@@ -23,7 +24,7 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 					slideshowRef={createRef<HTMLDivElement>()}
 				/>
 			)}
-			{props.type === SectionType.Body && <Paragraph>{props.data as string}</Paragraph>}
+			{props.type === SectionType.Body && <Body data={props.data as string} />}
 			{props.type === SectionType.Highlight &&
 				(props.data as IHighlight[]).map((data, index) => <Highlight key={index} data={data as IHighlight} />)}
 			{props.type === SectionType.Attachments && (
@@ -35,23 +36,26 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 					</Gallery>
 				</GalleryWrapper>
 			)}
+			{props.type === SectionType.Link && (
+				<Paragraph>
+					<Link>{props.data as string}</Link>
+				</Paragraph>
+			)}
 		</>
 	)
 }
-
-const Paragraph = styled.p`
-	font-size: 16px;
-	padding: 10px 15% 0px 15%;
-
-	@media (max-width: 1200px) {
-		padding: 10px 8% 0px 8%;
-	}
-`
 
 const GalleryWrapper = styled.div`
 	padding: 0 15%;
 
 	@media (max-width: 1200px) {
 		padding: 0 8%;
+	}
+`
+
+export const Link = styled.a`
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
 	}
 `

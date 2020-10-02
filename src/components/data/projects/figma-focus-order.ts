@@ -67,6 +67,11 @@ export const focusOrderer: IProject = {
 			},
 		},
 		{
+			header: 'URL',
+			body:
+				'<a href="https://www.figma.com/community/plugin/731310036968334777/A11y---Focus-Orderer">https://www.figma.com/community/plugin/731310036968334777/A11y---Focus-Orderer</a>',
+		},
+		{
 			header: 'Accessibility',
 			body: `Microsoft's Focus Orderer is a plugin for Figma that allows designers to build accessibility into their designs.  It is publicly available to the figma community.`,
 		},
