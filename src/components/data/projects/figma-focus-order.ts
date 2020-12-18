@@ -6,13 +6,15 @@ const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/75.jpg'
 const thumbnail3 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/76.jpg'
 
 const img1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/1.jpg'
-const img2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/2.jpg'
 const img5 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/3.jpg'
 const img7 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/4.jpg'
-const img3 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/readout.jpg'
 const img4 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/video1thumb2.jpg'
 const img6 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/video2thumb2.jpg'
-const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/sizedvid1.mp4'
+const img8 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/v2/v2-1.jpg'
+const img9 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/v2/v2-2.jpg'
+const img10 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/v2/v2-3.jpg'
+const img11 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/v2/v2-4.jpg'
+const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/v2/v2-video.mp4'
 const video2 = process.env.REACT_APP_IMAGE_URL + 'assets/images/focus-orderer/sizedvid2.mp4'
 
 export const focusOrderer: IProject = {
@@ -32,24 +34,20 @@ export const focusOrderer: IProject = {
 						caption: 'Figma plugin page',
 					},
 					{
-						img: img1,
-						caption: 'Annotated UI',
+						img: img8,
+						caption: 'Annotations and Readout',
 					},
 					{
-						img: img2,
+						img: img11,
+						caption: 'Multiple annotation sets',
+					},
+					{
+						img: img9,
+						caption: 'Home view and sorting',
+					},
+					{
+						img: img10,
 						caption: 'List view and edit screens',
-					},
-					{
-						img: img3,
-						caption: `The readout (right) allows users who don't have the plugin to see the configurations`,
-					},
-					{
-						img: img6,
-						caption: 'Demo',
-						file: {
-							type: FileType.Video,
-							source: video2,
-						},
 					},
 					{
 						img: img4,
@@ -62,6 +60,18 @@ export const focusOrderer: IProject = {
 					{
 						img: img7,
 						caption: 'Original plugin',
+					},
+					{
+						img: img1,
+						caption: 'Plugin V1',
+					},
+					{
+						img: img6,
+						caption: 'Plugin V1 - Demo',
+						file: {
+							type: FileType.Video,
+							source: video2,
+						},
 					},
 				],
 			},
@@ -102,10 +112,6 @@ export const focusOrderer: IProject = {
 					body: 'Sept. 2020 - Present',
 				},
 				{
-					header: 'Original plugin by',
-					body: 'Tiffany Chen',
-				},
-				{
 					header: 'Designer(s)',
 					body: 'Damien Aistrope, Ben Truelove',
 				},
@@ -118,8 +124,12 @@ export const focusOrderer: IProject = {
 					body: 'Chris Lorance',
 				},
 				{
+					header: 'Original plugin by',
+					body: 'Tiffany Chen',
+				},
+				{
 					header: 'Engineering',
-					body: 'Kelly Gorr, Zann St Pierre',
+					body: 'Kelly Gorr',
 				},
 			],
 		},

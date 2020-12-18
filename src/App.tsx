@@ -59,6 +59,7 @@ const AppContainer = styled.div`
 	position: relative;
 	height: 100%;
 	width: 100%;
+	min-width: 300px;
 	display: grid;
 	grid-template-rows: [header] 150px [canvas] auto [footer] max-content;
 
@@ -75,6 +76,7 @@ const Canvas = styled.div`
 const Wrapper = styled.div`
 	padding: 15%;
 	padding-top: 0;
+	transition: padding 200ms ease-out;
 
 	@media (max-width: 1200px) {
 		padding: 8%;
