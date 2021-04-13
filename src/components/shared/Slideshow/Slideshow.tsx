@@ -11,7 +11,7 @@ interface IPageProps {
 }
 
 let slideshowRef: React.RefObject<HTMLDivElement>
-let ScrollTimer: number
+let ScrollTimer: any
 
 export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 	slideshowRef = props.slideshowRef
@@ -33,7 +33,7 @@ export const Slideshow: React.FC<IPageProps> = (props: IPageProps) => {
 						setIsScrolling(true)
 						clearTimeout(ScrollTimer)
 
-						ScrollTimer = setTimeout(function() {
+						ScrollTimer = setTimeout(() => {
 							setIsScrolling(false)
 						}, 150)
 					}

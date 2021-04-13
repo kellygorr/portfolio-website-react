@@ -1,4 +1,3 @@
-import * as React from 'react'
 import styled from 'styled-components/macro'
 import { ThumbnailImage, transparentBase64, H3, Tags } from '../shared/Thumbnail'
 
