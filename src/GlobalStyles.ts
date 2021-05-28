@@ -7,6 +7,7 @@ export const PrimaryHoverAccentColor = '#fbe2e0'
 export const PrimaryColor = '#303030'
 export const LoadingColorHover = '#757575'
 export const LoadingColor = '#e2e2e2'
+export const FooterBg = '#0c0c0c'
 
 export const GlobalStyles = createGlobalStyle`
 	* {
@@ -15,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
 		padding: 0;
 		box-sizing: border-box;
 		border-spacing: 0px;
+		font-weight: normal;
 	}
 
 	*:before,
@@ -24,9 +26,10 @@ export const GlobalStyles = createGlobalStyle`
 
 	html,
 	body, #root {
-		height: 100%;
+		width: 100%;
 		margin: 0;
 		padding: 0;
+		font-family: 'open_sansregular';
 	}
 
 	*:focus {
@@ -36,10 +39,16 @@ export const GlobalStyles = createGlobalStyle`
 	button {
 		border-radius: 0;
 		border-width: 0;
+		background: transparent;
+		color: inherit;
 	}
 
 	a {
 		color: inherit;
 		text-decoration: inherit;
+	}
+
+	ul {
+		list-style-type:none;
 	}
 `

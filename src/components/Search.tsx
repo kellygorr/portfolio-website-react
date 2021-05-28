@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { projects } from './data'
-import { Header } from './Page'
-import { IProject, relatedTags, TagType, SkillType } from './data/IProject'
-import { Gallery } from './Home'
+import { projects } from '../data'
+import { Header } from './Page/Page'
+import { IProject, relatedTags, TagType, SkillType } from '../data/IProject'
+import { Gallery } from './Home/Home'
 import styled from 'styled-components'
-import { Thumbnail, Tag } from './shared'
+import { Tag, Thumbnail } from './Home'
 
 interface ISearchProps {
 	query: string
@@ -53,7 +53,7 @@ const relatedQueryMatches = (query: string): IProjectSearch[] => {
 	return tags.map((tag) => queryMatches(tag)).flat(1) // Flatten IProjectSearch[][] to IProjectSearch[]
 }
 
-export const Search: React.FC<ISearchProps> = (props: ISearchProps) => {
+export const Search = (props: ISearchProps): JSX.Element => {
 	const relatedMatches: IProjectSearch[] = relatedQueryMatches(props.query)
 	let matches: IProjectSearch[] = queryMatches(props.query)
 	matches = removeDuplicateTitles([...relatedMatches, ...matches])

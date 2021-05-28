@@ -1,11 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { Home, Page, Search } from './components'
-import { projects } from './components/data'
-import { GlobalStyles, PrimaryColor } from './GlobalStyles'
-import { Footer as FooterContent, Header as HeaderContent } from './components/shared'
+import { projects } from './data'
+import { FooterBg, GlobalStyles, PrimaryColor } from './GlobalStyles'
+import { Header as HeaderContent } from './components/Header'
+import { Footer as FooterContent } from './components/Footer'
+import { Home } from './components/Home'
+import { Page } from './components/Page'
+import { Search } from './components/Search'
 
-const App = () => (
+const App = (): JSX.Element => (
 	<Router>
 		<AppContainer>
 			<GlobalStyles />
@@ -56,11 +59,10 @@ export default App
 
 const AppContainer = styled.div`
 	position: relative;
-	height: 100%;
 	width: 100%;
 	min-width: 300px;
 	display: grid;
-	grid-template-rows: [header] 150px [canvas] auto [footer] max-content;
+	grid-template-rows: [header] 150px [canvas] 1fr [footer] auto;
 
 	color: ${PrimaryColor};
 	font-family: 'open_sansregular';
@@ -85,5 +87,4 @@ const Wrapper = styled.div`
 
 const Footer = styled.footer`
 	grid-row: footer;
-	background-color: #0c0c0c;
 `
