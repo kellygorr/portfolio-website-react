@@ -34,7 +34,7 @@ export const jewelBoxCafe: IProject = {
 			highlight: [
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Tools',

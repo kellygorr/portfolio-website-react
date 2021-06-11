@@ -1,6 +1,5 @@
 import { IProject, FileType } from '../IProject'
 import { TagType } from '../IProject'
-import { AccentColor } from '../../GlobalStyles'
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/66.jpg'
 
 // const video1 = process.env.REACT_APP_IMAGE_URL + 'assets/videos/summerME.mp4'
@@ -103,7 +102,6 @@ export const interactiveVideoPlaylist: IProject = {
 		{
 			header: 'Interactive Slipknot Music Video',
 			slideshow: {
-				activeColor: AccentColor,
 				width: 1250,
 				slides: [
 					{

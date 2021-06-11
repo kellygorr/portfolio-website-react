@@ -84,7 +84,7 @@ export interface ISection {
 }
 
 export interface ISlideshow {
-	activeColor?: string
+	neutralBorder?: boolean
 	slides: ISlide[]
 	width: number
 }
@@ -97,10 +97,15 @@ export interface ISlide {
 
 export interface IHighlight {
 	header: string
-	tags?: (TagType | SkillType | ToolType)[]
+	tags?: (TagType | SkillType | ToolType | string)[]
 	list?: string[]
 	body?: string
-	link?: string
+	link?: string | ILink
+}
+
+export interface ILink {
+	title: string
+	link: string
 }
 
 export interface IFile {
@@ -110,7 +115,7 @@ export interface IFile {
 
 export interface IThumbnail {
 	header: string
-	thumbnail: string
+	thumbnail: string | null
 	file?: IFile
-	tags?: TagType[]
+	tags?: (TagType | string)[]
 }

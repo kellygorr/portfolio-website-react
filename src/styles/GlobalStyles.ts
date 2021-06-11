@@ -1,15 +1,12 @@
 import { createGlobalStyle } from 'styled-components'
 import './fonts.css'
+import { Theme } from './theme'
 
-export const AccentColor = '#eb2f1b'
-export const PrimaryAccentColor = '#FFFFFF'
-export const PrimaryHoverAccentColor = '#fbe2e0'
-export const PrimaryColor = '#303030'
-export const LoadingColorHover = '#757575'
-export const LoadingColor = '#e2e2e2'
-export const FooterBg = '#0c0c0c'
+export const GRID_WIDTH = 350
+export const GRID_GAP = 20
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
+
 	* {
         position: relative;
 		margin: 0;
@@ -26,14 +23,21 @@ export const GlobalStyles = createGlobalStyle`
 
 	html,
 	body, #root {
+		min-height: 100vh;
 		width: 100%;
 		margin: 0;
 		padding: 0;
 		font-family: 'open_sansregular';
+		color: ${({ theme }) => theme.text};
 	}
 
 	*:focus {
- 		outline: 0;
+		outline: 0;
+		border-color: ${({ theme }) => theme.accent};
+
+		&:not(:focus-visible) {
+			border-color: transparent !important;
+		}
 	}
 
 	button {

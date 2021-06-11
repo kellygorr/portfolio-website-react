@@ -37,11 +37,11 @@ export const earthquakeMap: IProject = {
 					header: 'Skills',
 					tags: [
 						SkillType.PHP,
-						SkillType.JSON,
 						SkillType.JavaScript,
 						SkillType.JQuery,
 						SkillType.MySQL,
 						SkillType.Ajax,
+						SkillType.JSON,
 						SkillType.HTML,
 						SkillType.CSS,
 					],

@@ -58,7 +58,7 @@ export const calculatorTool: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.UIUX, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.UIUX, SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer',

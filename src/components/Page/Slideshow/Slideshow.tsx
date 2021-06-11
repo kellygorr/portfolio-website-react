@@ -5,7 +5,7 @@ import { Slide } from './Slide'
 
 interface IPageProps {
 	data: ISlide[]
-	activeColor?: string
+	neutralBorder?: boolean
 	defaultWidth: number
 	slideshowRef: React.RefObject<HTMLDivElement>
 }
@@ -33,7 +33,7 @@ export const Slideshow = (props: IPageProps): JSX.Element => {
 						setIsScrolling(true)
 						clearTimeout(ScrollTimer)
 
-						ScrollTimer = setTimeout(() => {
+						ScrollTimer = window.setTimeout(() => {
 							setIsScrolling(false)
 						}, 150)
 					}
@@ -45,7 +45,7 @@ export const Slideshow = (props: IPageProps): JSX.Element => {
 						index={index}
 						isActive={index === active && props.data.length > 1}
 						isScrolling={isScrolling}
-						activeColor={props.activeColor}
+						neutralBorder={props.neutralBorder}
 						defaultWidth={props.defaultWidth}
 						data={slide}
 						setIsScrolling={props.data.length > 1 && setIsScrolling}

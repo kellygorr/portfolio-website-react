@@ -13,7 +13,13 @@ export const Tag: React.FC<ITagProps> = (props: ITagProps) => {
 	const tagName = tag === 'UI-UX' ? 'UI/UX' : tag
 	return (
 		<>
-			{isLinkDisabled ? tagName : <TagLink to={'/search/' + tag}>{tagName}</TagLink>}
+			{isLinkDisabled ? (
+				tagName
+			) : (
+				<TagLink to={'/search/' + tag} tabIndex={-1}>
+					{tagName}
+				</TagLink>
+			)}
 			{!isLastTag && ', '}
 		</>
 	)

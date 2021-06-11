@@ -1,3 +1,3 @@
-export { Tag } from './Tag'
+export { Tag } from './Tags/Tag'
+export { Tags } from './Tags/Tags'
 export { Thumbnail } from './Thumbnail/Thumbnail'
-export { Blank } from './Thumbnail/Blank'

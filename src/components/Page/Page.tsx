@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components/macro'
 import { IProject, ISection } from '../../data/IProject'
 import { Section } from './Section'
-
+import { AnimateIn } from '../shared/Thumbnail/Thumbnail'
 interface IPageProps {
 	data: IProject | null
 }
@@ -42,6 +42,10 @@ const Container = styled.div`
 	height: 100%;
 	width: 100%;
 	padding-bottom: 5%;
+
+	opacity: 0;
+	animation: 1s ease-out 0.5s ${AnimateIn};
+	animation-fill-mode: forwards;
 
 	/* The paragraph immediately after a header does not need to have padding-top (this is covered by the header) */
 	${Header} + p {

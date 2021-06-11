@@ -76,7 +76,7 @@ export const xboxBillboards: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',

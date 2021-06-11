@@ -88,7 +88,7 @@ export const xboxLiveEvents: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',
@@ -175,7 +175,7 @@ export const xboxLiveEvents: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',
@@ -283,7 +283,7 @@ export const xboxLiveEvents: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',
@@ -315,7 +315,7 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Role',
-			body: 'The Xbox Daily Show held three live shows during E3 2015.  I was in charge of building the interactive poll and quiz overlays for the event.',
+			body: 'The Xbox Daily Show held three live shows during E3 2015.  I was in charge of building the interactive poll and quiz overlays for the event.  Some polls influenced what was presented during the show.',
 		},
 		{
 			header: 'Details',
@@ -334,7 +334,7 @@ export const xboxLiveEvents: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',
@@ -373,7 +373,7 @@ export const xboxLiveEvents: IProject = {
 		},
 		{
 			header: 'Role',
-			body: 'This was the debut of the interactive overlays on the XLEi.  I was in charge of building the preshow polls.',
+			body: 'This was the debut of the interactive overlays on the XLEi.  I was in charge of building the preshow polls.  Once the user made a selection the poll and numbers animated to show the live results.',
 		},
 		{
 			header: 'Details',
@@ -392,7 +392,7 @@ export const xboxLiveEvents: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Designer(s)',

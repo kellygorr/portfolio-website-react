@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { projects } from '../data'
-import { Header } from './Page/Page'
-import { IProject, relatedTags, TagType, SkillType } from '../data/IProject'
-import { Gallery } from './Home/Home'
+import { projects } from '../../data'
+import { Header } from '../Page/Page'
+import { IProject, relatedTags, TagType, SkillType } from '../../data/IProject'
+import { ThumbnailGrid } from '../Home/Home'
 import styled from 'styled-components'
-import { Tag, Thumbnail } from './Home'
+import { Tag, Thumbnail } from '../shared'
 
 interface ISearchProps {
 	query: string
@@ -109,4 +109,8 @@ export const Search = (props: ISearchProps): JSX.Element => {
 
 const Message = styled.div`
 	padding: 10px 5%;
+`
+
+const Gallery = styled.div`
+	${ThumbnailGrid}
 `

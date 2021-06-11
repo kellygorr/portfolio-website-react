@@ -3,11 +3,11 @@ import styled from 'styled-components/macro'
 import { createRef } from 'react'
 import { ISlideshow, SectionType, IHighlight, IThumbnail } from '../../data/IProject'
 import { Header } from './Page'
-import { Gallery } from '../Home/Home'
+import { ThumbnailGrid } from '../Home/Home'
 import { Body, Paragraph } from './Body'
-import { Thumbnail } from '../Home'
 import { Highlight } from './Highlight'
 import { Slideshow } from './Slideshow/Slideshow'
+import { Thumbnail } from '../shared'
 
 interface ISectionProps {
 	type: string
@@ -21,7 +21,7 @@ export const Section: React.FC<ISectionProps> = (props: ISectionProps) => {
 			{props.type === SectionType.Slideshow && (
 				<Slideshow
 					data={(props.data as ISlideshow).slides}
-					activeColor={(props.data as ISlideshow).activeColor}
+					neutralBorder={(props.data as ISlideshow).neutralBorder}
 					defaultWidth={(props.data as ISlideshow).width}
 					slideshowRef={createRef<HTMLDivElement>()}
 				/>
@@ -60,4 +60,8 @@ export const Link = styled.a`
 		cursor: pointer;
 		text-decoration: underline;
 	}
+`
+
+const Gallery = styled.div`
+	${ThumbnailGrid}
 `

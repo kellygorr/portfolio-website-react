@@ -52,7 +52,7 @@ export const starWars: IProject = {
 			highlight: [
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JavaScript, SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Platform and Accessories',

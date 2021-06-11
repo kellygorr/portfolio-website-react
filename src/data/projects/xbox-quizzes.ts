@@ -1,6 +1,5 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import { AccentColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/43.jpg'
 
@@ -107,7 +106,6 @@ export const xboxQuizzes: IProject = {
 			header: 'Game of Thrones Quiz',
 			slideshow: {
 				width: 1250,
-				activeColor: AccentColor,
 				slides: [
 					{
 						img: img9,
@@ -153,7 +151,7 @@ export const xboxQuizzes: IProject = {
 				},
 				{
 					header: 'Skills',
-					tags: [SkillType.JQuery, SkillType.JSON, SkillType.HTML, SkillType.CSS],
+					tags: [SkillType.JQuery, SkillType.HTML, SkillType.CSS],
 				},
 				{
 					header: 'Design Lead',

@@ -1,5 +1,4 @@
 import { IProject, TagType, SkillType, FileType } from '../IProject'
-import { LoadingColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/77.jpg'
 const thumbnail2 = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/75.jpg'
@@ -26,7 +25,7 @@ export const focusOrderer: IProject = {
 	content: [
 		{
 			slideshow: {
-				activeColor: LoadingColor,
+				neutralBorder: true,
 				width: 1735,
 				slides: [
 					{

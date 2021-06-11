@@ -1,5 +1,4 @@
 import { IProject, TagType, ToolType } from '../IProject'
-import { LoadingColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/2.jpg'
 
@@ -17,7 +16,7 @@ export const tenGreatTeas: IProject = {
 		{
 			slideshow: {
 				width: 1250,
-				activeColor: LoadingColor,
+				neutralBorder: true,
 				slides: [
 					{
 						img: img1,

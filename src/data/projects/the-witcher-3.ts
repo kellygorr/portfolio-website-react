@@ -1,6 +1,5 @@
 import { IProject, FileType, SkillType } from '../IProject'
 import { TagType } from '../IProject'
-import { AccentColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/60.jpg'
 
@@ -30,7 +29,6 @@ export const theWitcher3: IProject = {
 	content: [
 		{
 			slideshow: {
-				activeColor: AccentColor,
 				width: 1440,
 				slides: [
 					{
@@ -105,15 +103,7 @@ export const theWitcher3: IProject = {
 			highlight: [
 				{
 					header: 'Skills',
-					tags: [
-						SkillType.UIUX,
-						SkillType.JQuery,
-						SkillType.JavaScript,
-						SkillType.Ajax,
-						SkillType.JSON,
-						SkillType.HTML,
-						SkillType.CSS,
-					],
+					tags: [SkillType.UIUX, SkillType.JQuery, SkillType.JavaScript, SkillType.Ajax, SkillType.HTML, SkillType.CSS],
 				},
 			],
 			body: 'I was responsible for building the entire promotion, excluding the hunt section (built by a teammate).  This involved working through the UX of the main sections, galleries, and games with designers to ensure that the promotion would be easy to navigate on the Xbox, and to establish all the functionality I would need to code.  I built the promotion to be compatible with the Xbox controller and the Xbox Kinect (voice and gesture), and I also implemented custom user data tracking.  After building the promotion I added all the localized assets (videos, images, sound), and text for the other regions.',

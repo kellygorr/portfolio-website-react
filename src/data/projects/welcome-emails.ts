@@ -1,5 +1,4 @@
 import { IProject, ToolType, SkillType } from '../IProject'
-import { LoadingColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/26.jpg'
 
@@ -16,7 +15,7 @@ export const welcomeEmails: IProject = {
 		{
 			slideshow: {
 				width: 738,
-				activeColor: LoadingColor,
+				neutralBorder: true,
 				slides: [
 					{
 						img: img1,

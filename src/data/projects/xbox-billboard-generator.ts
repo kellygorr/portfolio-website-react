@@ -1,5 +1,4 @@
 import { IProject, TagType, SkillType } from '../IProject'
-import { LoadingColor } from '../../GlobalStyles'
 
 const thumbnail = process.env.REACT_APP_IMAGE_URL + 'assets/thumbnails/42.jpg'
 
@@ -19,7 +18,7 @@ export const xboxBillboardGenerator: IProject = {
 		{
 			slideshow: {
 				width: 1000,
-				activeColor: LoadingColor,
+				neutralBorder: true,
 				slides: [
 					{
 						img: img1,
