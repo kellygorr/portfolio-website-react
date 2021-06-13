@@ -24,10 +24,19 @@ export const Thumbnail: React.FC<IThumbnailProps> = (props: IThumbnailProps) => 
 
 	return (
 		<ThumbnailContainer ref={ref} style={{ ...thumbnailStyle, ...style }} aria-hidden={!data.thumbnail}>
-			<ThumbnailLink to={link} tabIndex={!data.thumbnail ? -1 : undefined}>
-				<ImageWrapper>{inView && data.thumbnail && <Image src={data.thumbnail} />}</ImageWrapper>
-				<H3>{data.header}</H3>
-			</ThumbnailLink>
+			<LinkStyle>
+				{data.file ? (
+					<a href={link} target="_blank" rel="noopener noreferrer">
+						<ImageWrapper>{inView && data.thumbnail && <Image src={data.thumbnail} />}</ImageWrapper>
+						<H3>{data.header}</H3>
+					</a>
+				) : (
+					<Link to={link} tabIndex={!data.thumbnail ? -1 : undefined}>
+						<ImageWrapper>{inView && data.thumbnail && <Image src={data.thumbnail} />}</ImageWrapper>
+						<H3>{data.header}</H3>
+					</Link>
+				)}
+			</LinkStyle>
 
 			{data.tags && !hideTags && <Tags tags={data.tags} />}
 		</ThumbnailContainer>
@@ -74,14 +83,16 @@ export const H3 = styled.h3`
 	transition: color 100ms ease-in;
 `
 
-const ThumbnailLink = styled(Link)`
-	&:hover,
-	&:focus {
-		${ImageWrapper} {
-			border-color: ${({ theme }) => theme.accent};
-		}
-		${H3} {
-			color: ${({ theme }) => theme.accent};
+const LinkStyle = styled.div`
+	a {
+		&:hover,
+		&:focus {
+			${ImageWrapper} {
+				border-color: ${({ theme }) => theme.accent};
+			}
+			${H3} {
+				color: ${({ theme }) => theme.accent};
+			}
 		}
 	}
 `
