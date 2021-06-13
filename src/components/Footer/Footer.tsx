@@ -49,8 +49,8 @@ const cog1 = {
 }
 
 const cog2 = {
-	darkMode: { rotate: 0, x: -10, y: -10 },
-	lightMode: { rotate: -270, x: -10, y: -10 },
+	darkMode: { rotate: 0, x: -11, y: -10 },
+	lightMode: { rotate: -270, x: -11, y: -10 },
 }
 
 export const Footer = (props: IFooterProps): JSX.Element => (
